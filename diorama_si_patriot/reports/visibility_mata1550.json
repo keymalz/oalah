@@ -1,0 +1,167 @@
+{
+ "labels": {
+  "PAKAN HIJAUAN": {
+   "kiri": 100.0,
+   "tengah": 100.0,
+   "kanan": 100.0
+  },
+  "MESIN PENCACAH": {
+   "kiri": 100.0,
+   "tengah": 100.0,
+   "kanan": 100.0
+  },
+  "PAKAN TERNAK": {
+   "kiri": 100.0,
+   "tengah": 100.0,
+   "kanan": 100.0
+  },
+  "PRODUKSI TERNAK": {
+   "kiri": 100.0,
+   "tengah": 100.0,
+   "kanan": 100.0
+  },
+  "SUSU SAPI": {
+   "kiri": 100.0,
+   "tengah": 100.0,
+   "kanan": 100.0
+  },
+  "PENDAPATAN PETERNAK": {
+   "kiri": 100.0,
+   "tengah": 100.0,
+   "kanan": 100.0
+  },
+  "LIMBAH TERNAK": {
+   "kiri": 100.0,
+   "tengah": 100.0,
+   "kanan": 100.0
+  },
+  "BIODIGESTER": {
+   "kiri": 100.0,
+   "tengah": 100.0,
+   "kanan": 100.0
+  },
+  "BIOGAS": {
+   "kiri": 100.0,
+   "tengah": 100.0,
+   "kanan": 100.0
+  },
+  "SLURRY": {
+   "kiri": 100.0,
+   "tengah": 100.0,
+   "kanan": 100.0
+  },
+  "ENERGI & PUPUK": {
+   "kiri": 100.0,
+   "tengah": 100.0,
+   "kanan": 100.0
+  },
+  "LIMBAH PADAT": {
+   "kiri": 100.0,
+   "tengah": 100.0,
+   "kanan": 100.0
+  },
+  "PUPUK ORGANIK": {
+   "kiri": 100.0,
+   "tengah": 100.0,
+   "kanan": 100.0
+  },
+  "PENCATATAN DIGITAL SI PATRIOT": {
+   "kiri": 100.0,
+   "tengah": 100.0,
+   "kanan": 100.0
+  }
+ },
+ "figures": {
+  "F01": {
+   "kiri": 25.2,
+   "tengah": 30.3,
+   "kanan": 28.6
+  },
+  "F02": {
+   "kiri": 96.8,
+   "tengah": 96.3,
+   "kanan": 93.3
+  },
+  "F03": {
+   "kiri": 56.7,
+   "tengah": 55.2,
+   "kanan": 50.9
+  },
+  "F04": {
+   "kiri": 92.4,
+   "tengah": 86.8,
+   "kanan": 88.7
+  },
+  "F05": {
+   "kiri": 88.2,
+   "tengah": 91.3,
+   "kanan": 90.8
+  },
+  "F06": {
+   "kiri": 94.0,
+   "tengah": 92.7,
+   "kanan": 91.6
+  },
+  "F07": {
+   "kiri": 85.3,
+   "tengah": 85.4,
+   "kanan": 83.6
+  },
+  "F08": {
+   "kiri": 97.0,
+   "tengah": 96.6,
+   "kanan": 97.0
+  },
+  "F09": {
+   "kiri": 82.9,
+   "tengah": 82.3,
+   "kanan": 82.1
+  },
+  "F10": {
+   "kiri": 97.4,
+   "tengah": 96.2,
+   "kanan": 97.1
+  },
+  "F11": {
+   "kiri": 90.5,
+   "tengah": 91.4,
+   "kanan": 92.2
+  },
+  "F12": {
+   "kiri": 84.4,
+   "tengah": 86.9,
+   "kanan": 86.8
+  },
+  "F13": {
+   "kiri": 93.8,
+   "tengah": 92.1,
+   "kanan": 91.1
+  },
+  "F14": {
+   "kiri": 91.3,
+   "tengah": 93.2,
+   "kanan": 93.3
+  },
+  "F15": {
+   "kiri": 92.9,
+   "tengah": 95.0,
+   "kanan": 94.6
+  },
+  "F16": {
+   "kiri": 91.5,
+   "tengah": 91.7,
+   "kanan": 95.5
+  },
+  "F17": {
+   "kiri": 97.7,
+   "tengah": 98.4,
+   "kanan": 97.6
+  },
+  "F18": {
+   "kiri": 80.8,
+   "tengah": 88.5,
+   "kanan": 80.2
+  }
+ },
+ "eye_height_mm": 1550.0
+}

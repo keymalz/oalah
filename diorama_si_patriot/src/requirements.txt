@@ -1,0 +1,13 @@
+# Python 3.13 (bpy 5.2.2 hanya tersedia untuk CPython 3.13)
+bpy==5.2.2
+manifold3d==3.*
+trimesh==5.*
+numpy
+scipy
+scikit-image
+fast-simplification
+shapely
+rtree
+embreex
+matplotlib
+pillow

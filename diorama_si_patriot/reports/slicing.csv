@@ -1,0 +1,40 @@
+file,profile,ok_support,needs_support,support_pct_support,time_support,filament_g_support,time_nosupport,filament_g_nosupport,overhang_perim_mm_nosupport
+stl/alas_cetak3d/K01_kunci_sambungan_bowtie.stl,alas,True,False,0.0,5m 10s,0.9,5m 10s,0.9,0
+stl/alas_cetak3d/T11_ubin_alas_depan_kiri.stl,alas,True,False,0.0,8h 11m 2s,98.0,8h 11m 2s,98.0,3.0
+stl/alas_cetak3d/T12_ubin_alas_depan_tengah.stl,alas,True,False,0.0,7h 43m 11s,98.9,7h 43m 11s,98.9,4.5
+stl/alas_cetak3d/T13_ubin_alas_depan_kanan.stl,alas,True,False,0.0,8h 11m 11s,98.3,8h 11m 11s,98.3,3.0
+stl/alas_cetak3d/T21_ubin_alas_belakang_kiri.stl,alas,True,False,0.0,7h 49m 57s,98.7,7h 49m 57s,98.7,3.0
+stl/alas_cetak3d/T22_ubin_alas_belakang_tengah.stl,alas,True,False,0.0,8h 13m 44s,98.2,8h 13m 44s,98.2,4.5
+stl/alas_cetak3d/T23_ubin_alas_belakang_kanan.stl,alas,True,False,0.0,8h 1m 2s,98.2,8h 1m 2s,98.2,3.0
+stl/dudukan/D01_dudukan_pakan_hijauan.stl,dudukan,True,False,0.0,2h 39m 36s,30.1,2h 39m 36s,30.1,0
+stl/dudukan/D02_dudukan_pakan_ternak_dan_mesin_pencacah.stl,dudukan,True,False,0.0,3h 39m 39s,51.3,3h 39m 39s,51.3,0
+stl/dudukan/D03_dudukan_produksi_ternak.stl,dudukan,True,False,0.0,7h 18m 38s,82.5,7h 18m 38s,82.5,0
+stl/dudukan/D04_dudukan_susu_sapi.stl,dudukan,True,False,0.0,1h 16m 6s,14.6,1h 16m 6s,14.6,0
+stl/dudukan/D05_dudukan_pendapatan_peternak.stl,dudukan,True,False,0.0,1h 26m 54s,16.3,1h 26m 54s,16.3,0
+stl/dudukan/D06_dudukan_limbah_ternak.stl,dudukan,True,False,0.0,2h 2m 16s,23.2,2h 2m 16s,23.2,0
+stl/dudukan/D07_dudukan_biodigester.stl,dudukan,True,False,0.0,3h 44m 32s,42.3,3h 44m 32s,42.3,0
+stl/dudukan/D08_dudukan_hasil_pengolahan_limbah.stl,dudukan,True,False,0.0,4h 29m 50s,50.6,4h 29m 50s,50.6,0
+stl/dudukan/D09_dudukan_pupuk_organik.stl,dudukan,True,False,0.0,1h 20m 45s,16.5,1h 20m 45s,16.5,0
+stl/dudukan/D10_dudukan_pencatatan_digital_si_patriot.stl,dudukan,True,False,0.0,3h 0m 23s,37.2,3h 0m 23s,37.2,0
+stl/figur/F01_rumput_pakan_hijauan.stl,figur,True,False,0.0,9h 26m 56s,28.8,9h 26m 56s,28.8,0
+stl/figur/F02_pakan_ternak.stl,figur,True,False,0.66,1h 11m 33s,9.8,1h 10m 51s,9.7,2.9
+stl/figur/F03_mesin_pencacah_rumput.stl,figur,True,False,0.0,1h 26m 36s,8.1,1h 26m 36s,8.1,23.0
+stl/figur/F04_kandang.stl,figur,True,False,0.0,6h 21m 46s,74.9,6h 21m 46s,74.9,0
+stl/figur/F05_sapi_perah_a.stl,figur,True,True,24.38,1h 32m 47s,11.3,1h 15m 54s,7.5,28.2
+stl/figur/F06_sapi_perah_b.stl,figur,True,True,24.01,1h 33m 2s,11.0,1h 17m 25s,7.5,27.4
+stl/figur/F07_peternak_badan.stl,figur,True,False,0.0,29m 9s,1.5,29m 9s,1.5,2.6
+stl/figur/F08_peternak_caping.stl,figur,True,False,0.0,6m 34s,0.4,6m 34s,0.4,0
+stl/figur/F09_botol_susu.stl,figur,True,False,0.0,56m 29s,4.9,56m 29s,4.9,6.9
+stl/figur/F10_kantong_uang_koin.stl,figur,True,False,1.4,33m 29s,3.2,33m 14s,3.2,0.1
+stl/figur/F11_limbah_ternak.stl,figur,True,False,0.0,31m 19s,3.9,31m 19s,3.9,0
+stl/figur/F12_biodigester.stl,figur,True,False,0.0,2h 27m 54s,22.5,2h 27m 54s,22.5,0
+stl/figur/F13_biogas.stl,figur,True,False,0.0,20m 39s,1.4,20m 39s,1.4,0
+stl/figur/F14_slurry.stl,figur,True,False,0.0,19m 9s,2.0,19m 9s,2.0,1.0
+stl/figur/F15_energi_dan_pupuk.stl,figur,True,False,0.0,22m 56s,1.5,22m 56s,1.5,0
+stl/figur/F16_limbah_padat.stl,figur,True,False,0.0,55m 42s,7.4,55m 42s,7.4,0.4
+stl/figur/F17_pupuk_organik.stl,figur,True,False,0.47,39m 49s,5.7,39m 40s,5.6,5.2
+stl/figur/F18_hp_si_patriot_dudukan.stl,figur,True,False,0.98,1h 24m 1s,10.4,1h 23m 27s,10.3,3.8
+stl/sapi_varian_belah/F05-1_sapi_A_belahan_kiri.stl,figur,True,True,9.82,34m 24s,4.1,31m 43s,3.6,13.8
+stl/sapi_varian_belah/F05-2_sapi_A_belahan_kanan.stl,figur,True,True,8.28,39m 42s,4.5,36m 52s,4.1,16.2
+stl/sapi_varian_belah/F06-1_sapi_B_belahan_kiri.stl,figur,True,True,9.59,38m 6s,4.5,35m 6s,4.0,15.7
+stl/sapi_varian_belah/F06-2_sapi_B_belahan_kanan.stl,figur,True,True,10.56,37m 10s,4.4,33m 46s,3.8,22.5

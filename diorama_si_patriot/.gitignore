@@ -1,0 +1,4 @@
+# cache mesh antara (bisa dibangun ulang dengan src/build_all.py)
+build/
+__pycache__/
+*.blend1

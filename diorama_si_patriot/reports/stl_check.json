@@ -1,0 +1,1564 @@
+[
+ {
+  "file": "stl/figur/F01_rumput_pakan_hijauan.stl",
+  "tri": 45844,
+  "watertight": true,
+  "winding_ok": true,
+  "is_volume": true,
+  "volume_cm3": 38.01,
+  "bodies": 1,
+  "smallest_body_mm3": null,
+  "min_z": 0.0,
+  "size_mm": [
+   70.6,
+   56.6,
+   26.4
+  ],
+  "bed_contact_mm2": 3664.2,
+  "overhang45_mm2": 0.0,
+  "overhang60_mm2": 0.0,
+  "thick_p1_mm": 1.0,
+  "thick_p5_mm": 1.07,
+  "thin_lt_0p8_pct": 0.43,
+  "manifold3d_ok": true,
+  "fits_bed": true,
+  "PASS": true,
+  "cleanup": {
+   "n_dropped": 1,
+   "dropped_mm3": 0.003,
+   "main_mm3": 38010.53,
+   "notes": [
+    "buang komponen vol=-0.0030 luas=0.281"
+   ]
+  }
+ },
+ {
+  "file": "stl/figur/F02_pakan_ternak.stl",
+  "tri": 69134,
+  "watertight": true,
+  "winding_ok": true,
+  "is_volume": true,
+  "volume_cm3": 20.58,
+  "bodies": 1,
+  "smallest_body_mm3": null,
+  "min_z": 0.0,
+  "size_mm": [
+   42.3,
+   34.6,
+   30.6
+  ],
+  "bed_contact_mm2": 548.7,
+  "overhang45_mm2": 106.5,
+  "overhang60_mm2": 30.9,
+  "thick_p1_mm": 1.66,
+  "thick_p5_mm": 2.89,
+  "thin_lt_0p8_pct": 0.2,
+  "manifold3d_ok": true,
+  "fits_bed": true,
+  "PASS": true,
+  "cleanup": {
+   "n_dropped": 410,
+   "dropped_mm3": 0.1829,
+   "main_mm3": 20581.99,
+   "notes": [
+    "buang komponen vol=-0.1352 luas=2.761",
+    "buang komponen vol=-0.0286 luas=0.843",
+    "buang komponen vol=-0.0071 luas=0.361",
+    "buang komponen vol=-0.0026 luas=0.207",
+    "buang komponen vol=-0.0025 luas=0.151",
+    "buang komponen vol=-0.0024 luas=0.153"
+   ]
+  }
+ },
+ {
+  "file": "stl/figur/F03_mesin_pencacah_rumput.stl",
+  "tri": 2454,
+  "watertight": true,
+  "winding_ok": true,
+  "is_volume": true,
+  "volume_cm3": 9.14,
+  "bodies": 1,
+  "smallest_body_mm3": null,
+  "min_z": 0.0,
+  "size_mm": [
+   38.0,
+   20.6,
+   32.7
+  ],
+  "bed_contact_mm2": 333.1,
+  "overhang45_mm2": 611.8,
+  "overhang60_mm2": 539.0,
+  "thick_p1_mm": 1.14,
+  "thick_p5_mm": 1.5,
+  "thin_lt_0p8_pct": 0.15,
+  "manifold3d_ok": true,
+  "fits_bed": true,
+  "PASS": true,
+  "cleanup": {
+   "n_dropped": 0,
+   "dropped_mm3": 0.0,
+   "main_mm3": 9137.18,
+   "notes": []
+  }
+ },
+ {
+  "file": "stl/figur/F04_kandang.stl",
+  "tri": 1314,
+  "watertight": true,
+  "winding_ok": true,
+  "is_volume": true,
+  "volume_cm3": 259.36,
+  "bodies": 1,
+  "smallest_body_mm3": null,
+  "min_z": 0.0,
+  "size_mm": [
+   65.6,
+   78.2,
+   61.9
+  ],
+  "bed_contact_mm2": 4731.4,
+  "overhang45_mm2": 127.0,
+  "overhang60_mm2": 0.0,
+  "thick_p1_mm": 1.32,
+  "thick_p5_mm": 38.02,
+  "thin_lt_0p8_pct": 0.0,
+  "manifold3d_ok": true,
+  "fits_bed": true,
+  "PASS": true,
+  "cleanup": {
+   "n_dropped": 0,
+   "dropped_mm3": 0.0,
+   "main_mm3": 259357.56,
+   "notes": []
+  }
+ },
+ {
+  "file": "stl/figur/F05_sapi_perah_a.stl",
+  "tri": 90000,
+  "watertight": true,
+  "winding_ok": true,
+  "is_volume": true,
+  "volume_cm3": 12.71,
+  "bodies": 1,
+  "smallest_body_mm3": null,
+  "min_z": 0.0,
+  "size_mm": [
+   56.4,
+   20.0,
+   39.3
+  ],
+  "bed_contact_mm2": 34.5,
+  "overhang45_mm2": 418.6,
+  "overhang60_mm2": 240.8,
+  "thick_p1_mm": 1.9,
+  "thick_p5_mm": 3.32,
+  "thin_lt_0p8_pct": 0.0,
+  "manifold3d_ok": true,
+  "fits_bed": true,
+  "PASS": true,
+  "cleanup": {
+   "n_dropped": 0,
+   "dropped_mm3": 0.0,
+   "main_mm3": 12709.81,
+   "notes": []
+  }
+ },
+ {
+  "file": "stl/figur/F06_sapi_perah_b.stl",
+  "tri": 89996,
+  "watertight": true,
+  "winding_ok": true,
+  "is_volume": true,
+  "volume_cm3": 12.89,
+  "bodies": 1,
+  "smallest_body_mm3": null,
+  "min_z": 0.0,
+  "size_mm": [
+   53.7,
+   20.6,
+   35.8
+  ],
+  "bed_contact_mm2": 34.9,
+  "overhang45_mm2": 382.2,
+  "overhang60_mm2": 219.7,
+  "thick_p1_mm": 1.92,
+  "thick_p5_mm": 3.57,
+  "thin_lt_0p8_pct": 0.0,
+  "manifold3d_ok": true,
+  "fits_bed": true,
+  "PASS": true,
+  "cleanup": {
+   "n_dropped": 1,
+   "dropped_mm3": 0.0,
+   "main_mm3": 12887.08,
+   "notes": [
+    "buang komponen vol=0.0000 luas=0.000"
+   ]
+  }
+ },
+ {
+  "file": "stl/figur/F07_peternak_badan.stl",
+  "tri": 69952,
+  "watertight": true,
+  "winding_ok": true,
+  "is_volume": true,
+  "volume_cm3": 1.24,
+  "bodies": 1,
+  "smallest_body_mm3": null,
+  "min_z": 0.0,
+  "size_mm": [
+   16.6,
+   12.9,
+   35.3
+  ],
+  "bed_contact_mm2": 145.0,
+  "overhang45_mm2": 20.1,
+  "overhang60_mm2": 11.4,
+  "thick_p1_mm": 1.47,
+  "thick_p5_mm": 1.47,
+  "thin_lt_0p8_pct": 0.0,
+  "manifold3d_ok": true,
+  "fits_bed": true,
+  "PASS": true,
+  "cleanup": {
+   "n_dropped": 28,
+   "dropped_mm3": 0.0,
+   "main_mm3": 1235.41,
+   "notes": [
+    "buang komponen vol=0.0000 luas=0.000",
+    "buang komponen vol=0.0000 luas=0.000",
+    "buang komponen vol=0.0000 luas=0.000",
+    "buang komponen vol=0.0000 luas=0.000",
+    "buang komponen vol=0.0000 luas=0.000",
+    "buang komponen vol=0.0000 luas=0.000"
+   ]
+  }
+ },
+ {
+  "file": "stl/figur/F08_peternak_caping.stl",
+  "tri": 1008,
+  "watertight": true,
+  "winding_ok": true,
+  "is_volume": true,
+  "volume_cm3": 0.34,
+  "bodies": 1,
+  "smallest_body_mm3": null,
+  "min_z": 0.0,
+  "size_mm": [
+   13.2,
+   13.2,
+   6.0
+  ],
+  "bed_contact_mm2": 119.7,
+  "overhang45_mm2": 18.0,
+  "overhang60_mm2": 18.0,
+  "thick_p1_mm": 0.92,
+  "thick_p5_mm": 1.13,
+  "thin_lt_0p8_pct": 0.0,
+  "manifold3d_ok": true,
+  "fits_bed": true,
+  "PASS": true,
+  "cleanup": {
+   "n_dropped": 0,
+   "dropped_mm3": 0.0,
+   "main_mm3": 339.92,
+   "notes": []
+  }
+ },
+ {
+  "file": "stl/figur/F09_botol_susu.stl",
+  "tri": 3592,
+  "watertight": true,
+  "winding_ok": true,
+  "is_volume": true,
+  "volume_cm3": 6.01,
+  "bodies": 1,
+  "smallest_body_mm3": null,
+  "min_z": 0.0,
+  "size_mm": [
+   20.4,
+   18.6,
+   31.0
+  ],
+  "bed_contact_mm2": 202.1,
+  "overhang45_mm2": 27.6,
+  "overhang60_mm2": 27.6,
+  "thick_p1_mm": 2.6,
+  "thick_p5_mm": 5.65,
+  "thin_lt_0p8_pct": 0.0,
+  "manifold3d_ok": true,
+  "fits_bed": true,
+  "PASS": true,
+  "cleanup": {
+   "n_dropped": 0,
+   "dropped_mm3": 0.0,
+   "main_mm3": 6006.27,
+   "notes": []
+  }
+ },
+ {
+  "file": "stl/figur/F10_kantong_uang_koin.stl",
+  "tri": 61192,
+  "watertight": true,
+  "winding_ok": true,
+  "is_volume": true,
+  "volume_cm3": 4.37,
+  "bodies": 1,
+  "smallest_body_mm3": null,
+  "min_z": 0.0,
+  "size_mm": [
+   27.4,
+   23.0,
+   22.1
+  ],
+  "bed_contact_mm2": 255.7,
+  "overhang45_mm2": 58.8,
+  "overhang60_mm2": 8.9,
+  "thick_p1_mm": 0.86,
+  "thick_p5_mm": 1.3,
+  "thin_lt_0p8_pct": 0.55,
+  "manifold3d_ok": true,
+  "fits_bed": true,
+  "PASS": true,
+  "cleanup": {
+   "n_dropped": 0,
+   "dropped_mm3": 0.0,
+   "main_mm3": 4372.79,
+   "notes": []
+  }
+ },
+ {
+  "file": "stl/figur/F11_limbah_ternak.stl",
+  "tri": 59998,
+  "watertight": true,
+  "winding_ok": true,
+  "is_volume": true,
+  "volume_cm3": 7.72,
+  "bodies": 1,
+  "smallest_body_mm3": null,
+  "min_z": 0.0,
+  "size_mm": [
+   41.8,
+   29.4,
+   19.6
+  ],
+  "bed_contact_mm2": 932.1,
+  "overhang45_mm2": 6.6,
+  "overhang60_mm2": 0.0,
+  "thick_p1_mm": 0.95,
+  "thick_p5_mm": 1.91,
+  "thin_lt_0p8_pct": 0.47,
+  "manifold3d_ok": true,
+  "fits_bed": true,
+  "PASS": true,
+  "cleanup": {
+   "n_dropped": 0,
+   "dropped_mm3": 0.0,
+   "main_mm3": 7721.14,
+   "notes": []
+  }
+ },
+ {
+  "file": "stl/figur/F12_biodigester.stl",
+  "tri": 10044,
+  "watertight": true,
+  "winding_ok": true,
+  "is_volume": true,
+  "volume_cm3": 62.54,
+  "bodies": 1,
+  "smallest_body_mm3": null,
+  "min_z": 0.0,
+  "size_mm": [
+   80.3,
+   59.5,
+   39.0
+  ],
+  "bed_contact_mm2": 2426.0,
+  "overhang45_mm2": 2.1,
+  "overhang60_mm2": 0.3,
+  "thick_p1_mm": 1.6,
+  "thick_p5_mm": 2.1,
+  "thin_lt_0p8_pct": 0.0,
+  "manifold3d_ok": true,
+  "fits_bed": true,
+  "PASS": true,
+  "cleanup": {
+   "n_dropped": 7,
+   "dropped_mm3": 0.0,
+   "main_mm3": 62537.8,
+   "notes": [
+    "buang komponen vol=0.0000 luas=0.000",
+    "buang komponen vol=0.0000 luas=0.000",
+    "buang komponen vol=0.0000 luas=0.000",
+    "buang komponen vol=0.0000 luas=0.000",
+    "buang komponen vol=0.0000 luas=0.000",
+    "buang komponen vol=0.0000 luas=0.000"
+   ]
+  }
+ },
+ {
+  "file": "stl/figur/F13_biogas.stl",
+  "tri": 49890,
+  "watertight": true,
+  "winding_ok": true,
+  "is_volume": true,
+  "volume_cm3": 1.52,
+  "bodies": 1,
+  "smallest_body_mm3": null,
+  "min_z": 0.0,
+  "size_mm": [
+   16.0,
+   16.0,
+   21.8
+  ],
+  "bed_contact_mm2": 153.1,
+  "overhang45_mm2": 0.6,
+  "overhang60_mm2": 0.0,
+  "thick_p1_mm": 2.17,
+  "thick_p5_mm": 4.0,
+  "thin_lt_0p8_pct": 0.0,
+  "manifold3d_ok": true,
+  "fits_bed": true,
+  "PASS": true,
+  "cleanup": {
+   "n_dropped": 57,
+   "dropped_mm3": 0.0,
+   "main_mm3": 1523.05,
+   "notes": [
+    "buang komponen vol=0.0000 luas=0.000",
+    "buang komponen vol=0.0000 luas=0.000",
+    "buang komponen vol=0.0000 luas=0.000",
+    "buang komponen vol=0.0000 luas=0.000",
+    "buang komponen vol=0.0000 luas=0.000",
+    "buang komponen vol=0.0000 luas=0.000"
+   ]
+  }
+ },
+ {
+  "file": "stl/figur/F14_slurry.stl",
+  "tri": 1924,
+  "watertight": true,
+  "winding_ok": true,
+  "is_volume": true,
+  "volume_cm3": 3.25,
+  "bodies": 1,
+  "smallest_body_mm3": null,
+  "min_z": 0.0,
+  "size_mm": [
+   17.0,
+   11.5,
+   22.5
+  ],
+  "bed_contact_mm2": 76.9,
+  "overhang45_mm2": 62.0,
+  "overhang60_mm2": 16.6,
+  "thick_p1_mm": 0.82,
+  "thick_p5_mm": 1.8,
+  "thin_lt_0p8_pct": 0.92,
+  "manifold3d_ok": true,
+  "fits_bed": true,
+  "PASS": true,
+  "cleanup": {
+   "n_dropped": 0,
+   "dropped_mm3": 0.0,
+   "main_mm3": 3251.81,
+   "notes": []
+  }
+ },
+ {
+  "file": "stl/figur/F15_energi_dan_pupuk.stl",
+  "tri": 54998,
+  "watertight": true,
+  "winding_ok": true,
+  "is_volume": true,
+  "volume_cm3": 1.44,
+  "bodies": 1,
+  "smallest_body_mm3": null,
+  "min_z": 0.0,
+  "size_mm": [
+   26.1,
+   16.2,
+   17.6
+  ],
+  "bed_contact_mm2": 317.7,
+  "overhang45_mm2": 16.6,
+  "overhang60_mm2": 4.3,
+  "thick_p1_mm": 0.69,
+  "thick_p5_mm": 1.1,
+  "thin_lt_0p8_pct": 1.6,
+  "manifold3d_ok": true,
+  "fits_bed": true,
+  "PASS": true,
+  "cleanup": {
+   "n_dropped": 1,
+   "dropped_mm3": 0.0,
+   "main_mm3": 1443.07,
+   "notes": [
+    "buang komponen vol=0.0000 luas=0.000"
+   ]
+  }
+ },
+ {
+  "file": "stl/figur/F16_limbah_padat.stl",
+  "tri": 42186,
+  "watertight": true,
+  "winding_ok": true,
+  "is_volume": true,
+  "volume_cm3": 16.63,
+  "bodies": 1,
+  "smallest_body_mm3": null,
+  "min_z": 0.0,
+  "size_mm": [
+   45.8,
+   32.9,
+   12.7
+  ],
+  "bed_contact_mm2": 1306.6,
+  "overhang45_mm2": 93.1,
+  "overhang60_mm2": 32.6,
+  "thick_p1_mm": 3.5,
+  "thick_p5_mm": 4.48,
+  "thin_lt_0p8_pct": 0.03,
+  "manifold3d_ok": true,
+  "fits_bed": true,
+  "PASS": true,
+  "cleanup": {
+   "n_dropped": 174,
+   "dropped_mm3": 29.8326,
+   "main_mm3": 16626.62,
+   "notes": [
+    "buang komponen vol=-1.0596 luas=8.037",
+    "buang komponen vol=-0.9257 luas=8.487",
+    "buang komponen vol=-0.8142 luas=8.308",
+    "buang komponen vol=-0.7144 luas=7.202",
+    "buang komponen vol=-0.6704 luas=5.295",
+    "buang komponen vol=-0.6117 luas=5.920"
+   ]
+  }
+ },
+ {
+  "file": "stl/figur/F17_pupuk_organik.stl",
+  "tri": 48586,
+  "watertight": true,
+  "winding_ok": true,
+  "is_volume": true,
+  "volume_cm3": 10.19,
+  "bodies": 1,
+  "smallest_body_mm3": null,
+  "min_z": 0.0,
+  "size_mm": [
+   25.3,
+   22.2,
+   35.8
+  ],
+  "bed_contact_mm2": 262.7,
+  "overhang45_mm2": 79.9,
+  "overhang60_mm2": 25.8,
+  "thick_p1_mm": 1.32,
+  "thick_p5_mm": 2.5,
+  "thin_lt_0p8_pct": 0.22,
+  "manifold3d_ok": true,
+  "fits_bed": true,
+  "PASS": true,
+  "cleanup": {
+   "n_dropped": 1,
+   "dropped_mm3": 0.0002,
+   "main_mm3": 10192.91,
+   "notes": [
+    "buang komponen vol=-0.0002 luas=0.028"
+   ]
+  }
+ },
+ {
+  "file": "stl/figur/F18_hp_si_patriot_dudukan.stl",
+  "tri": 1496,
+  "watertight": true,
+  "winding_ok": true,
+  "is_volume": true,
+  "volume_cm3": 13.37,
+  "bodies": 1,
+  "smallest_body_mm3": null,
+  "min_z": 0.0,
+  "size_mm": [
+   39.0,
+   36.0,
+   50.0
+  ],
+  "bed_contact_mm2": 1129.4,
+  "overhang45_mm2": 69.5,
+  "overhang60_mm2": 36.2,
+  "thick_p1_mm": 1.72,
+  "thick_p5_mm": 3.4,
+  "thin_lt_0p8_pct": 0.2,
+  "manifold3d_ok": true,
+  "fits_bed": true,
+  "PASS": true,
+  "cleanup": {
+   "n_dropped": 0,
+   "dropped_mm3": 0.0,
+   "main_mm3": 13369.13,
+   "notes": []
+  }
+ },
+ {
+  "file": "stl/sapi_varian_belah/F05-1_sapi_A_belahan_kiri.stl",
+  "tri": 42614,
+  "watertight": true,
+  "winding_ok": true,
+  "is_volume": true,
+  "volume_cm3": 6.04,
+  "bodies": 1,
+  "smallest_body_mm3": null,
+  "min_z": 0.0,
+  "size_mm": [
+   52.1,
+   39.3,
+   9.2
+  ],
+  "bed_contact_mm2": 901.9,
+  "overhang45_mm2": 127.9,
+  "overhang60_mm2": 83.1,
+  "thick_p1_mm": 0.76,
+  "thick_p5_mm": 1.47,
+  "thin_lt_0p8_pct": 1.1,
+  "manifold3d_ok": true,
+  "fits_bed": true,
+  "PASS": true,
+  "cleanup": {
+   "n_dropped": 0,
+   "dropped_mm3": 0.0,
+   "main_mm3": 6036.64,
+   "notes": []
+  }
+ },
+ {
+  "file": "stl/sapi_varian_belah/F05-2_sapi_A_belahan_kanan.stl",
+  "tri": 51142,
+  "watertight": true,
+  "winding_ok": true,
+  "is_volume": true,
+  "volume_cm3": 6.6,
+  "bodies": 1,
+  "smallest_body_mm3": null,
+  "min_z": 0.0,
+  "size_mm": [
+   56.4,
+   39.3,
+   10.8
+  ],
+  "bed_contact_mm2": 901.9,
+  "overhang45_mm2": 147.5,
+  "overhang60_mm2": 91.9,
+  "thick_p1_mm": 1.09,
+  "thick_p5_mm": 1.72,
+  "thin_lt_0p8_pct": 0.55,
+  "manifold3d_ok": true,
+  "fits_bed": true,
+  "PASS": true,
+  "cleanup": {
+   "n_dropped": 0,
+   "dropped_mm3": 0.0,
+   "main_mm3": 6595.07,
+   "notes": []
+  }
+ },
+ {
+  "file": "stl/sapi_varian_belah/F06-1_sapi_B_belahan_kiri.stl",
+  "tri": 46234,
+  "watertight": true,
+  "winding_ok": true,
+  "is_volume": true,
+  "volume_cm3": 6.59,
+  "bodies": 1,
+  "smallest_body_mm3": null,
+  "min_z": 0.0,
+  "size_mm": [
+   53.2,
+   35.8,
+   11.4
+  ],
+  "bed_contact_mm2": 906.7,
+  "overhang45_mm2": 129.9,
+  "overhang60_mm2": 84.0,
+  "thick_p1_mm": 1.09,
+  "thick_p5_mm": 2.73,
+  "thin_lt_0p8_pct": 0.73,
+  "manifold3d_ok": true,
+  "fits_bed": true,
+  "PASS": true,
+  "cleanup": {
+   "n_dropped": 0,
+   "dropped_mm3": 0.0,
+   "main_mm3": 6590.28,
+   "notes": []
+  }
+ },
+ {
+  "file": "stl/sapi_varian_belah/F06-2_sapi_B_belahan_kanan.stl",
+  "tri": 47318,
+  "watertight": true,
+  "winding_ok": true,
+  "is_volume": true,
+  "volume_cm3": 6.22,
+  "bodies": 1,
+  "smallest_body_mm3": null,
+  "min_z": 0.0,
+  "size_mm": [
+   53.0,
+   35.8,
+   9.2
+  ],
+  "bed_contact_mm2": 906.7,
+  "overhang45_mm2": 158.0,
+  "overhang60_mm2": 101.2,
+  "thick_p1_mm": 0.57,
+  "thick_p5_mm": 1.79,
+  "thin_lt_0p8_pct": 1.43,
+  "manifold3d_ok": true,
+  "fits_bed": true,
+  "PASS": true,
+  "cleanup": {
+   "n_dropped": 0,
+   "dropped_mm3": 0.0,
+   "main_mm3": 6218.71,
+   "notes": []
+  }
+ },
+ {
+  "file": "stl/dudukan/D01_dudukan_pakan_hijauan.stl",
+  "tri": 40596,
+  "watertight": true,
+  "winding_ok": true,
+  "is_volume": true,
+  "volume_cm3": 78.28,
+  "bodies": 1,
+  "smallest_body_mm3": null,
+  "min_z": 0.0,
+  "size_mm": [
+   94.0,
+   86.0,
+   10.8
+  ],
+  "bed_contact_mm2": 7615.8,
+  "overhang45_mm2": 36.3,
+  "overhang60_mm2": 0.0,
+  "thick_p1_mm": 1.28,
+  "thick_p5_mm": 10.0,
+  "thin_lt_0p8_pct": 0.03,
+  "manifold3d_ok": true,
+  "fits_bed": true,
+  "PASS": true,
+  "cleanup": {
+   "n_dropped": 0,
+   "dropped_mm3": 0.0,
+   "main_mm3": 78284.05,
+   "notes": []
+  }
+ },
+ {
+  "file": "stl/dudukan_varian_stiker/D01_dudukan_pakan_hijauan_stiker.stl",
+  "tri": 38374,
+  "watertight": true,
+  "winding_ok": true,
+  "is_volume": true,
+  "volume_cm3": 77.75,
+  "bodies": 1,
+  "smallest_body_mm3": null,
+  "min_z": 0.0,
+  "size_mm": [
+   94.0,
+   86.0,
+   10.0
+  ],
+  "bed_contact_mm2": 7615.8,
+  "overhang45_mm2": 36.3,
+  "overhang60_mm2": 0.0,
+  "thick_p1_mm": 9.5,
+  "thick_p5_mm": 9.5,
+  "thin_lt_0p8_pct": 0.0,
+  "manifold3d_ok": true,
+  "fits_bed": true,
+  "PASS": true,
+  "cleanup": {
+   "n_dropped": 0,
+   "dropped_mm3": 0.0,
+   "main_mm3": 77747.49,
+   "notes": []
+  }
+ },
+ {
+  "file": "stl/dudukan/D02_dudukan_pakan_ternak_dan_mesin_pencacah.stl",
+  "tri": 42984,
+  "watertight": true,
+  "winding_ok": true,
+  "is_volume": true,
+  "volume_cm3": 178.56,
+  "bodies": 1,
+  "smallest_body_mm3": null,
+  "min_z": 0.0,
+  "size_mm": [
+   112.0,
+   76.5,
+   22.8
+  ],
+  "bed_contact_mm2": 7871.1,
+  "overhang45_mm2": 34.8,
+  "overhang60_mm2": 0.0,
+  "thick_p1_mm": 1.02,
+  "thick_p5_mm": 22.0,
+  "thin_lt_0p8_pct": 0.0,
+  "manifold3d_ok": true,
+  "fits_bed": true,
+  "PASS": true,
+  "cleanup": {
+   "n_dropped": 0,
+   "dropped_mm3": 0.0,
+   "main_mm3": 178558.09,
+   "notes": []
+  }
+ },
+ {
+  "file": "stl/dudukan_varian_stiker/D02_dudukan_pakan_ternak_dan_mesin_pencacah_stiker.stl",
+  "tri": 38692,
+  "watertight": true,
+  "winding_ok": true,
+  "is_volume": true,
+  "volume_cm3": 177.71,
+  "bodies": 1,
+  "smallest_body_mm3": null,
+  "min_z": 0.0,
+  "size_mm": [
+   112.0,
+   76.5,
+   22.0
+  ],
+  "bed_contact_mm2": 7871.1,
+  "overhang45_mm2": 34.8,
+  "overhang60_mm2": 0.0,
+  "thick_p1_mm": 21.5,
+  "thick_p5_mm": 21.5,
+  "thin_lt_0p8_pct": 0.0,
+  "manifold3d_ok": true,
+  "fits_bed": true,
+  "PASS": true,
+  "cleanup": {
+   "n_dropped": 0,
+   "dropped_mm3": 0.0,
+   "main_mm3": 177705.0,
+   "notes": []
+  }
+ },
+ {
+  "file": "stl/dudukan/D03_dudukan_produksi_ternak.stl",
+  "tri": 39530,
+  "watertight": true,
+  "winding_ok": true,
+  "is_volume": true,
+  "volume_cm3": 226.49,
+  "bodies": 1,
+  "smallest_body_mm3": null,
+  "min_z": 0.0,
+  "size_mm": [
+   172.0,
+   136.0,
+   10.8
+  ],
+  "bed_contact_mm2": 22270.5,
+  "overhang45_mm2": 43.9,
+  "overhang60_mm2": 0.0,
+  "thick_p1_mm": 9.61,
+  "thick_p5_mm": 10.0,
+  "thin_lt_0p8_pct": 0.03,
+  "manifold3d_ok": true,
+  "fits_bed": true,
+  "PASS": true,
+  "cleanup": {
+   "n_dropped": 0,
+   "dropped_mm3": 0.0,
+   "main_mm3": 226492.38,
+   "notes": []
+  }
+ },
+ {
+  "file": "stl/dudukan_varian_stiker/D03_dudukan_produksi_ternak_stiker.stl",
+  "tri": 37184,
+  "watertight": true,
+  "winding_ok": true,
+  "is_volume": true,
+  "volume_cm3": 225.88,
+  "bodies": 1,
+  "smallest_body_mm3": null,
+  "min_z": 0.0,
+  "size_mm": [
+   172.0,
+   136.0,
+   10.0
+  ],
+  "bed_contact_mm2": 22270.5,
+  "overhang45_mm2": 43.9,
+  "overhang60_mm2": 0.0,
+  "thick_p1_mm": 9.5,
+  "thick_p5_mm": 9.78,
+  "thin_lt_0p8_pct": 0.0,
+  "manifold3d_ok": true,
+  "fits_bed": true,
+  "PASS": true,
+  "cleanup": {
+   "n_dropped": 0,
+   "dropped_mm3": 0.0,
+   "main_mm3": 225875.49,
+   "notes": []
+  }
+ },
+ {
+  "file": "stl/dudukan/D04_dudukan_susu_sapi.stl",
+  "tri": 42016,
+  "watertight": true,
+  "winding_ok": true,
+  "is_volume": true,
+  "volume_cm3": 36.07,
+  "bodies": 1,
+  "smallest_body_mm3": null,
+  "min_z": 0.0,
+  "size_mm": [
+   68.0,
+   68.0,
+   10.8
+  ],
+  "bed_contact_mm2": 3468.7,
+  "overhang45_mm2": 10.8,
+  "overhang60_mm2": 0.0,
+  "thick_p1_mm": 1.12,
+  "thick_p5_mm": 9.98,
+  "thin_lt_0p8_pct": 0.0,
+  "manifold3d_ok": true,
+  "fits_bed": true,
+  "PASS": true,
+  "cleanup": {
+   "n_dropped": 0,
+   "dropped_mm3": 0.0,
+   "main_mm3": 36070.37,
+   "notes": []
+  }
+ },
+ {
+  "file": "stl/dudukan_varian_stiker/D04_dudukan_susu_sapi_stiker.stl",
+  "tri": 39326,
+  "watertight": true,
+  "winding_ok": true,
+  "is_volume": true,
+  "volume_cm3": 35.77,
+  "bodies": 1,
+  "smallest_body_mm3": null,
+  "min_z": 0.0,
+  "size_mm": [
+   68.0,
+   68.0,
+   10.0
+  ],
+  "bed_contact_mm2": 3468.7,
+  "overhang45_mm2": 10.8,
+  "overhang60_mm2": 0.0,
+  "thick_p1_mm": 9.5,
+  "thick_p5_mm": 9.5,
+  "thin_lt_0p8_pct": 0.0,
+  "manifold3d_ok": true,
+  "fits_bed": true,
+  "PASS": true,
+  "cleanup": {
+   "n_dropped": 0,
+   "dropped_mm3": 0.0,
+   "main_mm3": 35768.23,
+   "notes": []
+  }
+ },
+ {
+  "file": "stl/dudukan/D05_dudukan_pendapatan_peternak.stl",
+  "tri": 42050,
+  "watertight": true,
+  "winding_ok": true,
+  "is_volume": true,
+  "volume_cm3": 40.53,
+  "bodies": 1,
+  "smallest_body_mm3": null,
+  "min_z": 0.0,
+  "size_mm": [
+   72.0,
+   72.0,
+   10.8
+  ],
+  "bed_contact_mm2": 3898.8,
+  "overhang45_mm2": 14.5,
+  "overhang60_mm2": 0.0,
+  "thick_p1_mm": 0.94,
+  "thick_p5_mm": 9.8,
+  "thin_lt_0p8_pct": 0.03,
+  "manifold3d_ok": true,
+  "fits_bed": true,
+  "PASS": true,
+  "cleanup": {
+   "n_dropped": 0,
+   "dropped_mm3": 0.0,
+   "main_mm3": 40532.69,
+   "notes": []
+  }
+ },
+ {
+  "file": "stl/dudukan_varian_stiker/D05_dudukan_pendapatan_peternak_stiker.stl",
+  "tri": 38642,
+  "watertight": true,
+  "winding_ok": true,
+  "is_volume": true,
+  "volume_cm3": 39.94,
+  "bodies": 1,
+  "smallest_body_mm3": null,
+  "min_z": 0.0,
+  "size_mm": [
+   72.0,
+   72.0,
+   10.0
+  ],
+  "bed_contact_mm2": 3898.8,
+  "overhang45_mm2": 14.5,
+  "overhang60_mm2": 0.0,
+  "thick_p1_mm": 9.5,
+  "thick_p5_mm": 9.5,
+  "thin_lt_0p8_pct": 0.07,
+  "manifold3d_ok": true,
+  "fits_bed": true,
+  "PASS": true,
+  "cleanup": {
+   "n_dropped": 0,
+   "dropped_mm3": 0.0,
+   "main_mm3": 39936.83,
+   "notes": []
+  }
+ },
+ {
+  "file": "stl/dudukan/D06_dudukan_limbah_ternak.stl",
+  "tri": 41436,
+  "watertight": true,
+  "winding_ok": true,
+  "is_volume": true,
+  "volume_cm3": 59.37,
+  "bodies": 1,
+  "smallest_body_mm3": null,
+  "min_z": 0.0,
+  "size_mm": [
+   92.0,
+   74.0,
+   10.8
+  ],
+  "bed_contact_mm2": 5755.4,
+  "overhang45_mm2": 33.4,
+  "overhang60_mm2": 0.0,
+  "thick_p1_mm": 1.13,
+  "thick_p5_mm": 10.0,
+  "thin_lt_0p8_pct": 0.05,
+  "manifold3d_ok": true,
+  "fits_bed": true,
+  "PASS": true,
+  "cleanup": {
+   "n_dropped": 0,
+   "dropped_mm3": 0.0,
+   "main_mm3": 59370.08,
+   "notes": []
+  }
+ },
+ {
+  "file": "stl/dudukan_varian_stiker/D06_dudukan_limbah_ternak_stiker.stl",
+  "tri": 39404,
+  "watertight": true,
+  "winding_ok": true,
+  "is_volume": true,
+  "volume_cm3": 58.91,
+  "bodies": 1,
+  "smallest_body_mm3": null,
+  "min_z": 0.0,
+  "size_mm": [
+   92.0,
+   74.0,
+   10.0
+  ],
+  "bed_contact_mm2": 5755.4,
+  "overhang45_mm2": 33.4,
+  "overhang60_mm2": 0.0,
+  "thick_p1_mm": 9.5,
+  "thick_p5_mm": 9.5,
+  "thin_lt_0p8_pct": 0.0,
+  "manifold3d_ok": true,
+  "fits_bed": true,
+  "PASS": true,
+  "cleanup": {
+   "n_dropped": 0,
+   "dropped_mm3": 0.0,
+   "main_mm3": 58907.73,
+   "notes": []
+  }
+ },
+ {
+  "file": "stl/dudukan/D07_dudukan_biodigester.stl",
+  "tri": 41850,
+  "watertight": true,
+  "winding_ok": true,
+  "is_volume": true,
+  "volume_cm3": 112.39,
+  "bodies": 1,
+  "smallest_body_mm3": null,
+  "min_z": 0.0,
+  "size_mm": [
+   124.0,
+   104.0,
+   10.8
+  ],
+  "bed_contact_mm2": 10988.7,
+  "overhang45_mm2": 52.5,
+  "overhang60_mm2": 0.0,
+  "thick_p1_mm": 9.35,
+  "thick_p5_mm": 10.0,
+  "thin_lt_0p8_pct": 0.0,
+  "manifold3d_ok": true,
+  "fits_bed": true,
+  "PASS": true,
+  "cleanup": {
+   "n_dropped": 0,
+   "dropped_mm3": 0.0,
+   "main_mm3": 112391.37,
+   "notes": []
+  }
+ },
+ {
+  "file": "stl/dudukan_varian_stiker/D07_dudukan_biodigester_stiker.stl",
+  "tri": 39614,
+  "watertight": true,
+  "winding_ok": true,
+  "is_volume": true,
+  "volume_cm3": 111.89,
+  "bodies": 1,
+  "smallest_body_mm3": null,
+  "min_z": 0.0,
+  "size_mm": [
+   124.0,
+   104.0,
+   10.0
+  ],
+  "bed_contact_mm2": 10988.7,
+  "overhang45_mm2": 52.5,
+  "overhang60_mm2": 0.0,
+  "thick_p1_mm": 9.5,
+  "thick_p5_mm": 9.5,
+  "thin_lt_0p8_pct": 0.0,
+  "manifold3d_ok": true,
+  "fits_bed": true,
+  "PASS": true,
+  "cleanup": {
+   "n_dropped": 0,
+   "dropped_mm3": 0.0,
+   "main_mm3": 111888.73,
+   "notes": []
+  }
+ },
+ {
+  "file": "stl/dudukan/D08_dudukan_hasil_pengolahan_limbah.stl",
+  "tri": 46642,
+  "watertight": true,
+  "winding_ok": true,
+  "is_volume": true,
+  "volume_cm3": 135.56,
+  "bodies": 1,
+  "smallest_body_mm3": null,
+  "min_z": 0.0,
+  "size_mm": [
+   144.0,
+   105.0,
+   10.8
+  ],
+  "bed_contact_mm2": 13255.0,
+  "overhang45_mm2": 52.9,
+  "overhang60_mm2": 0.0,
+  "thick_p1_mm": 1.01,
+  "thick_p5_mm": 10.0,
+  "thin_lt_0p8_pct": 0.05,
+  "manifold3d_ok": true,
+  "fits_bed": true,
+  "PASS": true,
+  "cleanup": {
+   "n_dropped": 0,
+   "dropped_mm3": 0.0,
+   "main_mm3": 135555.88,
+   "notes": []
+  }
+ },
+ {
+  "file": "stl/dudukan_varian_stiker/D08_dudukan_hasil_pengolahan_limbah_stiker.stl",
+  "tri": 39980,
+  "watertight": true,
+  "winding_ok": true,
+  "is_volume": true,
+  "volume_cm3": 134.33,
+  "bodies": 1,
+  "smallest_body_mm3": null,
+  "min_z": 0.0,
+  "size_mm": [
+   144.0,
+   105.0,
+   10.0
+  ],
+  "bed_contact_mm2": 13255.0,
+  "overhang45_mm2": 52.9,
+  "overhang60_mm2": 0.0,
+  "thick_p1_mm": 9.5,
+  "thick_p5_mm": 9.5,
+  "thin_lt_0p8_pct": 0.03,
+  "manifold3d_ok": true,
+  "fits_bed": true,
+  "PASS": true,
+  "cleanup": {
+   "n_dropped": 0,
+   "dropped_mm3": 0.0,
+   "main_mm3": 134332.22,
+   "notes": []
+  }
+ },
+ {
+  "file": "stl/dudukan/D09_dudukan_pupuk_organik.stl",
+  "tri": 41408,
+  "watertight": true,
+  "winding_ok": true,
+  "is_volume": true,
+  "volume_cm3": 44.81,
+  "bodies": 1,
+  "smallest_body_mm3": null,
+  "min_z": 0.0,
+  "size_mm": [
+   58.0,
+   64.0,
+   13.8
+  ],
+  "bed_contact_mm2": 3296.9,
+  "overhang45_mm2": 24.7,
+  "overhang60_mm2": 0.0,
+  "thick_p1_mm": 1.0,
+  "thick_p5_mm": 12.91,
+  "thin_lt_0p8_pct": 0.15,
+  "manifold3d_ok": true,
+  "fits_bed": true,
+  "PASS": true,
+  "cleanup": {
+   "n_dropped": 0,
+   "dropped_mm3": 0.0,
+   "main_mm3": 44809.86,
+   "notes": []
+  }
+ },
+ {
+  "file": "stl/dudukan_varian_stiker/D09_dudukan_pupuk_organik_stiker.stl",
+  "tri": 37958,
+  "watertight": true,
+  "winding_ok": true,
+  "is_volume": true,
+  "volume_cm3": 44.4,
+  "bodies": 1,
+  "smallest_body_mm3": null,
+  "min_z": 0.0,
+  "size_mm": [
+   58.0,
+   64.0,
+   13.0
+  ],
+  "bed_contact_mm2": 3296.9,
+  "overhang45_mm2": 24.7,
+  "overhang60_mm2": 0.0,
+  "thick_p1_mm": 12.5,
+  "thick_p5_mm": 12.5,
+  "thin_lt_0p8_pct": 0.0,
+  "manifold3d_ok": true,
+  "fits_bed": true,
+  "PASS": true,
+  "cleanup": {
+   "n_dropped": 0,
+   "dropped_mm3": 0.0,
+   "main_mm3": 44401.14,
+   "notes": []
+  }
+ },
+ {
+  "file": "stl/dudukan/D10_dudukan_pencatatan_digital_si_patriot.stl",
+  "tri": 43338,
+  "watertight": true,
+  "winding_ok": true,
+  "is_volume": true,
+  "volume_cm3": 111.36,
+  "bodies": 1,
+  "smallest_body_mm3": null,
+  "min_z": 0.0,
+  "size_mm": [
+   104.0,
+   80.0,
+   14.8
+  ],
+  "bed_contact_mm2": 7736.2,
+  "overhang45_mm2": 41.5,
+  "overhang60_mm2": 0.0,
+  "thick_p1_mm": 1.02,
+  "thick_p5_mm": 14.0,
+  "thin_lt_0p8_pct": 0.07,
+  "manifold3d_ok": true,
+  "fits_bed": true,
+  "PASS": true,
+  "cleanup": {
+   "n_dropped": 0,
+   "dropped_mm3": 0.0,
+   "main_mm3": 111364.53,
+   "notes": []
+  }
+ },
+ {
+  "file": "stl/dudukan_varian_stiker/D10_dudukan_pencatatan_digital_si_patriot_stiker.stl",
+  "tri": 38288,
+  "watertight": true,
+  "winding_ok": true,
+  "is_volume": true,
+  "volume_cm3": 110.47,
+  "bodies": 1,
+  "smallest_body_mm3": null,
+  "min_z": 0.0,
+  "size_mm": [
+   104.0,
+   80.0,
+   14.0
+  ],
+  "bed_contact_mm2": 7736.2,
+  "overhang45_mm2": 41.5,
+  "overhang60_mm2": 0.0,
+  "thick_p1_mm": 13.5,
+  "thick_p5_mm": 13.5,
+  "thin_lt_0p8_pct": 0.0,
+  "manifold3d_ok": true,
+  "fits_bed": true,
+  "PASS": true,
+  "cleanup": {
+   "n_dropped": 0,
+   "dropped_mm3": 0.0,
+   "main_mm3": 110473.07,
+   "notes": []
+  }
+ },
+ {
+  "file": "stl/alas_cetak3d/T11_ubin_alas_depan_kiri.stl",
+  "tri": 1262,
+  "watertight": true,
+  "winding_ok": true,
+  "is_volume": true,
+  "volume_cm3": 276.09,
+  "bodies": 1,
+  "smallest_body_mm3": null,
+  "min_z": 0.0,
+  "size_mm": [
+   200.0,
+   180.0,
+   8.0
+  ],
+  "bed_contact_mm2": 35338.1,
+  "overhang45_mm2": 661.9,
+  "overhang60_mm2": 661.9,
+  "thick_p1_mm": 3.8,
+  "thick_p5_mm": 7.4,
+  "thin_lt_0p8_pct": 0.0,
+  "manifold3d_ok": true,
+  "fits_bed": true,
+  "PASS": true,
+  "cleanup": {
+   "n_dropped": 0,
+   "dropped_mm3": 0.0,
+   "main_mm3": 276087.92,
+   "notes": []
+  }
+ },
+ {
+  "file": "stl/alas_cetak3d/T12_ubin_alas_depan_tengah.stl",
+  "tri": 1584,
+  "watertight": true,
+  "winding_ok": true,
+  "is_volume": true,
+  "volume_cm3": 273.36,
+  "bodies": 1,
+  "smallest_body_mm3": null,
+  "min_z": 0.0,
+  "size_mm": [
+   200.0,
+   180.0,
+   8.0
+  ],
+  "bed_contact_mm2": 35007.1,
+  "overhang45_mm2": 992.9,
+  "overhang60_mm2": 992.9,
+  "thick_p1_mm": 3.8,
+  "thick_p5_mm": 7.4,
+  "thin_lt_0p8_pct": 0.0,
+  "manifold3d_ok": true,
+  "fits_bed": true,
+  "PASS": true,
+  "cleanup": {
+   "n_dropped": 0,
+   "dropped_mm3": 0.0,
+   "main_mm3": 273355.16,
+   "notes": []
+  }
+ },
+ {
+  "file": "stl/alas_cetak3d/T13_ubin_alas_depan_kanan.stl",
+  "tri": 1270,
+  "watertight": true,
+  "winding_ok": true,
+  "is_volume": true,
+  "volume_cm3": 278.91,
+  "bodies": 1,
+  "smallest_body_mm3": null,
+  "min_z": 0.0,
+  "size_mm": [
+   200.0,
+   180.0,
+   8.0
+  ],
+  "bed_contact_mm2": 35338.1,
+  "overhang45_mm2": 661.9,
+  "overhang60_mm2": 661.9,
+  "thick_p1_mm": 3.8,
+  "thick_p5_mm": 7.4,
+  "thin_lt_0p8_pct": 0.0,
+  "manifold3d_ok": true,
+  "fits_bed": true,
+  "PASS": true,
+  "cleanup": {
+   "n_dropped": 0,
+   "dropped_mm3": 0.0,
+   "main_mm3": 278908.32,
+   "notes": []
+  }
+ },
+ {
+  "file": "stl/alas_cetak3d/T21_ubin_alas_belakang_kiri.stl",
+  "tri": 1278,
+  "watertight": true,
+  "winding_ok": true,
+  "is_volume": true,
+  "volume_cm3": 277.52,
+  "bodies": 1,
+  "smallest_body_mm3": null,
+  "min_z": 0.0,
+  "size_mm": [
+   200.0,
+   180.0,
+   8.0
+  ],
+  "bed_contact_mm2": 35338.1,
+  "overhang45_mm2": 661.9,
+  "overhang60_mm2": 661.9,
+  "thick_p1_mm": 3.8,
+  "thick_p5_mm": 7.4,
+  "thin_lt_0p8_pct": 0.03,
+  "manifold3d_ok": true,
+  "fits_bed": true,
+  "PASS": true,
+  "cleanup": {
+   "n_dropped": 0,
+   "dropped_mm3": 0.0,
+   "main_mm3": 277522.73,
+   "notes": []
+  }
+ },
+ {
+  "file": "stl/alas_cetak3d/T22_ubin_alas_belakang_tengah.stl",
+  "tri": 1740,
+  "watertight": true,
+  "winding_ok": true,
+  "is_volume": true,
+  "volume_cm3": 270.73,
+  "bodies": 1,
+  "smallest_body_mm3": null,
+  "min_z": 0.0,
+  "size_mm": [
+   200.0,
+   180.0,
+   8.0
+  ],
+  "bed_contact_mm2": 35007.1,
+  "overhang45_mm2": 992.9,
+  "overhang60_mm2": 992.9,
+  "thick_p1_mm": 3.2,
+  "thick_p5_mm": 7.4,
+  "thin_lt_0p8_pct": 0.03,
+  "manifold3d_ok": true,
+  "fits_bed": true,
+  "PASS": true,
+  "cleanup": {
+   "n_dropped": 0,
+   "dropped_mm3": 0.0,
+   "main_mm3": 270726.34,
+   "notes": []
+  }
+ },
+ {
+  "file": "stl/alas_cetak3d/T23_ubin_alas_belakang_kanan.stl",
+  "tri": 1542,
+  "watertight": true,
+  "winding_ok": true,
+  "is_volume": true,
+  "volume_cm3": 273.82,
+  "bodies": 1,
+  "smallest_body_mm3": null,
+  "min_z": 0.0,
+  "size_mm": [
+   200.0,
+   180.0,
+   8.0
+  ],
+  "bed_contact_mm2": 35338.1,
+  "overhang45_mm2": 661.9,
+  "overhang60_mm2": 661.9,
+  "thick_p1_mm": 3.2,
+  "thick_p5_mm": 7.4,
+  "thin_lt_0p8_pct": 0.0,
+  "manifold3d_ok": true,
+  "fits_bed": true,
+  "PASS": true,
+  "cleanup": {
+   "n_dropped": 0,
+   "dropped_mm3": 0.0,
+   "main_mm3": 273819.26,
+   "notes": []
+  }
+ },
+ {
+  "file": "stl/alas_cetak3d/K01_kunci_sambungan_bowtie.stl",
+  "tri": 124,
+  "watertight": true,
+  "winding_ok": true,
+  "is_volume": true,
+  "volume_cm3": 1.25,
+  "bodies": 1,
+  "smallest_body_mm3": null,
+  "min_z": 0.0,
+  "size_mm": [
+   30.0,
+   13.5,
+   4.0
+  ],
+  "bed_contact_mm2": 313.5,
+  "overhang45_mm2": 0.0,
+  "overhang60_mm2": 0.0,
+  "thick_p1_mm": 4.0,
+  "thick_p5_mm": 4.0,
+  "thin_lt_0p8_pct": 0.0,
+  "manifold3d_ok": true,
+  "fits_bed": true,
+  "PASS": true,
+  "cleanup": {
+   "n_dropped": 0,
+   "dropped_mm3": 0.0,
+   "main_mm3": 1254.02,
+   "notes": []
+  }
+ }
+]
