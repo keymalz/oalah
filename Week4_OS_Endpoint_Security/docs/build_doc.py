@@ -222,53 +222,56 @@ doc.add_page_break()
 # 10.1.13
 # ====================================================================
 h1("10.1.13 (File and Data Integrity Checks)")
-note("STATUS: TERHAMBAT - belum dapat dijalankan.")
-body("Penjelasan hambatan: Aktivitas ini memerlukan file Cisco Packet Tracer (.pka) resmi '10.1.13 Packet Tracer - "
-     "File and Data Integrity Checks'. File tersebut TIDAK disertakan dalam lampiran tugas - DIKONFIRMASI langsung "
-     "oleh pengguna dengan screenshot post tugas dari Google Classroom, yang hanya melampirkan 2 file: '10.1.15 "
-     "Packet Tracer...' (.pka) dan template jawaban Google Dokumen. Teks tugas sendiri menyatakan 'the .pka document "
-     "is attached' HANYA untuk 10.1.15, sementara instruksi 10.1.13 mengarahkan ke materi kursus NetAcad Cybersecurity "
-     "Essentials (bukan lampiran post ini). Sesuai instruksi pengguna, kami TIDAK membuat topologi/file tiruan "
-     "sebagai pengganti dan TIDAK mengarang jawaban atau screenshot untuk aktivitas ini.")
-shot("10.1.13_Assignment_post_no_pka_attached.png",
-     "Gambar 21. Screenshot post tugas asli (Google Classroom) yang dibagikan pengguna, mengonfirmasi hanya file "
-     "10.1.15 yang dilampirkan - tidak ada file 10.1.13.")
-body("Catatan tambahan: bahkan jika file .pka asli tersedia, Cisco Packet Tracer (aplikasi GUI berpemilik Cisco) "
-     "tidak terpasang di lingkungan sandbox ini dan tidak dapat dipasang (tidak tersedia di repository publik mana pun; "
-     "pengunduhan resmi memerlukan login akun Cisco NetAcad yang tidak diminta melalui chat sesuai instruksi pengguna). "
-     "Namun, seperti terbukti pada 10.1.15, jika pengguna menjalankan aktivitas ini sendiri di Packet Tracer pada "
-     "komputernya dan membagikan screenshot + teks instruksi/ciphertext yang relevan, jawaban tetap dapat diverifikasi "
-     "secara nyata di sesi ini tanpa perlu Packet Tracer terpasang di sandbox.")
-body("Tindakan yang dibutuhkan dari pengguna:", bold=True)
+note("STATUS: SEBAGIAN SELESAI. File .pka resmi dan file HTML export instruksi resmi aktivitas ini (lengkap dengan "
+     "kotak jawaban 'Show Answer' bawaan Cisco) ditemukan dan dibagikan pengguna. Pertanyaan berjenis "
+     "'computed value'/konseptual (Part 2 & 3) terjawab definitif dari kunci jawaban resmi tersebut. Langkah "
+     "hands-on (Part 1, dan sebagian Part 2-3 yang perlu klik di Packet Tracer) masih menunggu pengguna menjalankan "
+     "aktivitas secara langsung untuk mengambil screenshot prosesnya, karena Packet Tracer tidak dapat dijalankan "
+     "di sandbox kerja ini.")
+body("File sumber (.pka asli dan HTML instruksi resmi) telah disalin ke paket tugas ini di: "
+     "source/10.1.13_Original.pka dan source/10.1.13_Instructions.html.")
+
+h2("Part 1: Recover Files after a Cyber Attack")
+note("[BELUM ADA SCREENSHOT - menunggu pengguna menjalankan Step 1-3 di Packet Tracer sendiri: akses BR Server dari "
+     "Mike's PC (http://branch.corp), salin hash dari HQ (http://hq.corp), lalu download 6 file klien "
+     "(NEclients.txt, NWclients.txt, Nclients.txt, SEclients.txt, SWclients.txt, Sclients.txt) via FTP "
+     "(user: mike, password: cisco123) ke Laptop BR-1.]")
+
+h2("Part 2: Use Hashing to Verify File Integrity")
+body("Step 1: hash tiap file klien dihitung di CSE-LABVM dengan 'echo -n \\'isi-file\\' | md5sum', lalu dibandingkan "
+     "dengan hash referensi yang disalin dari HQ.")
+p = doc.add_paragraph(); r = p.add_run("Are the two hash values for NEclients.txt the same?"); r.bold = True
+answer("Yes (sesuai kunci jawaban resmi aktivitas).")
+p = doc.add_paragraph(); r = p.add_run("Which file has been tampered with and has an incorrect hash?"); r.bold = True
+answer("SEclients.txt (sesuai kunci jawaban resmi aktivitas).")
+shot("10.1.13_Part2_Part3_official_answers.png",
+     "Gambar 21. Kunci jawaban resmi (kotak 'Show Answer') dari file export instruksi aktivitas Cisco Packet Tracer "
+     "- File and Data Integrity Checks, menunjukkan jawaban Part 2 dan Part 3.")
+note("[BELUM ADA SCREENSHOT PRAKTIK - menunggu pengguna menjalankan Step 1 (hash tiap file) dan Step 2-3 (escalate "
+     "email ke Sally, download SEclients.txt ke HQ-Laptop-1) di Packet Tracer sendiri.]")
+
+h2("Part 3: Use HMAC to Verify File Integrity")
+body("Step h: HMAC dihitung di CSE-LABVM dengan 'openssl dgst -sha256 -hmac cisco123 income.txt'.")
+p = doc.add_paragraph(); r = p.add_run("What is the computed HMAC for the contents of the file?"); r.bold = True
+answer("b138706cb55787d2a01934b224edad32203f87470ff6c7ffb9bd126786d1830d (sesuai kunci jawaban resmi aktivitas).")
+p = doc.add_paragraph(); r = p.add_run("How is using HMAC more secure than general hashing?"); r.bold = True
+answer("To produce a specific hash, you need both the original message and a secret key (jawaban resmi aktivitas). "
+       "Penjelasan tambahan: HMAC menggabungkan isi pesan dengan sebuah shared secret key sebelum di-hash, sehingga "
+       "memberi DUA jaminan sekaligus - integritas data (perubahan isi file mengubah nilai HMAC, sama seperti hash "
+       "biasa) dan autentikasi sumber (hanya pihak yang memiliki secret key yang sama yang bisa menghasilkan HMAC "
+       "yang valid). Hash biasa tanpa key hanya menjamin integritas, bukan keaslian pengirim. Catatan: HMAC TIDAK "
+       "mengenkripsi isi file - ini fungsi autentikasi/integritas, bukan kerahasiaan.")
+p = doc.add_paragraph(); r = p.add_run("Does the HMAC hash for the income.txt file match the original hash you copied to the text file on the CSE-LABVM?"); r.bold = True
+answer("Yes (sesuai kunci jawaban resmi aktivitas).")
+
+body("Tindakan yang masih dibutuhkan dari pengguna (opsional, untuk kelengkapan bukti screenshot):", bold=True)
 for item in [
-    "Unggah file asli '10.1.13 Packet Tracer - File and Data Integrity Checks.pka' dari portal kelas, ATAU",
-    "Jalankan aktivitas ini sendiri di Packet Tracer pada komputer yang memiliki aplikasi tersebut terpasang, lalu "
-    "bagikan screenshot dan jawaban aktualnya untuk dimasukkan ke dokumen ini."
+    "Buka file 10.1.13_Original.pka ini di Packet Tracer (sama seperti 10.1.15), jalankan Part 1-3 sesuai instruksi, "
+    "lalu screenshot tiap langkah 'Show your practice screenshots here' untuk melengkapi bukti visual proses "
+    "(jawaban akhirnya sudah dikonfirmasi lewat kunci jawaban resmi di atas, jadi langkah ini untuk memenuhi syarat "
+    "dokumentasi screenshot per Part/Step, bukan untuk mencari jawaban baru)."
 ]:
     doc.add_paragraph(item, style='List Bullet')
-
-body("Bagian pertanyaan asli (belum terisi, menunggu file/aplikasi):", italic=True)
-for q in [
-    "Part 1 Step 1: Access the BR Server from Mike's PC. [Show your practice screenshots here]",
-    "Part 1 Step 2: Copy the hash values from the last time the files were archived. [Show your practice screenshots here]",
-    "Part 1 Step 3: Download the backup files to Mike's PC. [Show your practice screenshots here]",
-    "Part 2 Step 1g: Are the two hash values for NEclients.txt the same? [Belum dapat dijawab]",
-    "Part 2 Step 1h: Which file has been tampered with and has an incorrect hash? [Belum dapat dijawab]",
-    "Part 2 Step 2: Escalate the cyber attack to Mike's supervisor, Sally. [Show your practice screenshots here]",
-    "Part 2 Step 3: Download the suspected file to Sally's PC. [Show your practice screenshots here]",
-    "Part 3: What is the computed HMAC for the contents of the file? [Belum dapat dijawab]",
-    "Part 3: How is using HMAC more secure than general hashing? [Dapat dijawab konseptual - lihat catatan di bawah]",
-    "Part 3: Does the HMAC hash for income.txt match the original hash copied to CSE-LABVM? [Belum dapat dijawab]",
-]:
-    doc.add_paragraph(q, style='List Bullet')
-
-note("Catatan konseptual (bukan pengganti praktik nyata): HMAC (Hash-based Message Authentication Code) berbeda dari "
-     "hashing biasa karena HMAC menggabungkan isi pesan dengan sebuah shared secret key sebelum di-hash. Ini memberi "
-     "DUA jaminan sekaligus: (1) integritas data - perubahan isi file akan mengubah nilai HMAC, sama seperti hash "
-     "biasa, dan (2) autentikasi sumber - hanya pihak yang memiliki secret key yang sama yang bisa menghasilkan HMAC "
-     "yang valid, sehingga penyerang yang mengubah file TANPA mengetahui key tidak bisa memalsukan HMAC yang cocok. "
-     "Hash biasa (tanpa key) hanya menjamin integritas, bukan sumber/keaslian pengirim. Catatan: HMAC TIDAK mengenkripsi "
-     "isi file - ini adalah fungsi autentikasi/integritas, bukan kerahasiaan.")
 
 doc.add_page_break()
 

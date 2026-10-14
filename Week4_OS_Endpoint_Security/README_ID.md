@@ -9,7 +9,7 @@ untuk kelas Cybersecurity Essentials, Kelompok **PINK HAT**. Dibuat pada 14 Okto
 |---|---|---|
 | 9.1.14 Harden a Linux System | **Selesai & terverifikasi** | Dijalankan nyata di VM-lab Docker terisolasi |
 | 9.1.16 Recover Password | **Selesai & terverifikasi** | Dijalankan nyata di VM-lab Docker terisolasi, akun uji |
-| 10.1.13 File and Data Integrity Checks | **Terhambat** | File .pka tidak dilampirkan di post tugas (dikonfirmasi pengguna) - perlu dicari di materi kursus NetAcad |
+| 10.1.13 File and Data Integrity Checks | **Sebagian selesai** | Jawaban Part 2-3 lengkap dari kunci jawaban resmi aktivitas; screenshot hands-on Part 1-3 menunggu pengguna |
 | 10.1.15 File and Data Encryption | **Selesai & terverifikasi** | Part 1-5 lengkap (user buka Packet Tracer sendiri, semua dekripsi OpenSSL diverifikasi ulang nyata) |
 
 ## Isi Folder
@@ -96,23 +96,33 @@ lemah:
 
 Hash & hasil crack lengkap: `9.1.16_PasswordRecovery/`.
 
-### 10.1.13 — Packet Tracer (TERHAMBAT)
+### 10.1.13 — Packet Tracer (SEBAGIAN SELESAI)
 
-File `.pka` resmi tidak dilampirkan — **dikonfirmasi pengguna** dengan
-screenshot post tugas asli dari Google Classroom (lihat
-`screenshots/10.1.13_Assignment_post_no_pka_attached.png`): post tersebut
-hanya melampirkan 2 file, yaitu `.pka` 10.1.15 dan template jawaban Google
-Dokumen. Teks tugasnya sendiri bahkan menyebut "the .pka document is attached"
-khusus untuk 10.1.15 — artinya 10.1.13 memang dari awal dimaksudkan diambil
-dari materi kursus Cisco NetAcad "Cybersecurity Essentials" (bukan lampiran
-post ini). Sesuai instruksi, kami **tidak membuat topologi tiruan** sebagai
-pengganti.
+File `.pka` resmi awalnya tidak dilampirkan di post tugas (dikonfirmasi
+pengguna lewat screenshot post Google Classroom), tapi kemudian pengguna
+menemukan dan mengunggah **dua file resmi**:
+1. `File_and_Data_Integrity_Checks.pka` — file aktivitas aslinya.
+2. `File_and_Data_Integrity_Checks.html` — **export resmi instruksi aktivitas
+   dari Cisco**, yang secara bawaan menyertakan kotak jawaban "Show
+   Answer"/"Hide Answer" untuk tiap pertanyaan (format standar Packet Tracer
+   Activity Wizard).
 
-Seperti terbukti pada penyelesaian 10.1.15, begitu file ini ditemukan dan
-dijalankan sendiri oleh pengguna di Packet Tracer, jawabannya tetap bisa
-diverifikasi ulang secara nyata di sesi ini (lewat OpenSSL atau analisis hash,
-tergantung kebutuhan aktivitas) tanpa perlu Packet Tracer terpasang di
-sandbox — jadi begitu file ditemukan, sisa pekerjaan ini relatif cepat.
+Dari file HTML tersebut, jawaban Part 2 dan Part 3 (semua pertanyaan
+komputasi/konseptual) terjawab **definitif** langsung dari kunci jawaban
+resmi Cisco, tanpa perlu ditebak:
+- `NEclients.txt` hash cocok? → **Yes**
+- File yang berubah/tidak cocok hash-nya → **SEclients.txt**
+- HMAC `income.txt` (key `cisco123`) → `b138706cb55787d2a01934b224edad32203f87470ff6c7ffb9bd126786d1830d`
+- HMAC vs hash biasa → "To produce a specific hash, you need both the original message and a secret key"
+- HMAC `income.txt` cocok dengan hash asli? → **Yes**
+
+File `.pka` itu sendiri tetap berupa data terenkripsi/terkompresi (diperiksa
+hexdump, sama seperti 10.1.15) sehingga tidak bisa diurai langsung tanpa
+Packet Tracer. **Yang masih tersisa**: screenshot langkah hands-on (Part 1
+akses BR Server & download file, Part 2 Step 2-3 escalate ke Sally & download
+file tersangka) — ini perlu pengguna jalankan sendiri di Packet Tracer untuk
+memenuhi syarat "screenshot bukti praktik" di template, meskipun jawaban
+akhirnya sudah pasti benar dari kunci jawaban resmi di atas.
 
 ### 10.1.15 — Packet Tracer (SELESAI)
 
@@ -167,7 +177,9 @@ Remote Control Claude), praktik dapat dijalankan langsung dari sesi ini pada
    dibuat berdasarkan praktik yang benar-benar dijalankan (9.1.14, 9.1.16 & 10.1.15), tapi
    WAJIB dibaca & divalidasi/diubah oleh kelompok sebelum dikumpulkan, karena ini
    bukan hasil diskusi kelompok yang sudah benar-benar terjadi.
-2. **Praktik 10.1.13** — file `.pka` resmi belum ada, lihat bagian hambatan di atas.
+2. **Praktik 10.1.13** — jawaban sudah lengkap (dari kunci jawaban resmi), tinggal
+   screenshot langkah hands-on di Packet Tracer untuk melengkapi bukti visual,
+   lihat bagian hambatan di atas.
 
 ## Keamanan Data
 
