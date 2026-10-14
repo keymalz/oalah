@@ -222,12 +222,12 @@ doc.add_page_break()
 # 10.1.13
 # ====================================================================
 h1("10.1.13 (File and Data Integrity Checks)")
-note("STATUS: SEBAGIAN SELESAI. File .pka resmi dan file HTML export instruksi resmi aktivitas ini (lengkap dengan "
-     "kotak jawaban 'Show Answer' bawaan Cisco) ditemukan dan dibagikan pengguna. Pertanyaan berjenis "
-     "'computed value'/konseptual (Part 2 & 3) terjawab definitif dari kunci jawaban resmi tersebut. Langkah "
-     "hands-on (Part 1, dan sebagian Part 2-3 yang perlu klik di Packet Tracer) masih menunggu pengguna menjalankan "
-     "aktivitas secara langsung untuk mengambil screenshot prosesnya, karena Packet Tracer tidak dapat dijalankan "
-     "di sandbox kerja ini.")
+note("STATUS: SELESAI (Part 1-3 lengkap). Cisco Packet Tracer tidak dapat dijalankan langsung di sandbox kerja ini, "
+     "tetapi pengguna menjalankan seluruh aktivitas (Part 1, 2, dan 3) sendiri di Packet Tracer pada komputernya dan "
+     "membagikan screenshot tiap langkah secara bertahap ke sesi ini, plus file HTML export instruksi resmi "
+     "aktivitas (lengkap dengan kotak jawaban 'Show Answer' bawaan Cisco) yang menjadi dasar jawaban Part 2 & 3. "
+     "Nilai hash income.txt dari The Hash Page (Part 1 Step 2) dan nilai HMAC dari kunci jawaban resmi terbukti "
+     "cocok persis, saling memvalidasi kedua sumber tersebut.")
 body("File sumber (.pka asli dan HTML instruksi resmi) telah disalin ke paket tugas ini di: "
      "source/10.1.13_Original.pka dan source/10.1.13_Instructions.html.")
 
@@ -292,8 +292,18 @@ shot("10.1.13_Part2_Step2_compose_email.png",
 shot("10.1.13_Part2_Step2_email_sent_success.png",
      "Gambar 31. Log pengiriman email - DNS branch.corp berhasil di-resolve, 'Send Success' mengonfirmasi email "
      "terkirim ke Sally.")
-note("[Step 3 (download SEclients.txt ke HQ-Laptop-1 via FTP user sally/cisco321) belum di-screenshot - langkah "
-     "terakhir untuk melengkapi seluruh Part 1-3 10.1.13 secara visual.]")
+body("Step 3: pengguna pindah ke HQ-Laptop-1, login FTP sebagai sally (password cisco321), dan mengunduh "
+     "SEclients.txt - file yang dicurigai tampered - untuk dianalisis lebih lanjut.")
+shot("10.1.13_Part2_Step3_ftp_download_SEclients.png",
+     "Gambar 32. Command Prompt HQ-Laptop-1 - login FTP sebagai sally berhasil (230 Logged in), 'dir' menampilkan "
+     "6 file yang sama, 'get SEclients.txt' berhasil mengunduh 597 bytes, sesi ditutup dengan 'quit'.")
+shot("10.1.13_Part2_Step3_SEclients_on_SallyPC.png",
+     "Gambar 33. Isi SEclients.txt yang sudah ada di HQ-Laptop-1 (PC Sally), dibuka di Text Editor untuk analisis "
+     "lanjutan - identik dengan isi yang dilihat di Laptop BR-1 sebelumnya, mengonfirmasi file berhasil ditransfer "
+     "utuh untuk investigasi Sally.")
+note("Dengan ini, seluruh Part 1-2 10.1.13 (Recover Files after a Cyber Attack & Use Hashing to Verify File "
+     "Integrity) sudah lengkap dengan bukti visual nyata dari setiap langkah, dijalankan langsung oleh pengguna di "
+     "Packet Tracer miliknya sendiri.")
 
 h2("Part 3: Use HMAC to Verify File Integrity")
 body("Step h: HMAC dihitung di CSE-LABVM dengan 'openssl dgst -sha256 -hmac cisco123 income.txt'.")
@@ -335,14 +345,14 @@ body("File sumber yang dilampirkan pengguna telah disalin ke paket tugas ini di:
 h2("Part 1: Discover the FTP Account Credentials for Mary")
 body("Step 1: pengguna membuka maryftplogin.txt di Text Editor pada Laptop BR-1 (Packet Tracer, komputer pengguna).")
 shot("10.1.15_PacketTracer_opened_by_user.png",
-     "Gambar 32. Cisco Packet Tracer dibuka langsung oleh pengguna di komputernya sendiri, menampilkan topologi "
+     "Gambar 34. Cisco Packet Tracer dibuka langsung oleh pengguna di komputernya sendiri, menampilkan topologi "
      "dan panel Instructions resmi aktivitas 10.1.15.")
 body("Step 2: isi terenkripsi maryftplogin.txt didekripsi dengan OpenSSL (AES-256-CBC, PBKDF2) memakai password "
      "aktivitas 'maryftp123', dijalankan ulang secara nyata di sesi ini untuk verifikasi:")
 p = doc.add_paragraph(); r = p.add_run("What is the username and password for Mary's FTP account?"); r.bold = True
 answer("Username = mary, Password = cisco321.")
 shot("10.1.15_Part1_Part3_decrypt_credentials.png",
-     "Gambar 33. openssl aes-256-cbc -pbkdf2 -a -d dijalankan nyata dengan ciphertext & password persis dari "
+     "Gambar 35. openssl aes-256-cbc -pbkdf2 -a -d dijalankan nyata dengan ciphertext & password persis dari "
      "instruksi resmi aktivitas - hasil: Mary (mary/cisco321) dan Bob (bob/ninja123).")
 
 h2("Part 2: Upload Confidential Data using FTP")
@@ -372,12 +382,12 @@ note("STATUS: SELESAI. Key dekripsi didapat pengguna dari aplikasi Email dalam s
 p = doc.add_paragraph(); r = p.add_run("What is the decryption key to access the confidential information in the clientinfo.enc file?"); r.bold = True
 answer("cisco123.")
 shot("10.1.15_Part5_decryption_key_email.png",
-     "Gambar 34. Email dari Mary ke Bob pada Laptop BR-2 di Packet Tracer (dibuka langsung oleh pengguna), subjek "
+     "Gambar 36. Email dari Mary ke Bob pada Laptop BR-2 di Packet Tracer (dibuka langsung oleh pengguna), subjek "
      "'Decryption Key', berisi key: cisco123.")
 p = doc.add_paragraph(); r = p.add_run("What is the first name listed in the clientinfo.txt file?"); r.bold = True
 answer("Drew (nama lengkap: Drew N. Stark, baris pertama pada clientinfo.txt).")
 shot("10.1.15_Part5_decrypted_clientinfo.png",
-     "Gambar 35. openssl aes-256-cbc -pbkdf2 -a -d -in clientinfo.enc -out clientinfo.txt dijalankan nyata dengan "
+     "Gambar 37. openssl aes-256-cbc -pbkdf2 -a -d -in clientinfo.enc -out clientinfo.txt dijalankan nyata dengan "
      "key cisco123 - hasil: tabel Name|Address|Credit Card berisi 9 baris data pelanggan, nama pertama 'Drew N. Stark'.")
 note("Catatan: clientinfo.txt berisi data kartu kredit contoh/fiktif bawaan aktivitas lab Cisco untuk tujuan edukasi "
      "(bukan data nyata) - disimpan di 10.1.15_FileEncryption/clientinfo.txt untuk keperluan verifikasi.")
@@ -391,32 +401,39 @@ h1("Activity Reflection")
 p = doc.add_paragraph()
 r = p.add_run("What did you learn from this activity?")
 r.bold = True
-note("[DRAF - berdasarkan praktik yang benar-benar dijalankan (9.1.14, 9.1.16 & 10.1.15). WAJIB divalidasi/diubah "
-     "oleh kelompok sebelum dikumpulkan - draf ini BUKAN hasil diskusi kelompok yang sudah terjadi.]")
+note("[DRAF - berdasarkan praktik yang benar-benar dijalankan (9.1.14, 9.1.16, 10.1.13 & 10.1.15). WAJIB "
+     "divalidasi/diubah oleh kelompok sebelum dikumpulkan - draf ini BUKAN hasil diskusi kelompok yang sudah terjadi.]")
 answer("(Draf) Kelompok mempelajari bahwa hardening sistem Linux dengan Lynis memberikan audit terukur (229 tes, "
        "index hardening 57) yang bisa ditindaklanjuti satu per satu, dan bahwa satu warning dapat diselesaikan dengan "
        "memahami akar penyebab tes tersebut (membaca source code tes Lynis sendiri), bukan hanya menjalankan perintah "
        "secara acak. Pada praktik password recovery, kelompok melihat langsung bagaimana password kamus (seperti "
        "\"password\" atau \"summer\") dapat dipulihkan dalam hitungan detik, sedangkan password acak sepanjang 14 "
        "karakter bertahan terhadap serangan wordlist+rules selama durasi pengujian - menegaskan pentingnya kebijakan "
-       "password yang kuat. Pada praktik file and data encryption (10.1.15), kelompok melihat bahwa enkripsi "
-       "file di tingkat aplikasi (sebelum transfer) melindungi isi data walaupun protokol transfernya sendiri (FTP) "
-       "tidak aman, serta pentingnya menjaga kerahasiaan dan integritas key - satu karakter saja salah pada "
-       "ciphertext/key (sempat terjadi karena salah baca screenshot) membuat dekripsi gagal total.")
+       "password yang kuat. Pada praktik file integrity checks (10.1.13), kelompok melihat bagaimana hashing MD5 "
+       "dan HMAC-SHA256 mendeteksi perubahan satu file (SEclients.txt) di antara enam file yang identik strukturnya, "
+       "serta memahami prosedur eskalasi insiden (lapor ke supervisor, isolasi file tersangka untuk investigasi "
+       "lanjutan) sebagai bagian dari respons insiden keamanan, bukan cuma aspek teknis hashing-nya saja. Pada "
+       "praktik file and data encryption (10.1.15), kelompok melihat bahwa enkripsi file di tingkat aplikasi "
+       "(sebelum transfer) melindungi isi data walaupun protokol transfernya sendiri (FTP) tidak aman, serta "
+       "pentingnya menjaga kerahasiaan dan integritas key - satu karakter saja salah pada ciphertext/key (sempat "
+       "terjadi karena salah baca screenshot, di 10.1.13 dan 10.1.15 keduanya) membuat dekripsi/verifikasi hash "
+       "gagal total, menegaskan pentingnya menyalin data kriptografi sebagai teks asli, bukan dibaca ulang dari "
+       "gambar.")
 
 p = doc.add_paragraph()
 r = p.add_run("What are you still confused about? / What do you still need clarification on?")
 r.bold = True
 note("[DRAF - WAJIB divalidasi/diubah oleh kelompok.]")
-answer("(Draf) Kelompok masih perlu klarifikasi mengenai bagaimana mengakses materi lab resmi 9.1.14/9.1.16 dan file "
-       ".pka 10.1.13 dari portal kelas NetAcad.")
+answer("(Draf) Kelompok masih perlu klarifikasi mengenai bagaimana mengakses materi lab resmi 9.1.14/9.1.16 "
+       "langsung dari portal kelas NetAcad (saat ini dikerjakan di lingkungan VM-lab substitusi karena CSE-LABVM "
+       "resmi tidak dapat diakses dari sesi kerja ini).")
 
 doc.add_page_break()
 h1("Group Work Evidence")
 body("If you worked together in person, please attach a photo. If you worked together online, please attach a screenshot.")
 note("Bukti kerja kelompok (koordinasi daring via WhatsApp) - diberikan langsung oleh pengguna, bukan rekayasa.")
 shot("GroupWorkEvidence_WhatsApp.png",
-     "Gambar 36. Screenshot percakapan WhatsApp kelompok - konfirmasi nama dan NIM anggota yang berpartisipasi: "
+     "Gambar 38. Screenshot percakapan WhatsApp kelompok - konfirmasi nama dan NIM anggota yang berpartisipasi: "
      "Mohammed Aatef Saleh (24523270) dan M Kemal Sabda Majid (24523123).")
 
 doc.save(OUT)

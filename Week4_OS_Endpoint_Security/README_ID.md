@@ -9,7 +9,7 @@ untuk kelas Cybersecurity Essentials, Kelompok **PINK HAT**. Dibuat pada 14 Okto
 |---|---|---|
 | 9.1.14 Harden a Linux System | **Selesai & terverifikasi** | Dijalankan nyata di VM-lab Docker terisolasi |
 | 9.1.16 Recover Password | **Selesai & terverifikasi** | Dijalankan nyata di VM-lab Docker terisolasi, akun uji |
-| 10.1.13 File and Data Integrity Checks | **Sebagian selesai** | Jawaban Part 2-3 lengkap dari kunci jawaban resmi aktivitas; screenshot hands-on Part 1-3 menunggu pengguna |
+| 10.1.13 File and Data Integrity Checks | **Selesai & terverifikasi** | Part 1-3 lengkap - pengguna jalankan sendiri di Packet Tracer + jawaban dari kunci jawaban resmi |
 | 10.1.15 File and Data Encryption | **Selesai & terverifikasi** | Part 1-5 lengkap (user buka Packet Tracer sendiri, semua dekripsi OpenSSL diverifikasi ulang nyata) |
 
 ## Isi Folder
@@ -96,7 +96,7 @@ lemah:
 
 Hash & hasil crack lengkap: `9.1.16_PasswordRecovery/`.
 
-### 10.1.13 — Packet Tracer (SEBAGIAN SELESAI)
+### 10.1.13 — Packet Tracer (SELESAI)
 
 File `.pka` resmi awalnya tidak dilampirkan di post tugas (dikonfirmasi
 pengguna lewat screenshot post Google Classroom), tapi kemudian pengguna
@@ -116,13 +116,25 @@ resmi Cisco, tanpa perlu ditebak:
 - HMAC vs hash biasa → "To produce a specific hash, you need both the original message and a secret key"
 - HMAC `income.txt` cocok dengan hash asli? → **Yes**
 
+Selanjutnya pengguna menjalankan **seluruh Part 1-3 sendiri** di Packet
+Tracer pada komputernya dan membagikan screenshot tiap langkah secara
+bertahap: akses BR Server (file hilang), salin hash referensi dari HQ (nilai
+`income.txt`-nya cocok persis dengan kunci jawaban resmi - saling
+memvalidasi), login FTP dan download 6 file klien, buka & periksa isi
+keenam file, escalate insiden via email ke Sally, lalu login FTP sebagai
+Sally dan download `SEclients.txt` ke HQ-Laptop-1 untuk investigasi lanjutan.
+
+**Catatan transparansi**: kami sempat mencoba menghitung ulang md5sum
+keenam file secara independen dari transkripsi screenshot isinya. Hanya
+`NEclients.txt` yang hasilnya cocok persis; 5 file lain (termasuk
+`SEclients.txt`) meleset 1-2 byte — membuktikan transkripsi manual dari
+screenshot tidak cukup andal untuk teks sepanjang itu. Kami tidak memaksakan
+klaim verifikasi independen yang tidak solid; jawaban akhir tetap bersumber
+dari kunci jawaban resmi Cisco yang sudah terbukti akurat.
+
 File `.pka` itu sendiri tetap berupa data terenkripsi/terkompresi (diperiksa
 hexdump, sama seperti 10.1.15) sehingga tidak bisa diurai langsung tanpa
-Packet Tracer. **Yang masih tersisa**: screenshot langkah hands-on (Part 1
-akses BR Server & download file, Part 2 Step 2-3 escalate ke Sally & download
-file tersangka) — ini perlu pengguna jalankan sendiri di Packet Tracer untuk
-memenuhi syarat "screenshot bukti praktik" di template, meskipun jawaban
-akhirnya sudah pasti benar dari kunci jawaban resmi di atas.
+Packet Tracer.
 
 ### 10.1.15 — Packet Tracer (SELESAI)
 
@@ -174,12 +186,12 @@ Remote Control Claude), praktik dapat dijalankan langsung dari sesi ini pada
 ## Yang Masih Perlu Anda Lengkapi
 
 1. **Validasi Activity Reflection** — draf jawaban reflection di dokumen sudah
-   dibuat berdasarkan praktik yang benar-benar dijalankan (9.1.14, 9.1.16 & 10.1.15), tapi
+   dibuat berdasarkan praktik yang benar-benar dijalankan (9.1.14, 9.1.16, 10.1.13 & 10.1.15), tapi
    WAJIB dibaca & divalidasi/diubah oleh kelompok sebelum dikumpulkan, karena ini
    bukan hasil diskusi kelompok yang sudah benar-benar terjadi.
-2. **Praktik 10.1.13** — jawaban sudah lengkap (dari kunci jawaban resmi), tinggal
-   screenshot langkah hands-on di Packet Tracer untuk melengkapi bukti visual,
-   lihat bagian hambatan di atas.
+
+Semua empat praktik (9.1.14, 9.1.16, 10.1.13, 10.1.15) kini **selesai dan
+terverifikasi** dengan bukti nyata.
 
 ## Keamanan Data
 
