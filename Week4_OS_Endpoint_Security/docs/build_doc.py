@@ -268,41 +268,55 @@ doc.add_page_break()
 # 10.1.15
 # ====================================================================
 h1("10.1.15 (File and Data Encryption)")
-note("STATUS: TERHAMBAT - file .pka tersedia, namun aplikasi Cisco Packet Tracer tidak dapat dijalankan di lingkungan sandbox ini.")
-body(f"File sumber yang dilampirkan pengguna telah disalin ke paket tugas ini di: "
-     f"source/10.1.15_Original.pka (ukuran asli ~24.8 MB, disalin utuh tanpa diubah).")
-body("Penjelasan hambatan: Cisco Packet Tracer adalah aplikasi desktop GUI berpemilik Cisco yang: (1) tidak tersedia "
-     "di repository paket Linux/Ubuntu mana pun (dicek via apt-cache search - tidak ditemukan), (2) pengunduhan "
-     "resmi memerlukan login akun Cisco NetAcad (kredensial tidak diminta melalui chat sesuai instruksi pengguna), "
-     "dan (3) bahkan bila terpasang, aplikasi ini memerlukan interaksi GUI penuh (klik perangkat simulasi, membuka "
-     "aplikasi teks/FTP client di dalam PC simulasi, Simulation Mode untuk menangkap paket) yang tidak dapat "
-     "diotomasi secara andal tanpa tool kendali GUI khusus yang tidak tersedia di sesi cloud ini.")
-body("File biner .pka itu sendiri diperiksa (file & hexdump): terbukti berupa data terkompresi/terenkripsi milik "
-     "Cisco yang tidak dapat diuraikan tanpa aplikasi resminya - sehingga tidak ada cara sah untuk mengekstrak jawaban "
-     "aktivitas tanpa menjalankan simulasinya.")
+note("STATUS: SEBAGIAN SELESAI. Cisco Packet Tracer tidak dapat dijalankan langsung di sandbox kerja ini (aplikasi "
+     "GUI berpemilik Cisco, butuh akun NetAcad), tetapi pengguna membuka file ini sendiri di Packet Tracer pada "
+     "komputernya dan membagikan screenshot + teks instruksi resmi aktivitas ke sesi ini. Perintah dekripsi OpenSSL "
+     "pada instruksi tersebut dijalankan ulang secara nyata di sini untuk memverifikasi jawaban Part 1 dan Part 3.")
+body("File sumber yang dilampirkan pengguna telah disalin ke paket tugas ini di: "
+     "source/10.1.15_Original.pka (ukuran asli ~24.8 MB, disalin utuh tanpa diubah).")
 
-body("Tindakan yang dibutuhkan dari pengguna:", bold=True)
-for item in [
-    "Jalankan file 10.1.15_Original.pka ini sendiri di Cisco Packet Tracer (di komputer yang memiliki aplikasi "
-    "tersebut terpasang), ikuti Part 1-5 sesuai instruksi aktivitas, lalu bagikan screenshot dan jawaban aktualnya, ATAU",
-    "Jika tersedia, hubungkan sesi ini ke komputer pengguna sendiri (fitur Remote Control/Cowork) yang sudah memiliki "
-    "Packet Tracer terpasang, agar praktik dapat dijalankan langsung dari sesi ini."
-]:
-    doc.add_paragraph(item, style='List Bullet')
+h2("Part 1: Discover the FTP Account Credentials for Mary")
+body("Step 1: pengguna membuka maryftplogin.txt di Text Editor pada Laptop BR-1 (Packet Tracer, komputer pengguna).")
+shot("10.1.15_PacketTracer_opened_by_user.png",
+     "Gambar 17. Cisco Packet Tracer dibuka langsung oleh pengguna di komputernya sendiri, menampilkan topologi "
+     "dan panel Instructions resmi aktivitas 10.1.15.")
+body("Step 2: isi terenkripsi maryftplogin.txt didekripsi dengan OpenSSL (AES-256-CBC, PBKDF2) memakai password "
+     "aktivitas 'maryftp123', dijalankan ulang secara nyata di sesi ini untuk verifikasi:")
+p = doc.add_paragraph(); r = p.add_run("What is the username and password for Mary's FTP account?"); r.bold = True
+answer("Username = mary, Password = cisco321.")
+shot("10.1.15_Part1_Part3_decrypt_credentials.png",
+     "Gambar 18. openssl aes-256-cbc -pbkdf2 -a -d dijalankan nyata dengan ciphertext & password persis dari "
+     "instruksi resmi aktivitas - hasil: Mary (mary/cisco321) dan Bob (bob/ninja123).")
 
-body("Bagian pertanyaan asli (belum terisi, menunggu aplikasi Packet Tracer):", italic=True)
-for q in [
-    "Part 1 Step 1-2: Access text document on Mary's Laptop; decrypt Mary's FTP info. "
-    "What is the username and password for Mary's FTP account? [Belum dapat dijawab]",
-    "Part 2 Step 1: View confidential document on Laptop BR-1. What form is the data in? [Belum dapat dijawab]",
-    "Part 2 Step 2-3: Connect to BR Server; upload file via FTP. What would be in clear text if captured? [Belum dapat dijawab]",
-    "Part 3 Step 1-2: Access text document on Bob's Laptop; decrypt Bob's FTP info. "
-    "What is the username and password for Bob's FTP account? [Belum dapat dijawab]",
-    "Part 4 Step 1-2: Connect to BR Server; download file to Bob's PC. What would be in clear text crossing the internet? [Belum dapat dijawab]",
-    "Part 5 Step 1: Get the decryption key. What is the decryption key for clientinfo.enc? [Belum dapat dijawab]",
-    "Part 5 Step 2: Decrypt clientinfo.enc to clientinfo.txt. What is the first name listed? [Belum dapat dijawab]",
-]:
-    doc.add_paragraph(q, style='List Bullet')
+h2("Part 2: Upload Confidential Data using FTP")
+p = doc.add_paragraph(); r = p.add_run("What form is the data in?"); r.bold = True
+answer("Data terenkripsi (ciphertext) - sesuai desain aktivitas, isi clientinfo.enc adalah hasil enkripsi AES-256-CBC "
+       "yang dikodekan Base64, bukan teks biasa yang bisa dibaca langsung.")
+p = doc.add_paragraph(); r = p.add_run("What would be in clear text if threat actors were to capture the file transfer?"); r.bold = True
+answer("FTP adalah protokol yang tidak terenkripsi, sehingga username, password, dan perintah FTP (USER, PASS, PORT, "
+       "STOR, dll.) akan terlihat dalam clear text jika transfer ditangkap. Namun ISI file clientinfo.enc tetap tidak "
+       "terbaca (tetap ciphertext) karena file tersebut sudah dienkripsi SEBELUM ditransfer - FTP yang tidak aman "
+       "hanya membocorkan kredensial dan metadata transfer, bukan isi file yang sudah terenkripsi.")
+
+h2("Part 3: Discover the FTP Account Credentials for Bob")
+p = doc.add_paragraph(); r = p.add_run("What is the username and password for Bob's FTP account?"); r.bold = True
+answer("Username = bob, Password = ninja123. (Lihat Gambar 18 di atas - dekripsi dijalankan dengan password aktivitas 'bobftp123'.)")
+
+h2("Part 4: Download Confidential Data using FTP")
+p = doc.add_paragraph(); r = p.add_run("What would be in clear text if threat actors were to capture the file transfer crossing the internet?"); r.bold = True
+answer("Sama seperti Part 2: kredensial login FTP Bob dan perintah FTP akan terlihat jelas dalam clear text, "
+       "tetapi isi clientinfo.enc tetap berupa ciphertext terenkripsi karena enkripsi dilakukan di tingkat file, "
+       "bukan di tingkat transport.")
+
+h2("Part 5: Decrypt the Contents of a Sensitive File")
+note("STATUS: BELUM SELESAI. Key dekripsi ini unik untuk file .pka ini dan hanya tersedia di dalam aplikasi Email "
+     "simulasi pada Packet Tracer (bukan nilai statis di teks instruksi seperti Part 1/3) - sehingga tidak dapat "
+     "diturunkan tanpa pengguna membuka email tersebut sendiri.")
+p = doc.add_paragraph(); r = p.add_run("What is the decryption key to access the confidential information in the clientinfo.enc file?"); r.bold = True
+note("[BELUM DIISI - menunggu pengguna membuka Email > 'Decryption Key' pada Laptop BR-2 di Packet Tracer]")
+p = doc.add_paragraph(); r = p.add_run("What is the first name listed in the clientinfo.txt file?"); r.bold = True
+note("[BELUM DIISI - setelah key didapat, dekripsi dapat dijalankan ulang di sesi ini (openssl) begitu pengguna "
+     "membagikan key dan isi clientinfo.enc, tanpa perlu CSE-LABVM]")
 
 doc.add_page_break()
 
@@ -336,7 +350,7 @@ h1("Group Work Evidence")
 body("If you worked together in person, please attach a photo. If you worked together online, please attach a screenshot.")
 note("Bukti kerja kelompok (koordinasi daring via WhatsApp) - diberikan langsung oleh pengguna, bukan rekayasa.")
 shot("GroupWorkEvidence_WhatsApp.png",
-     "Gambar 17. Screenshot percakapan WhatsApp kelompok - konfirmasi nama dan NIM anggota yang berpartisipasi: "
+     "Gambar 19. Screenshot percakapan WhatsApp kelompok - konfirmasi nama dan NIM anggota yang berpartisipasi: "
      "Mohammed Aatef Saleh (24523270) dan M Kemal Sabda Majid (24523123).")
 
 doc.save(OUT)

@@ -10,7 +10,7 @@ untuk kelas Cybersecurity Essentials, Kelompok **PINK HAT**. Dibuat pada 14 Okto
 | 9.1.14 Harden a Linux System | **Selesai & terverifikasi** | Dijalankan nyata di VM-lab Docker terisolasi |
 | 9.1.16 Recover Password | **Selesai & terverifikasi** | Dijalankan nyata di VM-lab Docker terisolasi, akun uji |
 | 10.1.13 File and Data Integrity Checks | **Terhambat** | File .pka asli tidak tersedia |
-| 10.1.15 File and Data Encryption | **Terhambat** | File .pka ada, Packet Tracer tidak dapat dijalankan |
+| 10.1.15 File and Data Encryption | **Sebagian selesai** | Part 1-4 terjawab (user buka PT sendiri + dekripsi OpenSSL diverifikasi ulang); Part 5 menunggu key dari email simulasi |
 
 ## Isi Folder
 
@@ -96,31 +96,47 @@ lemah:
 
 Hash & hasil crack lengkap: `9.1.16_PasswordRecovery/`.
 
-### 10.1.13 dan 10.1.15 — Packet Tracer (TERHAMBAT)
+### 10.1.13 — Packet Tracer (TERHAMBAT)
 
-**10.1.13**: file `.pka` resmi tidak dilampirkan pengguna dan tidak dapat
-ditemukan dari sumber yang sah dan dapat diakses sesi ini (portal kelas/NetAcad
-tidak terhubung ke sesi ini). Sesuai instruksi, kami **tidak membuat topologi
+File `.pka` resmi tidak dilampirkan pengguna dan tidak dapat ditemukan dari
+sumber yang sah dan dapat diakses sesi ini (portal kelas/NetAcad tidak
+terhubung ke sesi ini). Sesuai instruksi, kami **tidak membuat topologi
 tiruan** sebagai pengganti.
 
-**10.1.15**: file `.pka` **ada** (dilampirkan pengguna, disalin ke `source/`),
-namun **Cisco Packet Tracer tidak dapat dijalankan** di lingkungan kerja ini:
-- Tidak tersedia di repository paket Linux mana pun (dicek via `apt-cache search`).
-- Pengunduhan resmi memerlukan login akun Cisco NetAcad (kredensial tidak diminta
-  melalui chat, sesuai instruksi Anda).
-- Merupakan aplikasi desktop GUI berat yang memerlukan interaksi klik manual pada
-  banyak "PC simulasi" dan Simulation Mode — tidak dapat diotomasi secara andal
-  tanpa tool kendali GUI yang terhubung ke aplikasi tersebut.
+### 10.1.15 — Packet Tracer (SEBAGIAN SELESAI)
 
-**Yang Anda perlu lakukan** untuk menyelesaikan kedua praktik ini:
-1. Untuk 10.1.13: unggah file `.pka` resmi dari portal kelas Anda.
-2. Untuk 10.1.15: jalankan file `source/10.1.15_Original.pka` ini sendiri di
-   Cisco Packet Tracer pada komputer Anda yang sudah memilikinya terpasang
-   (sesuai jejak file di `C:\Users\LOQ\Downloads\...` yang Anda sebutkan), ikuti
-   Part 1–5 sesuai instruksi di PDF template, lalu kirimkan screenshot dan
-   jawaban aktualnya kembali — akan langsung kami masukkan ke dokumen ini.
-3. Alternatif: jika Anda menghubungkan komputer Anda ke sesi kerja ini (fitur
-   Remote Control Claude), praktik dapat dijalankan langsung dari sesi ini pada
+Cisco Packet Tracer tidak bisa dijalankan langsung di sandbox kerja ini
+(aplikasi GUI berpemilik Cisco, instalasi resmi butuh login NetAcad). **Namun**
+pengguna membuka file ini sendiri di Packet Tracer pada komputernya dan
+membagikan screenshot aplikasi + teks lengkap panel Instructions resmi
+aktivitas (termasuk ciphertext dan password yang dipakai untuk mendekripsi
+kredensial FTP Mary dan Bob). Karena nilai-nilai tsb statis/tertanam di teks
+instruksi aktivitas (bukan hasil acak di dalam simulasi), kami menjalankan
+ulang perintah `openssl aes-256-cbc -pbkdf2 -a -d` yang sama persis di sesi
+ini untuk **memverifikasi secara independen**:
+- Mary: username `mary`, password `cisco321`
+- Bob: username `bob`, password `ninja123`
+
+Part 2 dan Part 4 (apa yang terlihat clear text saat transfer FTP ditangkap)
+dijawab secara konseptual berdasarkan cara kerja FTP (tidak terenkripsi) +
+desain aktivitas (file sudah dienkripsi sebelum transfer).
+
+**Yang masih tersisa (Part 5)**: key dekripsi `clientinfo.enc` ini unik per
+file dan hanya ada di aplikasi Email di dalam simulasi Packet Tracer (bukan
+nilai statis di teks instruksi) — perlu Anda buka sendiri:
+1. Di Packet Tracer, klik **Laptop BR-2 > Desktop > Email**.
+2. Buka email dengan subjek **"Decryption Key"**, catat key-nya.
+3. Kirim key tersebut ke chat ini (dan isi `clientinfo.enc` jika belum ada di
+   paket ini) — kami akan jalankan dekripsinya di sini juga dan langsung
+   memberi jawaban nama pertama di `clientinfo.txt`, tanpa Anda perlu
+   menjalankan command apa pun di CSE-LABVM.
+
+Untuk 10.1.13: unggah file `.pka` resmi dari portal kelas Anda, atau jalankan
+sendiri di Packet Tracer lalu bagikan screenshot + teks instruksi (sama seperti
+10.1.15) — kami proses dengan cara yang sama.
+
+Alternatif lain: jika Anda menghubungkan komputer Anda ke sesi kerja ini (fitur
+Remote Control Claude), praktik dapat dijalankan langsung dari sesi ini pada
    komputer Anda.
 
 ## Status Identitas Kelompok
@@ -137,7 +153,8 @@ namun **Cisco Packet Tracer tidak dapat dijalankan** di lingkungan kerja ini:
    dibuat berdasarkan praktik yang benar-benar dijalankan (9.1.14 & 9.1.16), tapi
    WAJIB dibaca & divalidasi/diubah oleh kelompok sebelum dikumpulkan, karena ini
    bukan hasil diskusi kelompok yang sudah benar-benar terjadi.
-2. **Praktik 10.1.13 dan 10.1.15** — lihat bagian hambatan di atas.
+2. **Praktik 10.1.13** (file `.pka` belum ada) dan **10.1.15 Part 5** (key dekripsi
+   dari email simulasi) — lihat bagian hambatan di atas.
 
 ## Keamanan Data
 
