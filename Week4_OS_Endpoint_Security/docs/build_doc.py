@@ -268,10 +268,11 @@ doc.add_page_break()
 # 10.1.15
 # ====================================================================
 h1("10.1.15 (File and Data Encryption)")
-note("STATUS: SEBAGIAN SELESAI. Cisco Packet Tracer tidak dapat dijalankan langsung di sandbox kerja ini (aplikasi "
-     "GUI berpemilik Cisco, butuh akun NetAcad), tetapi pengguna membuka file ini sendiri di Packet Tracer pada "
-     "komputernya dan membagikan screenshot + teks instruksi resmi aktivitas ke sesi ini. Perintah dekripsi OpenSSL "
-     "pada instruksi tersebut dijalankan ulang secara nyata di sini untuk memverifikasi jawaban Part 1 dan Part 3.")
+note("STATUS: SELESAI (Part 1-5 terjawab). Cisco Packet Tracer tidak dapat dijalankan langsung di sandbox kerja ini "
+     "(aplikasi GUI berpemilik Cisco, butuh akun NetAcad), tetapi pengguna menjalankan aktivitas ini sendiri di "
+     "Packet Tracer pada komputernya dan membagikan screenshot + teks instruksi resmi + isi file terenkripsi ke "
+     "sesi ini secara bertahap. Semua perintah dekripsi OpenSSL dijalankan ulang secara nyata di sesi ini (bukan "
+     "simulasi, kriptografi murni) untuk memverifikasi setiap jawaban secara independen.")
 body("File sumber yang dilampirkan pengguna telah disalin ke paket tugas ini di: "
      "source/10.1.15_Original.pka (ukuran asli ~24.8 MB, disalin utuh tanpa diubah).")
 
@@ -309,18 +310,21 @@ answer("Sama seperti Part 2: kredensial login FTP Bob dan perintah FTP akan terl
        "bukan di tingkat transport.")
 
 h2("Part 5: Decrypt the Contents of a Sensitive File")
-note("STATUS: SEBAGIAN SELESAI. Key dekripsi berhasil didapat pengguna dari aplikasi Email dalam simulasi Packet "
-     "Tracer (unik untuk file .pka ini, bukan nilai statis di teks instruksi). Langkah terakhir (dekripsi isi "
-     "clientinfo.enc) menunggu pengguna membagikan isi file tersebut.")
+note("STATUS: SELESAI. Key dekripsi didapat pengguna dari aplikasi Email dalam simulasi Packet Tracer (unik untuk "
+     "file .pka ini), dan isi terenkripsi clientinfo.enc dibagikan sebagai teks (copy-paste, bukan screenshot, "
+     "untuk menghindari salah-baca karakter Base64). Dekripsi final dijalankan nyata di sesi ini.")
 p = doc.add_paragraph(); r = p.add_run("What is the decryption key to access the confidential information in the clientinfo.enc file?"); r.bold = True
 answer("cisco123.")
 shot("10.1.15_Part5_decryption_key_email.png",
      "Gambar 19. Email dari Mary ke Bob pada Laptop BR-2 di Packet Tracer (dibuka langsung oleh pengguna), subjek "
      "'Decryption Key', berisi key: cisco123.")
 p = doc.add_paragraph(); r = p.add_run("What is the first name listed in the clientinfo.txt file?"); r.bold = True
-note("[BELUM DIISI - menunggu pengguna membagikan isi terenkripsi clientinfo.enc (copy-paste dari Text Editor, "
-     "sama seperti maryftplogin.txt sebelumnya). Setelah itu, dekripsi 'openssl aes-256-cbc -pbkdf2 -a -d' dengan "
-     "key cisco123 akan dijalankan ulang di sesi ini untuk jawaban final.]")
+answer("Drew (nama lengkap: Drew N. Stark, baris pertama pada clientinfo.txt).")
+shot("10.1.15_Part5_decrypted_clientinfo.png",
+     "Gambar 20. openssl aes-256-cbc -pbkdf2 -a -d -in clientinfo.enc -out clientinfo.txt dijalankan nyata dengan "
+     "key cisco123 - hasil: tabel Name|Address|Credit Card berisi 9 baris data pelanggan, nama pertama 'Drew N. Stark'.")
+note("Catatan: clientinfo.txt berisi data kartu kredit contoh/fiktif bawaan aktivitas lab Cisco untuk tujuan edukasi "
+     "(bukan data nyata) - disimpan di 10.1.15_FileEncryption/clientinfo.txt untuk keperluan verifikasi.")
 
 doc.add_page_break()
 
@@ -331,30 +335,32 @@ h1("Activity Reflection")
 p = doc.add_paragraph()
 r = p.add_run("What did you learn from this activity?")
 r.bold = True
-note("[DRAF - berdasarkan praktik yang benar-benar dijalankan (9.1.14 & 9.1.16). WAJIB divalidasi/diubah oleh "
-     "kelompok sebelum dikumpulkan - draf ini BUKAN hasil diskusi kelompok yang sudah terjadi.]")
+note("[DRAF - berdasarkan praktik yang benar-benar dijalankan (9.1.14, 9.1.16 & 10.1.15). WAJIB divalidasi/diubah "
+     "oleh kelompok sebelum dikumpulkan - draf ini BUKAN hasil diskusi kelompok yang sudah terjadi.]")
 answer("(Draf) Kelompok mempelajari bahwa hardening sistem Linux dengan Lynis memberikan audit terukur (229 tes, "
        "index hardening 57) yang bisa ditindaklanjuti satu per satu, dan bahwa satu warning dapat diselesaikan dengan "
        "memahami akar penyebab tes tersebut (membaca source code tes Lynis sendiri), bukan hanya menjalankan perintah "
        "secara acak. Pada praktik password recovery, kelompok melihat langsung bagaimana password kamus (seperti "
        "\"password\" atau \"summer\") dapat dipulihkan dalam hitungan detik, sedangkan password acak sepanjang 14 "
        "karakter bertahan terhadap serangan wordlist+rules selama durasi pengujian - menegaskan pentingnya kebijakan "
-       "password yang kuat.")
+       "password yang kuat. Pada praktik file and data encryption (10.1.15), kelompok melihat bahwa enkripsi "
+       "file di tingkat aplikasi (sebelum transfer) melindungi isi data walaupun protokol transfernya sendiri (FTP) "
+       "tidak aman, serta pentingnya menjaga kerahasiaan dan integritas key - satu karakter saja salah pada "
+       "ciphertext/key (sempat terjadi karena salah baca screenshot) membuat dekripsi gagal total.")
 
 p = doc.add_paragraph()
 r = p.add_run("What are you still confused about? / What do you still need clarification on?")
 r.bold = True
 note("[DRAF - WAJIB divalidasi/diubah oleh kelompok.]")
 answer("(Draf) Kelompok masih perlu klarifikasi mengenai bagaimana mengakses materi lab resmi 9.1.14/9.1.16 dan file "
-       ".pka 10.1.13 dari portal kelas, serta ketersediaan aplikasi Cisco Packet Tracer untuk menyelesaikan 10.1.13 "
-       "dan 10.1.15 secara penuh dengan data resmi dari Cisco (bukan lingkungan substitusi).")
+       ".pka 10.1.13 dari portal kelas NetAcad.")
 
 doc.add_page_break()
 h1("Group Work Evidence")
 body("If you worked together in person, please attach a photo. If you worked together online, please attach a screenshot.")
 note("Bukti kerja kelompok (koordinasi daring via WhatsApp) - diberikan langsung oleh pengguna, bukan rekayasa.")
 shot("GroupWorkEvidence_WhatsApp.png",
-     "Gambar 20. Screenshot percakapan WhatsApp kelompok - konfirmasi nama dan NIM anggota yang berpartisipasi: "
+     "Gambar 21. Screenshot percakapan WhatsApp kelompok - konfirmasi nama dan NIM anggota yang berpartisipasi: "
      "Mohammed Aatef Saleh (24523270) dan M Kemal Sabda Majid (24523123).")
 
 doc.save(OUT)
