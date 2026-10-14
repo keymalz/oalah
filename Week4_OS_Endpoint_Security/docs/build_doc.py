@@ -85,13 +85,17 @@ r2.bold = True
 
 p = doc.add_paragraph("Names & Student IDs of members present and participating in the work:")
 p.runs[0].bold = True
-for i in range(1, 5):
-    pp = doc.add_paragraph(f"[BELUM DIISI - Nama Anggota {i} (NIM)]", style='List Number')
-    pp.runs[0].font.color.rgb = YELLOW
+MEMBERS = [
+    "Mohammed Aatef Saleh (24523270)",
+    "M Kemal Sabda Majid (24523123)",
+]
+for m in MEMBERS:
+    doc.add_paragraph(m, style='List Number')
 
-note("Catatan: Identitas kelompok dan anggota belum dikonfirmasi oleh pengguna/kelompok. "
-     "Bagian ini TIDAK diisi/diarang secara otomatis - mohon lengkapi sebelum pengumpulan. "
-     "Lihat README_ID.md untuk detail.")
+note("Catatan: Dikonfirmasi oleh pengguna sebagai anggota yang berpartisipasi (2 orang, per pesan WhatsApp - "
+     "lihat bukti kerja kelompok di akhir dokumen). Nama kelompok (Group name) masih belum diberikan - "
+     "mohon dilengkapi sebelum pengumpulan. Jika ada anggota lain yang turut berpartisipasi, mohon informasikan "
+     "agar ditambahkan.")
 
 doc.add_paragraph()
 body("There are four activities:")
@@ -333,9 +337,10 @@ answer("(Draf) Kelompok masih perlu klarifikasi mengenai bagaimana mengakses mat
 doc.add_page_break()
 h1("Group Work Evidence")
 body("If you worked together in person, please attach a photo. If you worked together online, please attach a screenshot.")
-note("STATUS: BELUM TERSEDIA. Tidak ada foto/screenshot kerja kelompok yang diberikan ke sesi kerja ini. "
-     "Mohon kelompok melampirkan bukti kerja kelompok yang sebenarnya (foto pertemuan langsung atau screenshot "
-     "panggilan daring) sebelum dokumen ini dikumpulkan. Bukti TIDAK dikarang/direka-reka.")
+note("Bukti kerja kelompok (koordinasi daring via WhatsApp) - diberikan langsung oleh pengguna, bukan rekayasa.")
+shot("GroupWorkEvidence_WhatsApp.png",
+     "Gambar 17. Screenshot percakapan WhatsApp kelompok - konfirmasi nama dan NIM anggota yang berpartisipasi: "
+     "Mohammed Aatef Saleh (24523270) dan M Kemal Sabda Majid (24523123).")
 
 doc.save(OUT)
 print("Saved:", OUT)
