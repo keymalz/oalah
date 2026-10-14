@@ -1,0 +1,1 @@
+alice:$6$alicestrong$giaiqZXWqhZRzd0.rn1JLY291Dciiz7NqIwk03oqKwTLAwNP4q3nyrWs1ELuottluuQf.uWsKQxNPJSHKHIao.:1000:1000::/home/alice:/bin/bash

@@ -1,0 +1,4 @@
+alice:$6$alicesalt$9TEMlUAfjCLldh/9H5C.AtCIhgC1Q7Y8Jg0HY16bSLidyCUE0MP3OacXyEkfGsyxo3wb62u7uLLyn4jOzYW4O.:1000:1000::/home/alice:/bin/bash
+bob:$6$bobsalt$UHFZR5uW54BrdM.WgGVVsrYz/HYnqlxw2ZctvGVB5UTDY6yX0e8fUNP5LARZ09pElcPEwZIdOBopbu.tLBkNp.:1001:1001::/home/bob:/bin/bash
+eric:$6$ericsalt$n0o7f.AeBW28E5JqN502sAsBMZamVTrvnRzqTJ4IyLjCa9YcRO0LeO4WbkQjVi1Xzste3UuXUlHFub9R8jBEK/:1002:1002::/home/eric:/bin/bash
+eve:$6$evesalt$OHrSVSOPwC7qNCUTNaPgHW4nBFeKxtImxhUctz/gv7Mb1QFiogyNSxOSnHUxuWn9nBecv7rQacBV9a07wg8h01:1003:1003::/home/eve:/bin/bash

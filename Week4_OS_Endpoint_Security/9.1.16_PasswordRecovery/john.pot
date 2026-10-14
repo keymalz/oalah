@@ -1,0 +1,4 @@
+$6$ericsalt$n0o7f.AeBW28E5JqN502sAsBMZamVTrvnRzqTJ4IyLjCa9YcRO0LeO4WbkQjVi1Xzste3UuXUlHFub9R8jBEK/:password
+$6$alicesalt$9TEMlUAfjCLldh/9H5C.AtCIhgC1Q7Y8Jg0HY16bSLidyCUE0MP3OacXyEkfGsyxo3wb62u7uLLyn4jOzYW4O.:summer
+$6$evesalt$OHrSVSOPwC7qNCUTNaPgHW4nBFeKxtImxhUctz/gv7Mb1QFiogyNSxOSnHUxuWn9nBecv7rQacBV9a07wg8h01:letmein1
+$6$bobsalt$UHFZR5uW54BrdM.WgGVVsrYz/HYnqlxw2ZctvGVB5UTDY6yX0e8fUNP5LARZ09pElcPEwZIdOBopbu.tLBkNp.:cowboy1
