@@ -224,13 +224,21 @@ doc.add_page_break()
 h1("10.1.13 (File and Data Integrity Checks)")
 note("STATUS: TERHAMBAT - belum dapat dijalankan.")
 body("Penjelasan hambatan: Aktivitas ini memerlukan file Cisco Packet Tracer (.pka) resmi '10.1.13 Packet Tracer - "
-     "File and Data Integrity Checks'. File tersebut TIDAK disertakan dalam lampiran tugas (hanya file 10.1.15 yang "
-     "dilampirkan), dan sesi kerja ini tidak memiliki akses ke portal kelas/NetAcad tempat file aslinya biasanya "
-     "tersedia untuk mengunduhnya secara sah. Sesuai instruksi pengguna, kami TIDAK membuat topologi/file tiruan "
+     "File and Data Integrity Checks'. File tersebut TIDAK disertakan dalam lampiran tugas - DIKONFIRMASI langsung "
+     "oleh pengguna dengan screenshot post tugas dari Google Classroom, yang hanya melampirkan 2 file: '10.1.15 "
+     "Packet Tracer...' (.pka) dan template jawaban Google Dokumen. Teks tugas sendiri menyatakan 'the .pka document "
+     "is attached' HANYA untuk 10.1.15, sementara instruksi 10.1.13 mengarahkan ke materi kursus NetAcad Cybersecurity "
+     "Essentials (bukan lampiran post ini). Sesuai instruksi pengguna, kami TIDAK membuat topologi/file tiruan "
      "sebagai pengganti dan TIDAK mengarang jawaban atau screenshot untuk aktivitas ini.")
+shot("10.1.13_Assignment_post_no_pka_attached.png",
+     "Gambar 21. Screenshot post tugas asli (Google Classroom) yang dibagikan pengguna, mengonfirmasi hanya file "
+     "10.1.15 yang dilampirkan - tidak ada file 10.1.13.")
 body("Catatan tambahan: bahkan jika file .pka asli tersedia, Cisco Packet Tracer (aplikasi GUI berpemilik Cisco) "
      "tidak terpasang di lingkungan sandbox ini dan tidak dapat dipasang (tidak tersedia di repository publik mana pun; "
-     "pengunduhan resmi memerlukan login akun Cisco NetAcad yang tidak diminta melalui chat sesuai instruksi pengguna).")
+     "pengunduhan resmi memerlukan login akun Cisco NetAcad yang tidak diminta melalui chat sesuai instruksi pengguna). "
+     "Namun, seperti terbukti pada 10.1.15, jika pengguna menjalankan aktivitas ini sendiri di Packet Tracer pada "
+     "komputernya dan membagikan screenshot + teks instruksi/ciphertext yang relevan, jawaban tetap dapat diverifikasi "
+     "secara nyata di sesi ini tanpa perlu Packet Tracer terpasang di sandbox.")
 body("Tindakan yang dibutuhkan dari pengguna:", bold=True)
 for item in [
     "Unggah file asli '10.1.13 Packet Tracer - File and Data Integrity Checks.pka' dari portal kelas, ATAU",
@@ -360,7 +368,7 @@ h1("Group Work Evidence")
 body("If you worked together in person, please attach a photo. If you worked together online, please attach a screenshot.")
 note("Bukti kerja kelompok (koordinasi daring via WhatsApp) - diberikan langsung oleh pengguna, bukan rekayasa.")
 shot("GroupWorkEvidence_WhatsApp.png",
-     "Gambar 21. Screenshot percakapan WhatsApp kelompok - konfirmasi nama dan NIM anggota yang berpartisipasi: "
+     "Gambar 22. Screenshot percakapan WhatsApp kelompok - konfirmasi nama dan NIM anggota yang berpartisipasi: "
      "Mohammed Aatef Saleh (24523270) dan M Kemal Sabda Majid (24523123).")
 
 doc.save(OUT)

@@ -9,7 +9,7 @@ untuk kelas Cybersecurity Essentials, Kelompok **PINK HAT**. Dibuat pada 14 Okto
 |---|---|---|
 | 9.1.14 Harden a Linux System | **Selesai & terverifikasi** | Dijalankan nyata di VM-lab Docker terisolasi |
 | 9.1.16 Recover Password | **Selesai & terverifikasi** | Dijalankan nyata di VM-lab Docker terisolasi, akun uji |
-| 10.1.13 File and Data Integrity Checks | **Terhambat** | File .pka asli tidak tersedia |
+| 10.1.13 File and Data Integrity Checks | **Terhambat** | File .pka tidak dilampirkan di post tugas (dikonfirmasi pengguna) - perlu dicari di materi kursus NetAcad |
 | 10.1.15 File and Data Encryption | **Selesai & terverifikasi** | Part 1-5 lengkap (user buka Packet Tracer sendiri, semua dekripsi OpenSSL diverifikasi ulang nyata) |
 
 ## Isi Folder
@@ -98,10 +98,21 @@ Hash & hasil crack lengkap: `9.1.16_PasswordRecovery/`.
 
 ### 10.1.13 — Packet Tracer (TERHAMBAT)
 
-File `.pka` resmi tidak dilampirkan pengguna dan tidak dapat ditemukan dari
-sumber yang sah dan dapat diakses sesi ini (portal kelas/NetAcad tidak
-terhubung ke sesi ini). Sesuai instruksi, kami **tidak membuat topologi
-tiruan** sebagai pengganti.
+File `.pka` resmi tidak dilampirkan — **dikonfirmasi pengguna** dengan
+screenshot post tugas asli dari Google Classroom (lihat
+`screenshots/10.1.13_Assignment_post_no_pka_attached.png`): post tersebut
+hanya melampirkan 2 file, yaitu `.pka` 10.1.15 dan template jawaban Google
+Dokumen. Teks tugasnya sendiri bahkan menyebut "the .pka document is attached"
+khusus untuk 10.1.15 — artinya 10.1.13 memang dari awal dimaksudkan diambil
+dari materi kursus Cisco NetAcad "Cybersecurity Essentials" (bukan lampiran
+post ini). Sesuai instruksi, kami **tidak membuat topologi tiruan** sebagai
+pengganti.
+
+Seperti terbukti pada penyelesaian 10.1.15, begitu file ini ditemukan dan
+dijalankan sendiri oleh pengguna di Packet Tracer, jawabannya tetap bisa
+diverifikasi ulang secara nyata di sesi ini (lewat OpenSSL atau analisis hash,
+tergantung kebutuhan aktivitas) tanpa perlu Packet Tracer terpasang di
+sandbox — jadi begitu file ditemukan, sisa pekerjaan ini relatif cepat.
 
 ### 10.1.15 — Packet Tracer (SELESAI)
 
