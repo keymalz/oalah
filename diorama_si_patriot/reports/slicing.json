@@ -1,6 +1,6 @@
 [
  {
-  "file": "stl/alas_cetak3d/K01_kunci_sambungan_bowtie.stl",
+  "file": "stl/opsional/alas_cetak3d/K01_kunci_sambungan_bowtie.stl",
   "profile": "alas",
   "needs_support": false,
   "ok_support": true,
@@ -19,7 +19,7 @@
   "warnings_nosupport": []
  },
  {
-  "file": "stl/alas_cetak3d/T11_ubin_alas_depan_kiri.stl",
+  "file": "stl/opsional/alas_cetak3d/T11_ubin_alas_depan_kiri.stl",
   "profile": "alas",
   "needs_support": false,
   "ok_support": true,
@@ -38,7 +38,7 @@
   "warnings_nosupport": []
  },
  {
-  "file": "stl/alas_cetak3d/T12_ubin_alas_depan_tengah.stl",
+  "file": "stl/opsional/alas_cetak3d/T12_ubin_alas_depan_tengah.stl",
   "profile": "alas",
   "needs_support": false,
   "ok_support": true,
@@ -57,7 +57,7 @@
   "warnings_nosupport": []
  },
  {
-  "file": "stl/alas_cetak3d/T13_ubin_alas_depan_kanan.stl",
+  "file": "stl/opsional/alas_cetak3d/T13_ubin_alas_depan_kanan.stl",
   "profile": "alas",
   "needs_support": false,
   "ok_support": true,
@@ -76,7 +76,7 @@
   "warnings_nosupport": []
  },
  {
-  "file": "stl/alas_cetak3d/T21_ubin_alas_belakang_kiri.stl",
+  "file": "stl/opsional/alas_cetak3d/T21_ubin_alas_belakang_kiri.stl",
   "profile": "alas",
   "needs_support": false,
   "ok_support": true,
@@ -95,7 +95,7 @@
   "warnings_nosupport": []
  },
  {
-  "file": "stl/alas_cetak3d/T22_ubin_alas_belakang_tengah.stl",
+  "file": "stl/opsional/alas_cetak3d/T22_ubin_alas_belakang_tengah.stl",
   "profile": "alas",
   "needs_support": false,
   "ok_support": true,
@@ -114,7 +114,7 @@
   "warnings_nosupport": []
  },
  {
-  "file": "stl/alas_cetak3d/T23_ubin_alas_belakang_kanan.stl",
+  "file": "stl/opsional/alas_cetak3d/T23_ubin_alas_belakang_kanan.stl",
   "profile": "alas",
   "needs_support": false,
   "ok_support": true,
@@ -242,25 +242,6 @@
   "time_nosupport": "2h 2m 16s",
   "time_s_nosupport": 7336,
   "filament_g_nosupport": 23.2,
-  "support_pct_nosupport": 0.0,
-  "overhang_perim_mm_nosupport": 0,
-  "warnings_nosupport": []
- },
- {
-  "file": "stl/dudukan/D07_dudukan_biodigester.stl",
-  "profile": "dudukan",
-  "needs_support": false,
-  "ok_support": true,
-  "time_support": "3h 44m 32s",
-  "time_s_support": 13472,
-  "filament_g_support": 42.3,
-  "support_pct_support": 0.0,
-  "overhang_perim_mm_support": 0,
-  "warnings_support": [],
-  "ok_nosupport": true,
-  "time_nosupport": "3h 44m 32s",
-  "time_s_nosupport": 13472,
-  "filament_g_nosupport": 42.3,
   "support_pct_nosupport": 0.0,
   "overhang_perim_mm_nosupport": 0,
   "warnings_nosupport": []
@@ -540,27 +521,6 @@
   "warnings_nosupport": []
  },
  {
-  "file": "stl/figur/F12_biodigester.stl",
-  "profile": "figur",
-  "needs_support": false,
-  "ok_support": true,
-  "time_support": "2h 27m 54s",
-  "time_s_support": 8874,
-  "filament_g_support": 22.5,
-  "support_pct_support": 0.0,
-  "overhang_perim_mm_support": 0,
-  "warnings_support": [],
-  "ok_nosupport": true,
-  "time_nosupport": "2h 27m 54s",
-  "time_s_nosupport": 8874,
-  "filament_g_nosupport": 22.5,
-  "support_pct_nosupport": 0.0,
-  "overhang_perim_mm_nosupport": 0,
-  "warnings_nosupport": [
-   "print warning: Detected print stability issues:"
-  ]
- },
- {
   "file": "stl/figur/F13_biogas.stl",
   "profile": "figur",
   "needs_support": false,
@@ -681,7 +641,7 @@
   ]
  },
  {
-  "file": "stl/sapi_varian_belah/F05-1_sapi_A_belahan_kiri.stl",
+  "file": "stl/opsional/sapi_varian_belah/F05-1_sapi_A_belahan_kiri.stl",
   "profile": "figur",
   "needs_support": true,
   "ok_support": true,
@@ -700,7 +660,7 @@
   "warnings_nosupport": []
  },
  {
-  "file": "stl/sapi_varian_belah/F05-2_sapi_A_belahan_kanan.stl",
+  "file": "stl/opsional/sapi_varian_belah/F05-2_sapi_A_belahan_kanan.stl",
   "profile": "figur",
   "needs_support": true,
   "ok_support": true,
@@ -719,7 +679,7 @@
   "warnings_nosupport": []
  },
  {
-  "file": "stl/sapi_varian_belah/F06-1_sapi_B_belahan_kiri.stl",
+  "file": "stl/opsional/sapi_varian_belah/F06-1_sapi_B_belahan_kiri.stl",
   "profile": "figur",
   "needs_support": true,
   "ok_support": true,
@@ -738,7 +698,7 @@
   "warnings_nosupport": []
  },
  {
-  "file": "stl/sapi_varian_belah/F06-2_sapi_B_belahan_kanan.stl",
+  "file": "stl/opsional/sapi_varian_belah/F06-2_sapi_B_belahan_kanan.stl",
   "profile": "figur",
   "needs_support": true,
   "ok_support": true,
@@ -754,6 +714,44 @@
   "filament_g_nosupport": 3.8,
   "support_pct_nosupport": 0.0,
   "overhang_perim_mm_nosupport": 22.5,
+  "warnings_nosupport": []
+ },
+ {
+  "file": "stl/figur/F12_biodigester_kantong.stl",
+  "profile": "figur",
+  "needs_support": false,
+  "ok_support": true,
+  "time_support": "2h 43m 19s",
+  "time_s_support": 9799,
+  "filament_g_support": 22.1,
+  "support_pct_support": 0.27,
+  "overhang_perim_mm_support": 5.1,
+  "warnings_support": [],
+  "ok_nosupport": true,
+  "time_nosupport": "2h 43m 0s",
+  "time_s_nosupport": 9780,
+  "filament_g_nosupport": 22.0,
+  "support_pct_nosupport": 0.0,
+  "overhang_perim_mm_nosupport": 5.1,
+  "warnings_nosupport": []
+ },
+ {
+  "file": "stl/dudukan/D07_dudukan_biodigester.stl",
+  "profile": "dudukan",
+  "needs_support": false,
+  "ok_support": true,
+  "time_support": "3h 55m 4s",
+  "time_s_support": 14104,
+  "filament_g_support": 44.3,
+  "support_pct_support": 0.0,
+  "overhang_perim_mm_support": 0,
+  "warnings_support": [],
+  "ok_nosupport": true,
+  "time_nosupport": "3h 55m 4s",
+  "time_s_nosupport": 14104,
+  "filament_g_nosupport": 44.3,
+  "support_pct_nosupport": 0.0,
+  "overhang_perim_mm_nosupport": 0,
   "warnings_nosupport": []
  }
 ]

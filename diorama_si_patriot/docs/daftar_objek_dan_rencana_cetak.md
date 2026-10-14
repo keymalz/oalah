@@ -17,7 +17,7 @@ Waktu & berat = estimasi PrusaSlicer 2.7 (nozzle 0,4; figur layer 0,12 mm, 3 per
 | F09 | Botol susu (3 botol menyatu) | **1** | D04 | 20×19×31 | tidak | 56m 29s | 4.9 | Putih | - | tutup botol hijau |
 | F10 | Kantong uang + koin | **1** | D05 | 27×23×22 | tidak | 33m 14s | 3.2 | Krem/cokelat muda | - | koin & tali emas, huruf Rp emas |
 | F11 | Limbah ternak | **1** | D06 | 42×29×20 | tidak | 31m 19s | 3.9 | Cokelat tua | - | dry-brush cokelat sedang |
-| F12 | Biodigester | **1** | D07 | 80×60×39 | tidak | 2h 27m 54s | 22.5 | Zaitun/khaki -> hijau tua | ganti ke hijau tua di Z = 19,6 | pipa abu/hijau muda, bak inlet/outlet abu beton, isi bak cokelat |
+| F12 | Biodigester kantong (balon) | **1** | D07 | 106×53×33 | tidak | 2h 43m 0s | 22.0 | Abu muda (kontras dengan dudukan krem) | - | pipa putih, katup kuningan, selang merah |
 | F13 | Biogas (api di tungku) | **1** | D08 | 16×16×22 | tidak | 20m 39s | 1.4 | Hijau tua -> oranye | ganti ke oranye di Z = 5,6 | inti api kuning |
 | F14 | Slurry (jeriken) | **1** | D08 | 17×12×22 | tidak | 19m 9s | 2.0 | Hijau zaitun | - | panel label krem, ikon tetes cokelat tua, tutup abu tua |
 | F15 | Energi & pupuk (lampu + tunas) | **1** | D08 | 26×16×18 | tidak | 22m 56s | 1.5 | Cokelat -> kuning muda | ganti ke kuning muda di Z = 3,0 | tunas hijau, ulir lampu perak |
@@ -27,7 +27,7 @@ Waktu & berat = estimasi PrusaSlicer 2.7 (nozzle 0,4; figur layer 0,12 mm, 3 per
 
 Ringkas jumlah wajib: **2 sapi** (F05, F06 - pose berbeda), **1 peternak** (F07 badan + F08 caping), **1 mesin pencacah** (F03), **1 biodigester** (F12), **1 HP** (F18). Tidak ada sapi ketiga, HP kedua, laptop, monitor, tablet, atau panah.
 
-Alternatif sapi tanpa support di perut/ambing: `stl/sapi_varian_belah/` (2 belahan per sapi + 2 pin potongan filamen 1,75 mm × 12 mm). Masih perlu support kecil di bawah kaki (sisi dalam, tidak terlihat).
+Alternatif sapi tanpa support di perut/ambing: `stl/opsional/sapi_varian_belah/` (2 belahan per sapi + 2 pin potongan filamen 1,75 mm × 12 mm). Masih perlu support kecil di bawah kaki (sisi dalam, tidak terlihat).
 
 ## Dudukan krem berlabel (semua 1×)
 
@@ -39,33 +39,33 @@ Alternatif sapi tanpa support di perut/ambing: `stl/sapi_varian_belah/` (2 belah
 | D04 | SUSU SAPI | **1** | 68×68×10.8 | (542; 256) | 1h 16m 6s | 14.6 | krem -> hijau tua di Z = 10.0 |
 | D05 | PENDAPATAN PETERNAK | **1** | 72×72×10.8 | (550; 166) | 1h 26m 54s | 16.3 | krem -> hijau tua di Z = 10.0 |
 | D06 | LIMBAH TERNAK | **1** | 92×74×10.8 | (445; 106) | 2h 2m 16s | 23.2 | krem -> hijau tua di Z = 10.0 |
-| D07 | BIODIGESTER | **1** | 124×104×10.8 | (304; 67) | 3h 44m 32s | 42.3 | krem -> hijau tua di Z = 10.0 |
+| D07 | BIODIGESTER | **1** | 124×104×10.8 | (304; 67) | 3h 55m 4s | 44.3 | krem -> hijau tua di Z = 10.0 |
 | D08 | BIOGAS / SLURRY / ENERGI & PUPUK / LIMBAH PADAT | **1** | 144×105×10.8 | (128; 92) | 4h 29m 50s | 50.6 | krem -> hijau tua di Z = 10.0 |
 | D09 | PUPUK ORGANIK | **1** | 58×64×13.8 | (44; 210) | 1h 20m 45s | 16.5 | krem -> hijau tua di Z = 13.0 |
 | D10 | PENCATATAN DIGITAL SI PATRIOT | **1** | 104×80×14.8 | (280; 168) | 3h 0m 23s | 37.2 | krem -> hijau tua di Z = 14.0 |
 
-Varian stiker (tanpa ganti filamen): `stl/dudukan_varian_stiker/` + `docs/stiker_label_A4_skala_1-1.pdf`.
+Varian stiker (tanpa ganti filamen): `stl/opsional/dudukan_varian_stiker/` + `docs/stiker_label_A4_skala_1-1.pdf`.
 
 ## Alas utama
 
 **Disarankan:** papan MDF/plywood 600 × 360 × 12 mm, tepi atas di-chamfer/diamplas, cat akrilik cokelat tanah (doff). Biaya & waktu jauh lebih kecil daripada mencetak.
 
-Opsional cetak 3D (PLA cokelat):
+Opsional cetak 3D (PLA cokelat, `stl/opsional/alas_cetak3d/`, TIDAK termasuk paket cetak utama):
 
 | ID | Berkas | Jumlah | Waktu | Gram |
 |---|---|---|---|---|
-| T11 | `stl/alas_cetak3d/T11_ubin_alas_depan_kiri.stl` | 1 | 8h 11m 2s | 98.0 |
-| T12 | `stl/alas_cetak3d/T12_ubin_alas_depan_tengah.stl` | 1 | 7h 43m 11s | 98.9 |
-| T13 | `stl/alas_cetak3d/T13_ubin_alas_depan_kanan.stl` | 1 | 8h 11m 11s | 98.3 |
-| T21 | `stl/alas_cetak3d/T21_ubin_alas_belakang_kiri.stl` | 1 | 7h 49m 57s | 98.7 |
-| T22 | `stl/alas_cetak3d/T22_ubin_alas_belakang_tengah.stl` | 1 | 8h 13m 44s | 98.2 |
-| T23 | `stl/alas_cetak3d/T23_ubin_alas_belakang_kanan.stl` | 1 | 8h 1m 2s | 98.2 |
-| K01 | `stl/alas_cetak3d/K01_kunci_sambungan_bowtie.stl` | 14 | 1j 12m total | 13 total |
+| T11 | `stl/opsional/alas_cetak3d/T11_ubin_alas_depan_kiri.stl` | 1 | 8h 11m 2s | 98.0 |
+| T12 | `stl/opsional/alas_cetak3d/T12_ubin_alas_depan_tengah.stl` | 1 | 7h 43m 11s | 98.9 |
+| T13 | `stl/opsional/alas_cetak3d/T13_ubin_alas_depan_kanan.stl` | 1 | 8h 11m 11s | 98.3 |
+| T21 | `stl/opsional/alas_cetak3d/T21_ubin_alas_belakang_kiri.stl` | 1 | 7h 49m 57s | 98.7 |
+| T22 | `stl/opsional/alas_cetak3d/T22_ubin_alas_belakang_tengah.stl` | 1 | 8h 13m 44s | 98.2 |
+| T23 | `stl/opsional/alas_cetak3d/T23_ubin_alas_belakang_kanan.stl` | 1 | 8h 1m 2s | 98.2 |
+| K01 | `stl/opsional/alas_cetak3d/K01_kunci_sambungan_bowtie.stl` | 14 | 1j 12m total | 13 total |
 
 ## Total estimasi
 
-- Figur & alat: **30j 38m**, ±208 g
-- Dudukan: **30j 58m**, ±365 g
+- Figur & alat: **30j 53m**, ±208 g
+- Dudukan: **31j 9m**, ±367 g
 - (Opsional) alas cetak 3D: **49j 22m**, ±603 g
-- Total tanpa alas cetak: **61j 36m** (≈ 31 jam bila 2 printer jalan paralel)
+- Total tanpa alas cetak: **62j 2m** (≈ 31 jam bila 2 printer jalan paralel)
 

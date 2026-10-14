@@ -15,12 +15,12 @@ alas cokelat **600 × 360 mm**, 10 dudukan krem berlabel, 18 figur/alat, tanpa p
 
 | Sudah dibuat & diperiksa | Belum / di luar kemampuan saya |
 |---|---|
-| 49 STL nyata (figur, dudukan 2 varian, sapi belah, ubin alas, kunci) — **49/49 lolos** pemeriksaan otomatis: tertutup, volume > 0, **satu badan**, alas di **Z = 0**, valid di manifold3d, muat bed 220 × 220 | Belum ada cetak fisik. Semua verifikasi bersifat geometri + **uji iris PrusaSlicer 2.7** (bukan percobaan di printer Anda). Cetak uji dulu (lihat §5). |
+**Satu set cetak utama = 28 STL** (`stl/dudukan/` 10 + `stl/figur/` 18, tanpa dobel); varian alternatif dipisah di `stl/opsional/`. Total 49 STL — **49/49 lolos** pemeriksaan otomatis: tertutup, volume > 0, **satu badan**, alas di **Z = 0**, valid di manifold3d, muat bed 220 × 220 | Belum ada cetak fisik. Semua verifikasi bersifat geometri + **uji iris PrusaSlicer 2.7** (bukan percobaan di printer Anda). Cetak uji dulu (lihat §5). |
 | Uji iris setiap STL: **hanya 2 sapi yang perlu support**; semua lainnya ≤ 1 % (praktis tanpa support) | Warna di render = **panduan cat/ganti filamen**. Printer FDM satu warna akan mencetak satu warna; diperlukan cat akrilik atau ganti filamen di ketinggian tertentu (tabel §5.3). |
 | Uji garis pandang (ray casting) dari mata pengunjung 1 m di depan meja → semua 14 label ≥ 92 % terlihat untuk tinggi mata 155 cm **dan** 145 cm | Stiker layar HP berisi **placeholder** “CONTOH TATA LETAK”. Tangkapan layar App/Website SI PATRIOT yang asli harus Anda sediakan (ukuran 23,1 × 43,1 mm). |
 | Berkas `.blend` lengkap + kode parametrik (Python) untuk membangun ulang semuanya | Meja: kedalaman 60 cm masih **perkiraan** — ukur ulang (lihat §8). |
 
-Biodigester di sini adalah **miniatur ilustratif sesuai skema**, bukan replika unit lapangan. Kantong uang adalah simbol hubungan dalam skema, **bukan klaim** angka pendapatan.
+Biodigester (revisi) = **tipe kantong/balon fleksibel** sesuai foto acuan tim: kantong terpal berjahit di atas rangka pipa, pipa inlet miring, pipa outlet tegak, katup gas kuningan + selang merah. Tetap miniatur ilustratif, bukan replika ukuran unit lapangan. Kantong uang adalah simbol hubungan dalam skema, **bukan klaim** angka pendapatan.
 
 ---
 
@@ -30,7 +30,7 @@ Biodigester di sini adalah **miniatur ilustratif sesuai skema**, bukan replika u
 |---|---|---|
 | 1 | Satu adegan 3D lengkap di alas cokelat | `blend/diorama_si_patriot.blend` (koleksi ALAS_UTAMA, DUDUKAN, FIGUR, STIKER_RENDER, MEJA_PAMERAN; kamera tersimpan `CAM_*`) |
 | 2 | Proyek yang bisa diedit | `.blend` di atas + **sumber parametrik** `src/*.py` (ubah ukuran/posisi lalu bangun ulang) |
-| 3 | STL terpisah tiap figur, alat, dudukan | `stl/figur/` (F01–F18), `stl/dudukan/` (D01–D10), `stl/dudukan_varian_stiker/`, `stl/sapi_varian_belah/`, `stl/alas_cetak3d/` |
+| 3 | STL terpisah tiap figur, alat, dudukan | **Set cetak utama:** `stl/dudukan/` (D01–D10) + `stl/figur/` (F01–F18) = 28 berkas, masing-masing dicetak 1×. Alternatif (jangan dihitung bersama set utama): `stl/opsional/dudukan_varian_stiker/` (pengganti D01–D10 bila tidak bisa ganti filamen), `stl/opsional/sapi_varian_belah/` (pengganti F05/F06), `stl/opsional/alas_cetak3d/` (pengganti papan MDF) |
 | 4 | Daftar objek & jumlah cetak | [`docs/daftar_objek_dan_rencana_cetak.md`](docs/daftar_objek_dan_rencana_cetak.md) |
 | 5 | Render atas, depan, tiga perempat | `render/diorama_top.png` (atas), `render/diorama_front_elevasi.png` (elevasi depan ortografik), `render/diorama_front_pengunjung_1m.png` + `..._zoom.png` (dari mata pengunjung), `render/diorama_three_quarter.png`, `render/diorama_iso_acuan.png` (sudut gambar acuan); pratinjau depan + ¾ per objek beserta ukuran & posisi: `render/objek/*.png`, `render/katalog_semua_objek.png` |
 | 6 | Perbandingan dengan meja 96 × 60 | `render/diorama_meja_tiga_perempat.png`, `render/diorama_meja_atas_ukuran.png`, `render/diorama_meja_pandangan_pengunjung.png`, `docs/simulasi_meja_96x60.png` |
@@ -84,14 +84,14 @@ Stiker: `docs/stiker_label_A4_skala_1-1.pdf` (label dudukan untuk varian stiker 
 | Dudukan (D01–D10) | 0,2 mm | 3 | 10–15 % | 5 lapis atas padat agar huruf rapi |
 | Ubin alas (opsional) | 0,24 mm | 2 | 10 % | PLA cokelat; bed bersih agar tidak melengkung |
 
-Semua STL sudah dalam **orientasi cetak**: alas datar di bed (Z = 0). Jangan diputar, kecuali sapi varian belah (sudah rebah di bidang belahnya).
+Semua STL sudah dalam **orientasi cetak**: alas datar di bed (Z = 0). Jangan diputar.
 
 ### 5.2 Support — spesifik
 | Objek | Support | Di mana |
 |---|---|---|
 | F05, F06 sapi (utuh) | **Ya**, *tree/organic*, “build plate only” (±24 % material) | Bawah perut, ambing & puting, dagu/kepala, ekor |
 | F05-1/2, F06-1/2 sapi belah | **Ya**, sedikit (±10 %) | Bawah kaki (sisi dalam yang nanti tak terlihat). Satukan dengan 2 pin potongan filamen 1,75 mm × 12 mm + lem CA. Hasil permukaan perut/ambing lebih bersih. |
-| Semua objek lain | **Tidak** | Kandang, biodigester, mesin, jeriken, HP sudah didesain ulang (tritisan/list/pipa/bibir dibuat miring 45°) sampai PrusaSlicer 0 % support. Mesin pencacah: dek bertumpu jembatan ≤ 9 mm (PrusaSlicer memberi info *long bridging*, aman). |
+| Semua objek lain | **Tidak** | Kandang, biodigester kantong (0,27 %), mesin, jeriken, HP sudah didesain ulang (tritisan/list/pipa/bibir dibuat miring 45°) sampai PrusaSlicer 0 % support. Mesin pencacah: dek bertumpu jembatan ≤ 9 mm (PrusaSlicer memberi info *long bridging*, aman). |
 
 ### 5.3 Warna: ganti filamen & cat
 Dudukan: **krem**, lalu ganti ke **hijau tua** pada layer pertama di atas Z = tebal dudukan (contoh: layer 0,2 mm → jeda di Z = 10,2 untuk D01/D03–D08; 13,2 untuk D09; 14,2 untuk D10; 22,2 untuk D02). Hanya huruf yang tercetak hijau. Di PrusaSlicer/Bambu/Orca: klik kanan penggeser layer → *Add color change (M600)*.
@@ -100,7 +100,7 @@ Dudukan: **krem**, lalu ganti ke **hijau tua** pada layer pertama di atas Z = te
 |---|---|---|
 | F01 rumput | cokelat → hijau di Z 6,0 | – |
 | F03 mesin | merah → hijau di Z 11,6 | motor abu tua, tangki merah |
-| F12 biodigester | zaitun → hijau tua di Z 19,6 | pipa & bak beton |
+| F12 biodigester kantong | abu muda (agar kontras dengan dudukan krem) | pipa putih, katup kuningan, selang merah |
 | F13 biogas | hijau tua → oranye di Z 5,6 | inti api kuning |
 | F15 energi & pupuk | cokelat → kuning muda di Z 3,0 | tunas hijau, ulir perak |
 | F05/F06 sapi | putih | corak hitam (pola di render), moncong & ambing merah muda, kuku abu |
@@ -108,7 +108,7 @@ Dudukan: **krem**, lalu ganti ke **hijau tua** pada layer pertama di atas Z = te
 | lainnya | lihat [daftar lengkap](docs/daftar_objek_dan_rencana_cetak.md) | |
 
 ### 5.4 Urutan cetak yang disarankan (total ±61½ jam; ±31 jam dengan 2 printer)
-1. **Cetak uji** (hari 1): D04 SUSU SAPI (1 j 16 m) untuk menguji ganti filamen & ketajaman huruf; satu sapi (F05) untuk menyetel support. Jika huruf kurang rapi → pakai varian stiker.
+1. **Cetak uji** (hari 1): D04 SUSU SAPI (1 j 16 m) untuk menguji ganti filamen & ketajaman huruf; satu sapi (F05) untuk menyetel support. Jika huruf kurang rapi → pakai `stl/opsional/dudukan_varian_stiker/` sebagai **pengganti** (bukan tambahan).
 2. **Cetak panjang malam hari**: F01 rumput (9 j 27 m pada 0,12 mm), D03 (7 j 19 m), F04 kandang (6 j 22 m), D08 (4 j 30 m), D07 (3 j 45 m), D02 (3 j 40 m), D10 (3 j 0 m).
 3. Siang hari: figur kecil (F02, F03, F06, F07, F08, F09–F18) dan dudukan kecil (D01, D05, D06, D09).
 4. Cadangan: cetak satu sapi ekstra dan rumput ekstra (bagian paling rapuh) bila waktu ada — bukan untuk dipajang (tetap dua sapi).

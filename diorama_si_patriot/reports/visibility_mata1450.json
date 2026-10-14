@@ -67,8 +67,8 @@
   },
   "PENCATATAN DIGITAL SI PATRIOT": {
    "kiri": 100.0,
-   "tengah": 99.4,
-   "kanan": 91.9
+   "tengah": 100.0,
+   "kanan": 100.0
   }
  },
  "figures": {
@@ -128,9 +128,9 @@
    "kanan": 93.5
   },
   "F12": {
-   "kiri": 84.3,
-   "tengah": 87.9,
-   "kanan": 87.3
+   "kiri": 91.5,
+   "tengah": 93.4,
+   "kanan": 93.0
   },
   "F13": {
    "kiri": 94.1,

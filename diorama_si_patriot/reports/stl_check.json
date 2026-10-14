@@ -359,33 +359,33 @@
   }
  },
  {
-  "file": "stl/figur/F12_biodigester.stl",
-  "tri": 10044,
+  "file": "stl/figur/F12_biodigester_kantong.stl",
+  "tri": 89954,
   "watertight": true,
   "winding_ok": true,
   "is_volume": true,
-  "volume_cm3": 62.54,
+  "volume_cm3": 56.41,
   "bodies": 1,
   "smallest_body_mm3": null,
   "min_z": 0.0,
   "size_mm": [
-   80.3,
-   59.5,
-   39.0
+   106.2,
+   53.0,
+   33.1
   ],
-  "bed_contact_mm2": 2426.0,
-  "overhang45_mm2": 2.1,
-  "overhang60_mm2": 0.3,
-  "thick_p1_mm": 1.6,
-  "thick_p5_mm": 2.1,
-  "thin_lt_0p8_pct": 0.0,
+  "bed_contact_mm2": 2876.2,
+  "overhang45_mm2": 134.0,
+  "overhang60_mm2": 16.6,
+  "thick_p1_mm": 1.1,
+  "thick_p5_mm": 2.69,
+  "thin_lt_0p8_pct": 0.27,
   "manifold3d_ok": true,
   "fits_bed": true,
   "PASS": true,
   "cleanup": {
-   "n_dropped": 7,
+   "n_dropped": 26,
    "dropped_mm3": 0.0,
-   "main_mm3": 62537.8,
+   "main_mm3": 56410.6,
    "notes": [
     "buang komponen vol=0.0000 luas=0.000",
     "buang komponen vol=0.0000 luas=0.000",
@@ -601,7 +601,7 @@
   }
  },
  {
-  "file": "stl/sapi_varian_belah/F05-1_sapi_A_belahan_kiri.stl",
+  "file": "stl/opsional/sapi_varian_belah/F05-1_sapi_A_belahan_kiri.stl",
   "tri": 42614,
   "watertight": true,
   "winding_ok": true,
@@ -632,7 +632,7 @@
   }
  },
  {
-  "file": "stl/sapi_varian_belah/F05-2_sapi_A_belahan_kanan.stl",
+  "file": "stl/opsional/sapi_varian_belah/F05-2_sapi_A_belahan_kanan.stl",
   "tri": 51142,
   "watertight": true,
   "winding_ok": true,
@@ -663,7 +663,7 @@
   }
  },
  {
-  "file": "stl/sapi_varian_belah/F06-1_sapi_B_belahan_kiri.stl",
+  "file": "stl/opsional/sapi_varian_belah/F06-1_sapi_B_belahan_kiri.stl",
   "tri": 46234,
   "watertight": true,
   "winding_ok": true,
@@ -694,7 +694,7 @@
   }
  },
  {
-  "file": "stl/sapi_varian_belah/F06-2_sapi_B_belahan_kanan.stl",
+  "file": "stl/opsional/sapi_varian_belah/F06-2_sapi_B_belahan_kanan.stl",
   "tri": 47318,
   "watertight": true,
   "winding_ok": true,
@@ -756,7 +756,7 @@
   }
  },
  {
-  "file": "stl/dudukan_varian_stiker/D01_dudukan_pakan_hijauan_stiker.stl",
+  "file": "stl/opsional/dudukan_varian_stiker/D01_dudukan_pakan_hijauan_stiker.stl",
   "tri": 38374,
   "watertight": true,
   "winding_ok": true,
@@ -818,7 +818,7 @@
   }
  },
  {
-  "file": "stl/dudukan_varian_stiker/D02_dudukan_pakan_ternak_dan_mesin_pencacah_stiker.stl",
+  "file": "stl/opsional/dudukan_varian_stiker/D02_dudukan_pakan_ternak_dan_mesin_pencacah_stiker.stl",
   "tri": 38692,
   "watertight": true,
   "winding_ok": true,
@@ -880,7 +880,7 @@
   }
  },
  {
-  "file": "stl/dudukan_varian_stiker/D03_dudukan_produksi_ternak_stiker.stl",
+  "file": "stl/opsional/dudukan_varian_stiker/D03_dudukan_produksi_ternak_stiker.stl",
   "tri": 37184,
   "watertight": true,
   "winding_ok": true,
@@ -942,7 +942,7 @@
   }
  },
  {
-  "file": "stl/dudukan_varian_stiker/D04_dudukan_susu_sapi_stiker.stl",
+  "file": "stl/opsional/dudukan_varian_stiker/D04_dudukan_susu_sapi_stiker.stl",
   "tri": 39326,
   "watertight": true,
   "winding_ok": true,
@@ -1004,7 +1004,7 @@
   }
  },
  {
-  "file": "stl/dudukan_varian_stiker/D05_dudukan_pendapatan_peternak_stiker.stl",
+  "file": "stl/opsional/dudukan_varian_stiker/D05_dudukan_pendapatan_peternak_stiker.stl",
   "tri": 38642,
   "watertight": true,
   "winding_ok": true,
@@ -1066,7 +1066,7 @@
   }
  },
  {
-  "file": "stl/dudukan_varian_stiker/D06_dudukan_limbah_ternak_stiker.stl",
+  "file": "stl/opsional/dudukan_varian_stiker/D06_dudukan_limbah_ternak_stiker.stl",
   "tri": 39404,
   "watertight": true,
   "winding_ok": true,
@@ -1098,11 +1098,11 @@
  },
  {
   "file": "stl/dudukan/D07_dudukan_biodigester.stl",
-  "tri": 41850,
+  "tri": 41860,
   "watertight": true,
   "winding_ok": true,
   "is_volume": true,
-  "volume_cm3": 112.39,
+  "volume_cm3": 118.22,
   "bodies": 1,
   "smallest_body_mm3": null,
   "min_z": 0.0,
@@ -1111,10 +1111,10 @@
    104.0,
    10.8
   ],
-  "bed_contact_mm2": 10988.7,
-  "overhang45_mm2": 52.5,
+  "bed_contact_mm2": 11569.0,
+  "overhang45_mm2": 55.5,
   "overhang60_mm2": 0.0,
-  "thick_p1_mm": 9.35,
+  "thick_p1_mm": 9.28,
   "thick_p5_mm": 10.0,
   "thin_lt_0p8_pct": 0.0,
   "manifold3d_ok": true,
@@ -1123,17 +1123,17 @@
   "cleanup": {
    "n_dropped": 0,
    "dropped_mm3": 0.0,
-   "main_mm3": 112391.37,
+   "main_mm3": 118224.27,
    "notes": []
   }
  },
  {
-  "file": "stl/dudukan_varian_stiker/D07_dudukan_biodigester_stiker.stl",
-  "tri": 39614,
+  "file": "stl/opsional/dudukan_varian_stiker/D07_dudukan_biodigester_stiker.stl",
+  "tri": 39646,
   "watertight": true,
   "winding_ok": true,
   "is_volume": true,
-  "volume_cm3": 111.89,
+  "volume_cm3": 117.72,
   "bodies": 1,
   "smallest_body_mm3": null,
   "min_z": 0.0,
@@ -1142,8 +1142,8 @@
    104.0,
    10.0
   ],
-  "bed_contact_mm2": 10988.7,
-  "overhang45_mm2": 52.5,
+  "bed_contact_mm2": 11569.0,
+  "overhang45_mm2": 55.5,
   "overhang60_mm2": 0.0,
   "thick_p1_mm": 9.5,
   "thick_p5_mm": 9.5,
@@ -1154,7 +1154,7 @@
   "cleanup": {
    "n_dropped": 0,
    "dropped_mm3": 0.0,
-   "main_mm3": 111888.73,
+   "main_mm3": 117721.64,
    "notes": []
   }
  },
@@ -1190,7 +1190,7 @@
   }
  },
  {
-  "file": "stl/dudukan_varian_stiker/D08_dudukan_hasil_pengolahan_limbah_stiker.stl",
+  "file": "stl/opsional/dudukan_varian_stiker/D08_dudukan_hasil_pengolahan_limbah_stiker.stl",
   "tri": 39980,
   "watertight": true,
   "winding_ok": true,
@@ -1252,7 +1252,7 @@
   }
  },
  {
-  "file": "stl/dudukan_varian_stiker/D09_dudukan_pupuk_organik_stiker.stl",
+  "file": "stl/opsional/dudukan_varian_stiker/D09_dudukan_pupuk_organik_stiker.stl",
   "tri": 37958,
   "watertight": true,
   "winding_ok": true,
@@ -1314,7 +1314,7 @@
   }
  },
  {
-  "file": "stl/dudukan_varian_stiker/D10_dudukan_pencatatan_digital_si_patriot_stiker.stl",
+  "file": "stl/opsional/dudukan_varian_stiker/D10_dudukan_pencatatan_digital_si_patriot_stiker.stl",
   "tri": 38288,
   "watertight": true,
   "winding_ok": true,
@@ -1345,7 +1345,7 @@
   }
  },
  {
-  "file": "stl/alas_cetak3d/T11_ubin_alas_depan_kiri.stl",
+  "file": "stl/opsional/alas_cetak3d/T11_ubin_alas_depan_kiri.stl",
   "tri": 1262,
   "watertight": true,
   "winding_ok": true,
@@ -1376,12 +1376,12 @@
   }
  },
  {
-  "file": "stl/alas_cetak3d/T12_ubin_alas_depan_tengah.stl",
-  "tri": 1584,
+  "file": "stl/opsional/alas_cetak3d/T12_ubin_alas_depan_tengah.stl",
+  "tri": 1580,
   "watertight": true,
   "winding_ok": true,
   "is_volume": true,
-  "volume_cm3": 273.36,
+  "volume_cm3": 273.0,
   "bodies": 1,
   "smallest_body_mm3": null,
   "min_z": 0.0,
@@ -1395,19 +1395,19 @@
   "overhang60_mm2": 992.9,
   "thick_p1_mm": 3.8,
   "thick_p5_mm": 7.4,
-  "thin_lt_0p8_pct": 0.0,
+  "thin_lt_0p8_pct": 0.05,
   "manifold3d_ok": true,
   "fits_bed": true,
   "PASS": true,
   "cleanup": {
    "n_dropped": 0,
    "dropped_mm3": 0.0,
-   "main_mm3": 273355.16,
+   "main_mm3": 273002.68,
    "notes": []
   }
  },
  {
-  "file": "stl/alas_cetak3d/T13_ubin_alas_depan_kanan.stl",
+  "file": "stl/opsional/alas_cetak3d/T13_ubin_alas_depan_kanan.stl",
   "tri": 1270,
   "watertight": true,
   "winding_ok": true,
@@ -1438,7 +1438,7 @@
   }
  },
  {
-  "file": "stl/alas_cetak3d/T21_ubin_alas_belakang_kiri.stl",
+  "file": "stl/opsional/alas_cetak3d/T21_ubin_alas_belakang_kiri.stl",
   "tri": 1278,
   "watertight": true,
   "winding_ok": true,
@@ -1469,7 +1469,7 @@
   }
  },
  {
-  "file": "stl/alas_cetak3d/T22_ubin_alas_belakang_tengah.stl",
+  "file": "stl/opsional/alas_cetak3d/T22_ubin_alas_belakang_tengah.stl",
   "tri": 1740,
   "watertight": true,
   "winding_ok": true,
@@ -1500,7 +1500,7 @@
   }
  },
  {
-  "file": "stl/alas_cetak3d/T23_ubin_alas_belakang_kanan.stl",
+  "file": "stl/opsional/alas_cetak3d/T23_ubin_alas_belakang_kanan.stl",
   "tri": 1542,
   "watertight": true,
   "winding_ok": true,
@@ -1531,7 +1531,7 @@
   }
  },
  {
-  "file": "stl/alas_cetak3d/K01_kunci_sambungan_bowtie.stl",
+  "file": "stl/opsional/alas_cetak3d/K01_kunci_sambungan_bowtie.stl",
   "tri": 124,
   "watertight": true,
   "winding_ok": true,

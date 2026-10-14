@@ -329,3 +329,65 @@ def build_phone():
     stand = union([base, lip, tag(sup, "phone")])
     m = union([stand, ph]).trim_by_plane((0, 0, 1), 0.0)
     return geo.to_arrays(m)
+
+
+# =============================================================== biodigester kantong (revisi)
+def bag_digester_sdf():
+    """Biodigester tipe kantong/balon fleksibel (sesuai foto revisi):
+    kantong terpal memanjang di atas rangka pipa, pipa inlet miring di kiri,
+    pipa outlet tegak di kanan, katup gas kuningan di atas + selang merah.
+    Semua bagian menyentuh dudukan / menempel permukaan -> cetak tanpa support."""
+    HL, HW, HH, RR = 38.0, 19.0, 23.0, 16.0          # setengah panjang, setengah lebar, tinggi, jari-jari bahu
+    bag = RoundBox((0, 0, 0), (HL, HW, HH), RR, color="bag_white")
+    # jahitan melintang (alur dangkal) seperti terpal
+    bag = Displace(bag, lambda p: 0.35 * np.exp(-((((p[:, 0] + 50) % 15.0) - 7.5) ** 2) / 0.6))
+    # rangka pipa persegi di kaki kantong (rebah di dudukan)
+    rp = 1.7
+    fx, fy = HL + 1.5, HW + 1.2
+    frame = Union([Capsule((-fx, -fy, rp), (fx, -fy, rp), rp, color="pvc_white"),
+                   Capsule((-fx, fy, rp), (fx, fy, rp), rp, color="pvc_white"),
+                   Capsule((-fx, -fy, rp), (-fx, fy, rp), rp, color="pvc_white"),
+                   Capsule((fx, -fy, rp), (fx, fy, rp), rp, color="pvc_white")])
+    clamps = Union([Cylinder((x, sy * fy, 0), 2.4, 3.4, re=0.4, color="pvc_white")
+                    for x in (-fx, -18, 0, 18, fx) for sy in (-1, 1)])
+    # inlet: pipa miring 45 derajat di ujung kiri, ujung berlubang + flens
+    a0 = np.array([-HL + 6, 0, 9.0]); a1 = np.array([-HL - 14, 0, 29.0])
+    inlet = Capsule(a0, a1, 3.4, color="pvc_white")
+    d = (a1 - a0) / np.linalg.norm(a1 - a0)
+    inlet = Diff(inlet, Capsule(a1 - d * 5.0, a1 + d * 4.0, 2.3, color="pvc_white"))
+    flange = Capsule(np.array([-HL + 1.0, 0, 9.0]) - d * 0.0, np.array([-HL - 1.0, 0, 11.0]), 5.0, color="pvc_white")
+    # outlet: pipa rendah keluar dari ujung kanan lalu siku tegak
+    o_h = Capsule((HL - 6, 0, 3.4), (HL + 9, 0, 3.4), 3.2, color="pvc_white")
+    o_v = Cylinder((HL + 9, 0, 0), 3.2, 33.0, re=0.6, color="pvc_white")
+    o_cap = Union([Cylinder((HL + 9, 0, z), 3.75, 1.4, re=0.4, color="pvc_white") for z in (21.0, 31.0)])
+    outlet = Diff(SU(1.2, o_h, o_v, o_cap), Cylinder((HL + 9, 0, 28.0), 2.1, 8.0, color="pvc_white"))
+    # katup gas kuningan di puncak
+    vz = HH - 0.8
+    valve = Union([Cylinder((4, 0, vz - 1.0), 4.0, 3.0, re=0.6, color="brass"),
+                   Cylinder((4, 0, vz + 1.5), 2.6, 4.2, re=0.5, color="brass"),
+                   Cylinder((4, 0, vz + 5.4), 3.0, 1.4, re=0.4, color="brass"),
+                   Cone((4, 0, 0), vz + 6.6, vz + 8.4, 1.6, 0.8, color="brass")])
+    # selang merah: dari katup menyusuri permukaan kantong ke depan lalu rebah di dudukan
+    hr = 1.35
+
+    def surf_y(z):  # permukaan depan kantong pada ketinggian z (y negatif)
+        zc = HH - RR
+        if z <= zc:
+            return -HW
+        return -(HW - RR + math.sqrt(max(RR ** 2 - (z - zc) ** 2, 0.0)))
+    pts = [np.array([6.5, -2.6, vz + 2.2])]
+    for z in (HH - 1.0, 20.0, 16.0, 12.0, 8.0, 4.5):
+        pts.append(np.array([8.0 + (HH - z) * 0.25, surf_y(z) - hr * 0.55, z]))
+    pts += [np.array([14.0, -HW - 4.0, hr * 0.8]), np.array([20.0, -HW - 8.5, hr * 0.8]),
+            np.array([28.0, -HW - 10.0, hr * 0.8])]
+    hose = Union([Capsule(a, b, hr, color="hose_red") for a, b in zip(pts[:-1], pts[1:])])
+    node = SU(1.0, bag, flange)
+    node = SU(0.8, node, frame, clamps)
+    node = SU(0.8, node, inlet, outlet)
+    node = Union([node, SU(0.5, valve, hose)])
+    return node
+
+
+def build_biodigester_kantong():
+    v, f, c = mesh_sdf(bag_digester_sdf(), ((-58, -32, 0), (52, 26, 37)), h=0.22, target_faces=90000)
+    return v, f, c

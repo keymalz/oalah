@@ -25,7 +25,12 @@ from build_figs import build_one, load
 from islands import build_island
 import base_tiles
 
-OUT = {k: os.path.join(ROOT, "stl", k) for k in ("figur", "dudukan", "dudukan_varian_stiker", "sapi_varian_belah", "alas_cetak3d")}
+# stl/figur + stl/dudukan = SATU set cetak utama (28 berkas, tanpa dobel).
+# Varian alternatif dipisah ke stl/opsional/ agar tidak ikut terhitung saat estimasi harga.
+OUT = {"figur": os.path.join(ROOT, "stl", "figur"), "dudukan": os.path.join(ROOT, "stl", "dudukan"),
+       "dudukan_varian_stiker": os.path.join(ROOT, "stl", "opsional", "dudukan_varian_stiker"),
+       "sapi_varian_belah": os.path.join(ROOT, "stl", "opsional", "sapi_varian_belah"),
+       "alas_cetak3d": os.path.join(ROOT, "stl", "opsional", "alas_cetak3d")}
 MESH = os.path.join(ROOT, "build", "meshes")
 REP = os.path.join(ROOT, "reports")
 BED = (220.0, 220.0, 250.0)

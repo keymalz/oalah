@@ -76,7 +76,7 @@ def slice_one(path):
 
 
 if __name__ == "__main__":
-    files = sorted(glob.glob(os.path.join(ROOT, "stl", "*", "*.stl")))
+    files = sorted(glob.glob(os.path.join(ROOT, "stl", "*", "*.stl")) + glob.glob(os.path.join(ROOT, "stl", "opsional", "*", "*.stl")))
     files = [f for f in files if "varian_stiker" not in f]
     with ThreadPoolExecutor(4) as ex:
         rows = list(ex.map(slice_one, files))

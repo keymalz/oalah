@@ -23,7 +23,7 @@ COLOR_PLAN = {
     "F09": ("Putih", "-", "tutup botol hijau"),
     "F10": ("Krem/cokelat muda", "-", "koin & tali emas, huruf Rp emas"),
     "F11": ("Cokelat tua", "-", "dry-brush cokelat sedang"),
-    "F12": ("Zaitun/khaki -> hijau tua", "ganti ke hijau tua di Z = 19,6", "pipa abu/hijau muda, bak inlet/outlet abu beton, isi bak cokelat"),
+    "F12": ("Abu muda (kontras dengan dudukan krem)", "-", "pipa putih, katup kuningan, selang merah"),
     "F13": ("Hijau tua -> oranye", "ganti ke oranye di Z = 5,6", "inti api kuning"),
     "F14": ("Hijau zaitun", "-", "panel label krem, ikon tetes cokelat tua, tutup abu tua"),
     "F15": ("Cokelat -> kuning muda", "ganti ke kuning muda di Z = 3,0", "tunas hijau, ulir lampu perak"),
@@ -109,16 +109,16 @@ def bom_md():
            "", "Ringkas jumlah wajib: **2 sapi** (F05, F06 - pose berbeda), **1 peternak** (F07 badan + F08 caping), "
            "**1 mesin pencacah** (F03), **1 biodigester** (F12), **1 HP** (F18). Tidak ada sapi ketiga, HP kedua, laptop, "
            "monitor, tablet, atau panah.", "",
-           "Alternatif sapi tanpa support di perut/ambing: `stl/sapi_varian_belah/` (2 belahan per sapi + 2 pin "
+           "Alternatif sapi tanpa support di perut/ambing: `stl/opsional/sapi_varian_belah/` (2 belahan per sapi + 2 pin "
            "potongan filamen 1,75 mm × 12 mm). Masih perlu support kecil di bawah kaki (sisi dalam, tidak terlihat).", "",
            "## Dudukan krem berlabel (semua 1×)", "",
            "| ID | Label | Jumlah | Ukuran (mm) | Pusat dari pojok kiri-depan alas (mm) | Waktu | Gram | Ganti filamen |",
            "|---|---|---|---|---|---|---|---|"] + drows + [
-           "", "Varian stiker (tanpa ganti filamen): `stl/dudukan_varian_stiker/` + `docs/stiker_label_A4_skala_1-1.pdf`.", "",
+           "", "Varian stiker (tanpa ganti filamen): `stl/opsional/dudukan_varian_stiker/` + `docs/stiker_label_A4_skala_1-1.pdf`.", "",
            "## Alas utama", "",
            "**Disarankan:** papan MDF/plywood 600 × 360 × 12 mm, tepi atas di-chamfer/diamplas, cat akrilik cokelat tanah "
            "(doff). Biaya & waktu jauh lebih kecil daripada mencetak.", "",
-           "Opsional cetak 3D (PLA cokelat):", "", "| ID | Berkas | Jumlah | Waktu | Gram |", "|---|---|---|---|---|"] + trows + [
+           "Opsional cetak 3D (PLA cokelat, `stl/opsional/alas_cetak3d/`, TIDAK termasuk paket cetak utama):", "", "| ID | Berkas | Jumlah | Waktu | Gram |", "|---|---|---|---|---|"] + trows + [
            f"| K01 | `{MAN['tile_keys']['stl']}` | {nk} | {hm(kt)} total | {kg:.0f} total |", "",
            "## Total estimasi", "",
            f"- Figur & alat: **{hm(tot['figur'][0])}**, ±{tot['figur'][1]:.0f} g",
