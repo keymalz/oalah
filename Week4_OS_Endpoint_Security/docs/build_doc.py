@@ -309,14 +309,18 @@ answer("Sama seperti Part 2: kredensial login FTP Bob dan perintah FTP akan terl
        "bukan di tingkat transport.")
 
 h2("Part 5: Decrypt the Contents of a Sensitive File")
-note("STATUS: BELUM SELESAI. Key dekripsi ini unik untuk file .pka ini dan hanya tersedia di dalam aplikasi Email "
-     "simulasi pada Packet Tracer (bukan nilai statis di teks instruksi seperti Part 1/3) - sehingga tidak dapat "
-     "diturunkan tanpa pengguna membuka email tersebut sendiri.")
+note("STATUS: SEBAGIAN SELESAI. Key dekripsi berhasil didapat pengguna dari aplikasi Email dalam simulasi Packet "
+     "Tracer (unik untuk file .pka ini, bukan nilai statis di teks instruksi). Langkah terakhir (dekripsi isi "
+     "clientinfo.enc) menunggu pengguna membagikan isi file tersebut.")
 p = doc.add_paragraph(); r = p.add_run("What is the decryption key to access the confidential information in the clientinfo.enc file?"); r.bold = True
-note("[BELUM DIISI - menunggu pengguna membuka Email > 'Decryption Key' pada Laptop BR-2 di Packet Tracer]")
+answer("cisco123.")
+shot("10.1.15_Part5_decryption_key_email.png",
+     "Gambar 19. Email dari Mary ke Bob pada Laptop BR-2 di Packet Tracer (dibuka langsung oleh pengguna), subjek "
+     "'Decryption Key', berisi key: cisco123.")
 p = doc.add_paragraph(); r = p.add_run("What is the first name listed in the clientinfo.txt file?"); r.bold = True
-note("[BELUM DIISI - setelah key didapat, dekripsi dapat dijalankan ulang di sesi ini (openssl) begitu pengguna "
-     "membagikan key dan isi clientinfo.enc, tanpa perlu CSE-LABVM]")
+note("[BELUM DIISI - menunggu pengguna membagikan isi terenkripsi clientinfo.enc (copy-paste dari Text Editor, "
+     "sama seperti maryftplogin.txt sebelumnya). Setelah itu, dekripsi 'openssl aes-256-cbc -pbkdf2 -a -d' dengan "
+     "key cisco123 akan dijalankan ulang di sesi ini untuk jawaban final.]")
 
 doc.add_page_break()
 
@@ -350,7 +354,7 @@ h1("Group Work Evidence")
 body("If you worked together in person, please attach a photo. If you worked together online, please attach a screenshot.")
 note("Bukti kerja kelompok (koordinasi daring via WhatsApp) - diberikan langsung oleh pengguna, bukan rekayasa.")
 shot("GroupWorkEvidence_WhatsApp.png",
-     "Gambar 19. Screenshot percakapan WhatsApp kelompok - konfirmasi nama dan NIM anggota yang berpartisipasi: "
+     "Gambar 20. Screenshot percakapan WhatsApp kelompok - konfirmasi nama dan NIM anggota yang berpartisipasi: "
      "Mohammed Aatef Saleh (24523270) dan M Kemal Sabda Majid (24523123).")
 
 doc.save(OUT)
