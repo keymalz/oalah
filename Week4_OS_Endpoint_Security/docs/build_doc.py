@@ -92,10 +92,9 @@ MEMBERS = [
 for m in MEMBERS:
     doc.add_paragraph(m, style='List Number')
 
-note("Catatan: Dikonfirmasi oleh pengguna sebagai anggota yang berpartisipasi (2 orang, per pesan WhatsApp - "
+note("Catatan: Daftar anggota di atas FINAL - dikonfirmasi langsung oleh pengguna (2 orang, per pesan WhatsApp - "
      "lihat bukti kerja kelompok di akhir dokumen). Nama kelompok (Group name) masih belum diberikan - "
-     "mohon dilengkapi sebelum pengumpulan. Jika ada anggota lain yang turut berpartisipasi, mohon informasikan "
-     "agar ditambahkan.")
+     "mohon dilengkapi sebelum pengumpulan.")
 
 doc.add_paragraph()
 body("There are four activities:")
