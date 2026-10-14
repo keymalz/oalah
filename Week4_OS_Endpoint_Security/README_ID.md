@@ -1,7 +1,7 @@
 # README - Week 4: OS & Endpoint Security Practices
 
 Paket ini berisi hasil pengerjaan tugas kelompok "OS & Endpoint Security Practices"
-untuk kelas Cybersecurity Essentials. Dibuat pada 14 Oktober 2026.
+untuk kelas Cybersecurity Essentials, Kelompok **PINK HAT**. Dibuat pada 14 Oktober 2026.
 
 ## Ringkasan Status
 
@@ -123,17 +123,21 @@ namun **Cisco Packet Tracer tidak dapat dijalankan** di lingkungan kerja ini:
    Remote Control Claude), praktik dapat dijalankan langsung dari sesi ini pada
    komputer Anda.
 
+## Status Identitas Kelompok
+
+- **Nama kelompok**: PINK HAT (dikonfirmasi pengguna).
+- **Anggota (final, 2 orang)**: Mohammed Aatef Saleh (24523270), M Kemal Sabda Majid (24523123).
+- **Bukti kerja kelompok**: screenshot percakapan WhatsApp (dilampirkan, lihat
+  `screenshots/GroupWorkEvidence_WhatsApp.png` dan bagian "Group Work Evidence"
+  di dokumen).
+
 ## Yang Masih Perlu Anda Lengkapi
 
-1. **Nama kelompok** dan **nama + NIM anggota yang benar-benar ikut mengerjakan**
-   (belum diisi — jangan dikarang).
-2. **Bukti kerja kelompok** (foto pertemuan langsung atau screenshot panggilan
-   daring) — belum tersedia.
-3. **Validasi Activity Reflection** — draf jawaban reflection di dokumen sudah
+1. **Validasi Activity Reflection** — draf jawaban reflection di dokumen sudah
    dibuat berdasarkan praktik yang benar-benar dijalankan (9.1.14 & 9.1.16), tapi
    WAJIB dibaca & divalidasi/diubah oleh kelompok sebelum dikumpulkan, karena ini
    bukan hasil diskusi kelompok yang sudah benar-benar terjadi.
-4. **Praktik 10.1.13 dan 10.1.15** — lihat bagian hambatan di atas.
+2. **Praktik 10.1.13 dan 10.1.15** — lihat bagian hambatan di atas.
 
 ## Keamanan Data
 

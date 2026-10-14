@@ -79,8 +79,7 @@ doc.add_paragraph()
 p = doc.add_paragraph()
 r = p.add_run("Group name: ")
 r.bold = True
-r2 = p.add_run("[BELUM DIISI - menunggu konfirmasi kelompok]")
-r2.font.color.rgb = YELLOW
+r2 = p.add_run("PINK HAT")
 r2.bold = True
 
 p = doc.add_paragraph("Names & Student IDs of members present and participating in the work:")
@@ -92,9 +91,8 @@ MEMBERS = [
 for m in MEMBERS:
     doc.add_paragraph(m, style='List Number')
 
-note("Catatan: Daftar anggota di atas FINAL - dikonfirmasi langsung oleh pengguna (2 orang, per pesan WhatsApp - "
-     "lihat bukti kerja kelompok di akhir dokumen). Nama kelompok (Group name) masih belum diberikan - "
-     "mohon dilengkapi sebelum pengumpulan.")
+note("Catatan: Nama kelompok dan daftar anggota di atas FINAL - dikonfirmasi langsung oleh pengguna "
+     "(2 orang, per pesan WhatsApp - lihat bukti kerja kelompok di akhir dokumen).")
 
 doc.add_paragraph()
 body("There are four activities:")
