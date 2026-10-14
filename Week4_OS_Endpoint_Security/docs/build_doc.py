@@ -248,10 +248,15 @@ shot("10.1.13_Part1_Step2_hash_page.png",
      "resmi HMAC yang didapat sebelumnya, mengonfirmasi validitas kunci jawaban tersebut.")
 shot("10.1.13_Part1_Step2_pasted_hashes.png",
      "Gambar 20. Hash referensi disalin ke Text Editor pada Laptop BR-1 untuk dipakai sebagai pembanding di Part 2.")
-note("[Step 3 (download 6 file klien via FTP, user mike/cisco123, ke Laptop BR-1) dan Part 2 Step 1 (hash tiap file "
-     "lalu bandingkan) belum di-screenshot - jika pengguna membagikan ISI keenam file klien (NEclients.txt dkk.) "
-     "setelah di-download, verifikasi hash dapat dijalankan ulang secara nyata di sesi ini (md5sum), persis seperti "
-     "verifikasi HMAC & FTP sebelumnya pada 10.1.15.]")
+body("Step 3: pengguna login FTP ke HQ Server (user mike, password cisco123) dan melihat daftar 6 file klien yang "
+     "tersedia untuk diunduh.")
+shot("10.1.13_Part1_Step3_ftp_dir.png",
+     "Gambar 21. Command Prompt Laptop BR-1 - login FTP ke hq.corp berhasil (230 Logged in), perintah 'dir' "
+     "menampilkan 6 file klien (NEclients.txt, NWclients.txt, Nclients.txt, SEclients.txt, SWclients.txt, "
+     "Sclients.txt) siap diunduh dengan 'get'.")
+note("[Proses 'get' untuk keenam file dan Part 2 Step 1 (hash tiap file lalu bandingkan) belum di-screenshot - "
+     "jika pengguna membagikan ISI keenam file klien setelah di-download, verifikasi hash dapat dijalankan ulang "
+     "secara nyata di sesi ini (md5sum), persis seperti verifikasi HMAC & FTP sebelumnya pada 10.1.15.]")
 
 h2("Part 2: Use Hashing to Verify File Integrity")
 body("Step 1: hash tiap file klien dihitung di CSE-LABVM dengan 'echo -n \\'isi-file\\' | md5sum', lalu dibandingkan "
@@ -261,7 +266,7 @@ answer("Yes (sesuai kunci jawaban resmi aktivitas).")
 p = doc.add_paragraph(); r = p.add_run("Which file has been tampered with and has an incorrect hash?"); r.bold = True
 answer("SEclients.txt (sesuai kunci jawaban resmi aktivitas).")
 shot("10.1.13_Part2_Part3_official_answers.png",
-     "Gambar 21. Kunci jawaban resmi (kotak 'Show Answer') dari file export instruksi aktivitas Cisco Packet Tracer "
+     "Gambar 22. Kunci jawaban resmi (kotak 'Show Answer') dari file export instruksi aktivitas Cisco Packet Tracer "
      "- File and Data Integrity Checks, menunjukkan jawaban Part 2 dan Part 3.")
 note("[BELUM ADA SCREENSHOT PRAKTIK - menunggu pengguna menjalankan Step 1 (hash tiap file) dan Step 2-3 (escalate "
      "email ke Sally, download SEclients.txt ke HQ-Laptop-1) di Packet Tracer sendiri.]")
@@ -306,14 +311,14 @@ body("File sumber yang dilampirkan pengguna telah disalin ke paket tugas ini di:
 h2("Part 1: Discover the FTP Account Credentials for Mary")
 body("Step 1: pengguna membuka maryftplogin.txt di Text Editor pada Laptop BR-1 (Packet Tracer, komputer pengguna).")
 shot("10.1.15_PacketTracer_opened_by_user.png",
-     "Gambar 22. Cisco Packet Tracer dibuka langsung oleh pengguna di komputernya sendiri, menampilkan topologi "
+     "Gambar 23. Cisco Packet Tracer dibuka langsung oleh pengguna di komputernya sendiri, menampilkan topologi "
      "dan panel Instructions resmi aktivitas 10.1.15.")
 body("Step 2: isi terenkripsi maryftplogin.txt didekripsi dengan OpenSSL (AES-256-CBC, PBKDF2) memakai password "
      "aktivitas 'maryftp123', dijalankan ulang secara nyata di sesi ini untuk verifikasi:")
 p = doc.add_paragraph(); r = p.add_run("What is the username and password for Mary's FTP account?"); r.bold = True
 answer("Username = mary, Password = cisco321.")
 shot("10.1.15_Part1_Part3_decrypt_credentials.png",
-     "Gambar 23. openssl aes-256-cbc -pbkdf2 -a -d dijalankan nyata dengan ciphertext & password persis dari "
+     "Gambar 24. openssl aes-256-cbc -pbkdf2 -a -d dijalankan nyata dengan ciphertext & password persis dari "
      "instruksi resmi aktivitas - hasil: Mary (mary/cisco321) dan Bob (bob/ninja123).")
 
 h2("Part 2: Upload Confidential Data using FTP")
@@ -343,12 +348,12 @@ note("STATUS: SELESAI. Key dekripsi didapat pengguna dari aplikasi Email dalam s
 p = doc.add_paragraph(); r = p.add_run("What is the decryption key to access the confidential information in the clientinfo.enc file?"); r.bold = True
 answer("cisco123.")
 shot("10.1.15_Part5_decryption_key_email.png",
-     "Gambar 24. Email dari Mary ke Bob pada Laptop BR-2 di Packet Tracer (dibuka langsung oleh pengguna), subjek "
+     "Gambar 25. Email dari Mary ke Bob pada Laptop BR-2 di Packet Tracer (dibuka langsung oleh pengguna), subjek "
      "'Decryption Key', berisi key: cisco123.")
 p = doc.add_paragraph(); r = p.add_run("What is the first name listed in the clientinfo.txt file?"); r.bold = True
 answer("Drew (nama lengkap: Drew N. Stark, baris pertama pada clientinfo.txt).")
 shot("10.1.15_Part5_decrypted_clientinfo.png",
-     "Gambar 25. openssl aes-256-cbc -pbkdf2 -a -d -in clientinfo.enc -out clientinfo.txt dijalankan nyata dengan "
+     "Gambar 26. openssl aes-256-cbc -pbkdf2 -a -d -in clientinfo.enc -out clientinfo.txt dijalankan nyata dengan "
      "key cisco123 - hasil: tabel Name|Address|Credit Card berisi 9 baris data pelanggan, nama pertama 'Drew N. Stark'.")
 note("Catatan: clientinfo.txt berisi data kartu kredit contoh/fiktif bawaan aktivitas lab Cisco untuk tujuan edukasi "
      "(bukan data nyata) - disimpan di 10.1.15_FileEncryption/clientinfo.txt untuk keperluan verifikasi.")
@@ -387,7 +392,7 @@ h1("Group Work Evidence")
 body("If you worked together in person, please attach a photo. If you worked together online, please attach a screenshot.")
 note("Bukti kerja kelompok (koordinasi daring via WhatsApp) - diberikan langsung oleh pengguna, bukan rekayasa.")
 shot("GroupWorkEvidence_WhatsApp.png",
-     "Gambar 26. Screenshot percakapan WhatsApp kelompok - konfirmasi nama dan NIM anggota yang berpartisipasi: "
+     "Gambar 27. Screenshot percakapan WhatsApp kelompok - konfirmasi nama dan NIM anggota yang berpartisipasi: "
      "Mohammed Aatef Saleh (24523270) dan M Kemal Sabda Majid (24523123).")
 
 doc.save(OUT)
