@@ -1,0 +1,10 @@
+
+> auth-gemini-node-web@1.0.0 build:client
+> node scripts/build-client.js
+
+
+  public/js/register.bundle.js   141.1kb
+  public/js/login.bundle.js      140.1kb
+  public/js/dashboard.bundle.js    1.9kb
+
+⚡ Done in 46ms

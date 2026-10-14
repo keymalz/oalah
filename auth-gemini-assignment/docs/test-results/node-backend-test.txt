@@ -1,0 +1,85 @@
+
+> auth-gemini-node-web@1.0.0 test
+> node --test "test/*.test.js"
+
+TAP version 13
+# Subtest: dashboard tanpa login diarahkan ke /login
+ok 1 - dashboard tanpa login diarahkan ke /login
+  ---
+  duration_ms: 35.385974
+  type: 'test'
+  ...
+# Subtest: POST /api/gemini tanpa autentikasi ditolak 401 dan Gemini tidak dipanggil
+ok 2 - POST /api/gemini tanpa autentikasi ditolak 401 dan Gemini tidak dipanggil
+  ---
+  duration_ms: 13.037783
+  type: 'test'
+  ...
+# Subtest: bearer token palsu ditolak 401
+ok 3 - bearer token palsu ditolak 401
+  ---
+  duration_ms: 4.844155
+  type: 'test'
+  ...
+# Subtest: session cookie palsu ditolak 401 dan cookie dihapus
+ok 4 - session cookie palsu ditolak 401 dan cookie dihapus
+  ---
+  duration_ms: 3.811767
+  type: 'test'
+  ...
+# Subtest: sessionLogin tanpa CSRF ditolak 403
+ok 5 - sessionLogin tanpa CSRF ditolak 403
+  ---
+  duration_ms: 3.476112
+  type: 'test'
+  ...
+# Subtest: sessionLogin dengan ID token palsu ditolak 401
+ok 6 - sessionLogin dengan ID token palsu ditolak 401
+  ---
+  duration_ms: 11.395125
+  type: 'test'
+  ...
+# Subtest: alur sesi: login -> dashboard -> gemini -> logout
+ok 7 - alur sesi: login -> dashboard -> gemini -> logout
+  ---
+  duration_ms: 49.997773
+  type: 'test'
+  ...
+# Subtest: bearer token valid (gaya Flutter) diterima
+ok 8 - bearer token valid (gaya Flutter) diterima
+  ---
+  duration_ms: 9.265677
+  type: 'test'
+  ...
+# [gemini] GEMINI_BAD_KEY uid=uEfys35sl4uuuTwDowM0RTHKBXcc
+# [gemini] GEMINI_QUOTA uid=uEfys35sl4uuuTwDowM0RTHKBXcc
+# [gemini] GEMINI_TIMEOUT uid=uEfys35sl4uuuTwDowM0RTHKBXcc
+# [gemini] GEMINI_FAILED uid=uEfys35sl4uuuTwDowM0RTHKBXcc
+# Subtest: error Gemini dipetakan dan tidak membocorkan rahasia
+ok 9 - error Gemini dipetakan dan tidak membocorkan rahasia
+  ---
+  duration_ms: 20.104764
+  type: 'test'
+  ...
+# Subtest: CORS hanya untuk origin yang diizinkan
+ok 10 - CORS hanya untuk origin yang diizinkan
+  ---
+  duration_ms: 4.15231
+  type: 'test'
+  ...
+# [gemini] GEMINI_BAD_KEY uid=myO3A6QFggBNkX1ZrthIOdjdE9fZ
+# Subtest: key Gemini tidak valid -> 503 GEMINI_BAD_KEY tanpa membocorkan key
+ok 11 - key Gemini tidak valid -> 503 GEMINI_BAD_KEY tanpa membocorkan key
+  ---
+  duration_ms: 417.649043
+  type: 'test'
+  ...
+1..11
+# tests 11
+# suites 0
+# pass 11
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 752.64955

@@ -1,0 +1,18 @@
+[Lulus] N-01 Halaman register tampil -> Sesuai harapan
+[Lulus] N-02 Validasi: email tidak valid, password lemah, nama pendek -> Sesuai harapan
+[Lulus] N-03 Password dan konfirmasi tidak cocok -> Sesuai harapan
+[Lulus] N-04 Toggle tampil/sembunyikan password -> Sesuai harapan
+[Lulus] N-05 Register email baru (email/password) -> Sesuai harapan
+[Lulus] N-06 Refresh dashboard saat sesi valid -> Sesuai harapan
+[Lulus] N-07 Tanya Gemini (MOCK) dari dashboard -> Jawaban MOCK tampil (BUKAN bukti Gemini nyata)
+[Lulus] N-08 Pertanyaan kosong ditolak di klien -> Sesuai harapan
+[Lulus] N-09 Logout lalu buka kembali /dashboard -> Sesuai harapan
+[Lulus] N-10 Login: email tidak valid -> Sesuai harapan
+[Lulus] N-11 Login: password salah -> Sesuai harapan
+[Lulus] N-12 Login email/password benar -> Sesuai harapan
+[Lulus] N-13 Session cookie berflag HttpOnly & SameSite -> httpOnly=true, sameSite=Lax, secure=false (Secure aktif hanya di NODE_ENV=production/HTTPS)
+[Lulus] N-14 Sesi hilang/kedaluwarsa saat memakai Gemini -> Sesuai harapan
+[Lulus] N-15 Register email yang sudah dipakai -> Sesuai harapan
+[Lulus] N-16 Akses /dashboard tanpa login (konteks bersih) -> /dashboard -> 302 /login; POST /api/gemini -> 401
+[Lulus] N-17 Login Google via kredensial IdP tiruan emulator (BUKAN Google nyata) -> Provider "Google" tampil (jalur emulator, bukan OAuth Google asli)
+[Belum diuji] N-18 Klik tombol "Masuk dengan Google" (popup) di sandbox -> BELUM DIUJI: sandbox memblokir apis.google.com, popup tidak dapat dibuka. Perlu uji manual di Firebase nyata.

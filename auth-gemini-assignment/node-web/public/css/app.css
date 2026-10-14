@@ -1,0 +1,93 @@
+:root {
+  --bg: #f4f6fb;
+  --surface: #ffffff;
+  --text: #1b2033;
+  --muted: #5b6380;
+  --border: #d5dae8;
+  --primary: #3949ab;
+  --primary-hover: #2c3a8c;
+  --on-primary: #ffffff;
+  --danger: #b3261e;
+  --danger-bg: #fdecea;
+  --ok: #1b6e3c;
+  --ok-bg: #e6f4ea;
+  --focus: #1a73e8;
+  --radius: 12px;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #11141f; --surface: #1b2030; --text: #e8eaf6; --muted: #a2a9c4; --border: #343b55;
+    --primary: #8c9eff; --primary-hover: #a9b7ff; --on-primary: #11141f;
+    --danger: #ffb4ab; --danger-bg: #3a1b19; --ok: #8fd9a8; --ok-bg: #16301f; --focus: #8ab4f8;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font: 16px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  min-height: 100vh; padding: 16px;
+}
+.skip { position: absolute; left: -999px; }
+.skip:focus { left: 8px; top: 8px; background: var(--surface); padding: 8px 12px; border-radius: 8px; z-index: 10; }
+.card {
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 24px; box-shadow: 0 2px 12px rgba(20, 30, 70, .06);
+}
+.auth { max-width: 420px; margin: 6vh auto; }
+.dash { max-width: 760px; margin: 16px auto; display: grid; gap: 16px; }
+.topbar {
+  max-width: 760px; margin: 0 auto 8px; display: flex; justify-content: space-between; align-items: center; gap: 12px;
+}
+h1 { font-size: 1.6rem; margin: 0 0 4px; }
+h2 { font-size: 1.25rem; margin: 0 0 12px; }
+h3 { font-size: 1rem; margin: 20px 0 8px; }
+.muted, .hint { color: var(--muted); }
+.hint { font-size: .85rem; margin: 4px 0 0; }
+.field { margin: 14px 0; }
+label { display: block; font-weight: 600; margin-bottom: 6px; }
+input, textarea {
+  width: 100%; padding: 11px 12px; font: inherit; color: var(--text); background: var(--surface);
+  border: 1px solid var(--border); border-radius: 8px;
+}
+textarea { resize: vertical; }
+input[aria-invalid="true"] { border-color: var(--danger); }
+:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+.pw { position: relative; }
+.pw input { padding-right: 96px; }
+.pw-toggle {
+  position: absolute; right: 6px; top: 50%; transform: translateY(-50%);
+  background: none; border: 0; color: var(--primary); font: inherit; font-size: .9rem; font-weight: 600;
+  padding: 6px 8px; cursor: pointer; border-radius: 6px;
+}
+.field-error { color: var(--danger); font-size: .88rem; margin: 6px 0 0; }
+.alert { padding: 10px 12px; border-radius: 8px; margin: 14px 0; font-size: .95rem; }
+.alert-error { background: var(--danger-bg); color: var(--danger); }
+.alert-ok { background: var(--ok-bg); color: var(--ok); }
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 10px; width: 100%;
+  padding: 12px 16px; font: inherit; font-weight: 600; border-radius: 8px; cursor: pointer; text-decoration: none;
+  border: 1px solid transparent; min-height: 44px;
+}
+.btn-primary { background: var(--primary); color: var(--on-primary); }
+.btn-primary:hover { background: var(--primary-hover); }
+.btn-google { background: #fff; color: #1f1f1f; border-color: #747775; }
+.btn-ghost { width: auto; background: transparent; color: var(--text); border-color: var(--border); }
+.btn[disabled] { opacity: .6; cursor: not-allowed; }
+.divider { display: flex; align-items: center; gap: 12px; color: var(--muted); margin: 18px 0; font-size: .9rem; }
+.divider::before, .divider::after { content: ""; flex: 1; height: 1px; background: var(--border); }
+.switch { text-align: center; margin: 18px 0 0; }
+a { color: var(--primary); }
+.profile { display: grid; gap: 10px; margin: 12px 0 0; }
+.profile div { display: grid; grid-template-columns: 130px 1fr; gap: 8px; }
+.profile dt { color: var(--muted); }
+.profile dd { margin: 0; font-weight: 600; overflow-wrap: anywhere; }
+.answer {
+  white-space: pre-wrap; background: var(--bg); border: 1px solid var(--border); border-radius: 8px;
+  padding: 12px; min-height: 64px; overflow-wrap: anywhere;
+}
+.answer.loading { color: var(--muted); font-style: italic; }
+[hidden] { display: none !important; }
+@media (max-width: 480px) {
+  .card { padding: 18px; }
+  .profile div { grid-template-columns: 1fr; gap: 0; }
+}

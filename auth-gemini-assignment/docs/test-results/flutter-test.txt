@@ -1,0 +1,16 @@
+Resolving dependencies...
+Downloading packages...
+  material_color_utilities 0.13.0 (0.13.1 available)
+  meta 1.18.3 (1.19.0 available)
+  test_api 0.7.12 (0.7.15 available)
+  vector_math 2.4.0 (2.4.3 available)
+Got dependencies!
+4 packages have newer versions incompatible with dependency constraints.
+Try `flutter pub outdated` for more information.
+00:00 +0: loading /home/user/oalah/auth-gemini-assignment/flutter-web/test/app_test.dart
+00:00 +0: validator
+00:00 +1: login: validasi, kredensial salah, sukses, logout
+00:02 +2: register: konfirmasi password tidak cocok
+00:02 +3: login Google dibatalkan menampilkan pesan, lalu sukses
+00:02 +4: Tanya Gemini: kirim Bearer token, tampilkan jawaban & tangani 401
+00:03 +5: All tests passed!

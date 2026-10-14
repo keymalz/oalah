@@ -1,0 +1,15 @@
+[Lulus] F-01 Halaman login Flutter Web tampil -> Sesuai harapan
+[Lulus] F-02 Akses /#/dashboard sebelum login -> Sesuai harapan
+[Lulus] F-03 Login: kolom kosong & email tidak valid -> Sesuai harapan
+[Lulus] F-04 Pindah ke halaman register -> Sesuai harapan
+[Lulus] F-05 Register: validasi nama/email/password & konfirmasi tidak cocok -> Sesuai harapan
+[Lulus] F-06 Register email baru -> Sesuai harapan
+[Lulus] F-07 Tanya Gemini (MOCK) lewat backend Node.js dengan Bearer token -> Jawaban MOCK tampil (BUKAN bukti Gemini nyata)
+[Lulus] F-08 Refresh halaman saat sesi valid -> Sesuai harapan
+[Lulus] F-09 Logout -> Sesuai harapan
+[Lulus] F-10 Login: password salah -> Sesuai harapan
+[Lulus] F-11 Login email/password benar -> Sesuai harapan
+[Lulus] F-12 Logout lalu register email yang sudah dipakai -> Sesuai harapan
+[Lulus] F-13 Login Google via kredensial IdP tiruan emulator (BUKAN Google nyata) -> Provider "Google" tampil (jalur emulator, bukan OAuth Google asli)
+[Lulus] F-14 Google (dari dashboard Google) mengakses Gemini lewat backend -> Sesuai harapan
+[Belum diuji] F-15 Klik tombol "Masuk dengan Google" (popup) di sandbox -> BELUM DIUJI: sandbox memblokir apis.google.com, popup tidak dapat dibuka. Perlu uji manual di Firebase nyata.

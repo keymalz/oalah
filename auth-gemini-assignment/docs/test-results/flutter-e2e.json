@@ -1,0 +1,122 @@
+[
+  {
+    "id": "F-01",
+    "scenario": "Halaman login Flutter Web tampil",
+    "expected": "Email, password, Masuk, Masuk dengan Google, tautan Daftar",
+    "actual": "Sesuai harapan",
+    "status": "Lulus",
+    "evidence": "12-flutter-login.png"
+  },
+  {
+    "id": "F-02",
+    "scenario": "Akses /#/dashboard sebelum login",
+    "expected": "AuthGate menampilkan halaman login, bukan dashboard",
+    "actual": "Sesuai harapan",
+    "status": "Lulus",
+    "evidence": "13-flutter-dashboard-ditolak-sebelum-login.png"
+  },
+  {
+    "id": "F-03",
+    "scenario": "Login: kolom kosong & email tidak valid",
+    "expected": "Pesan validasi per kolom",
+    "actual": "Sesuai harapan",
+    "status": "Lulus",
+    "evidence": "14-flutter-validasi-login.png"
+  },
+  {
+    "id": "F-04",
+    "scenario": "Pindah ke halaman register",
+    "expected": "Form Nama, Email, Password, Konfirmasi, Daftar, Google",
+    "actual": "Sesuai harapan",
+    "status": "Lulus",
+    "evidence": "15-flutter-register.png"
+  },
+  {
+    "id": "F-05",
+    "scenario": "Register: validasi nama/email/password & konfirmasi tidak cocok",
+    "expected": "Pesan error muncul",
+    "actual": "Sesuai harapan",
+    "status": "Lulus",
+    "evidence": "16-flutter-validasi-register.png"
+  },
+  {
+    "id": "F-06",
+    "scenario": "Register email baru",
+    "expected": "Akun dibuat dan dashboard tampil dengan nama & email",
+    "actual": "Sesuai harapan",
+    "status": "Lulus",
+    "evidence": "17-flutter-dashboard-setelah-register.png"
+  },
+  {
+    "id": "F-07",
+    "scenario": "Tanya Gemini (MOCK) lewat backend Node.js dengan Bearer token",
+    "expected": "Jawaban MOCK tampil",
+    "actual": "Jawaban MOCK tampil (BUKAN bukti Gemini nyata)",
+    "status": "Lulus",
+    "evidence": "18-flutter-gemini-mock.png"
+  },
+  {
+    "id": "F-08",
+    "scenario": "Refresh halaman saat sesi valid",
+    "expected": "Tetap di dashboard",
+    "actual": "Sesuai harapan",
+    "status": "Lulus",
+    "evidence": ""
+  },
+  {
+    "id": "F-09",
+    "scenario": "Logout",
+    "expected": "Kembali ke halaman login",
+    "actual": "Sesuai harapan",
+    "status": "Lulus",
+    "evidence": ""
+  },
+  {
+    "id": "F-10",
+    "scenario": "Login: password salah",
+    "expected": "Pesan \"Email atau password salah.\"",
+    "actual": "Sesuai harapan",
+    "status": "Lulus",
+    "evidence": "19-flutter-login-kredensial-salah.png"
+  },
+  {
+    "id": "F-11",
+    "scenario": "Login email/password benar",
+    "expected": "Dashboard tampil",
+    "actual": "Sesuai harapan",
+    "status": "Lulus",
+    "evidence": "20-flutter-dashboard-login-email.png"
+  },
+  {
+    "id": "F-12",
+    "scenario": "Logout lalu register email yang sudah dipakai",
+    "expected": "Pesan \"Email ini sudah terdaftar.\"",
+    "actual": "Sesuai harapan",
+    "status": "Lulus",
+    "evidence": "21-flutter-register-email-terpakai.png"
+  },
+  {
+    "id": "F-13",
+    "scenario": "Login Google via kredensial IdP tiruan emulator (BUKAN Google nyata)",
+    "expected": "Dashboard menampilkan metode login \"Google\"",
+    "actual": "Provider \"Google\" tampil (jalur emulator, bukan OAuth Google asli)",
+    "status": "Lulus",
+    "evidence": "22-flutter-dashboard-google-emulator.png"
+  },
+  {
+    "id": "F-14",
+    "scenario": "Google (dari dashboard Google) mengakses Gemini lewat backend",
+    "expected": "Jawaban MOCK tampil",
+    "actual": "Sesuai harapan",
+    "status": "Lulus",
+    "evidence": ""
+  },
+  {
+    "id": "F-15",
+    "scenario": "Klik tombol \"Masuk dengan Google\" (popup) di sandbox",
+    "expected": "Popup Google asli",
+    "actual": "BELUM DIUJI: sandbox memblokir apis.google.com, popup tidak dapat dibuka. Perlu uji manual di Firebase nyata.",
+    "status": "Belum diuji",
+    "evidence": ""
+  }
+]

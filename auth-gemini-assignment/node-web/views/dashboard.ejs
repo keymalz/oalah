@@ -1,0 +1,33 @@
+<%- include('partials/head') %>
+<header class="topbar">
+  <strong>Praktikum Auth &amp; Gemini · Node.js</strong>
+  <button type="button" class="btn btn-ghost" id="logout-btn">Keluar</button>
+</header>
+<main id="main" class="dash">
+  <section class="card" aria-labelledby="profil-h">
+    <h1 id="profil-h">Halo, <%= user.name || user.email %></h1>
+    <dl class="profile">
+      <div><dt>Nama</dt><dd id="user-name"><%= user.name || '(belum diisi)' %></dd></div>
+      <div><dt>Email</dt><dd id="user-email"><%= user.email %></dd></div>
+      <div><dt>Metode login</dt><dd id="user-provider"><%= providerLabel %></dd></div>
+    </dl>
+  </section>
+
+  <section class="card" aria-labelledby="gemini-h">
+    <h2 id="gemini-h">Tanya Gemini</h2>
+    <div id="alert" class="alert" role="alert" aria-live="assertive" hidden></div>
+    <form id="ask-form" novalidate>
+      <div class="field">
+        <label for="prompt">Pertanyaan Anda</label>
+        <textarea id="prompt" name="prompt" rows="4" maxlength="<%= maxChars %>" placeholder="Contoh: Jelaskan apa itu Firebase Authentication dalam 3 kalimat." required></textarea>
+        <p class="hint"><span id="count">0</span>/<%= maxChars %> karakter</p>
+      </div>
+      <button type="submit" class="btn btn-primary" id="ask-btn">Kirim ke Gemini</button>
+    </form>
+    <h3>Jawaban</h3>
+    <div id="answer" class="answer" aria-live="polite">Jawaban akan muncul di sini.</div>
+    <p class="hint" id="answer-meta"></p>
+  </section>
+</main>
+<script src="/static/js/dashboard.bundle.js" defer></script>
+<%- include('partials/foot') %>

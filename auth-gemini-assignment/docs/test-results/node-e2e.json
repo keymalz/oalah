@@ -1,0 +1,146 @@
+[
+  {
+    "id": "N-01",
+    "scenario": "Halaman register tampil",
+    "expected": "Form nama, email, password, konfirmasi, tombol Daftar & Google",
+    "actual": "Sesuai harapan",
+    "status": "Lulus",
+    "evidence": "01-node-register.png"
+  },
+  {
+    "id": "N-02",
+    "scenario": "Validasi: email tidak valid, password lemah, nama pendek",
+    "expected": "Pesan error per kolom, tidak ada request ke Firebase",
+    "actual": "Sesuai harapan",
+    "status": "Lulus",
+    "evidence": "02-node-validasi-register.png"
+  },
+  {
+    "id": "N-03",
+    "scenario": "Password dan konfirmasi tidak cocok",
+    "expected": "Pesan \"Konfirmasi password tidak cocok.\"",
+    "actual": "Sesuai harapan",
+    "status": "Lulus",
+    "evidence": "03-node-password-tidak-cocok.png"
+  },
+  {
+    "id": "N-04",
+    "scenario": "Toggle tampil/sembunyikan password",
+    "expected": "Tipe input berubah text <-> password",
+    "actual": "Sesuai harapan",
+    "status": "Lulus",
+    "evidence": ""
+  },
+  {
+    "id": "N-05",
+    "scenario": "Register email baru (email/password)",
+    "expected": "Akun dibuat, diarahkan ke /dashboard dengan nama & email",
+    "actual": "Sesuai harapan",
+    "status": "Lulus",
+    "evidence": "04-node-dashboard-setelah-register.png"
+  },
+  {
+    "id": "N-06",
+    "scenario": "Refresh dashboard saat sesi valid",
+    "expected": "Tetap di dashboard",
+    "actual": "Sesuai harapan",
+    "status": "Lulus",
+    "evidence": ""
+  },
+  {
+    "id": "N-07",
+    "scenario": "Tanya Gemini (MOCK) dari dashboard",
+    "expected": "Jawaban muncul; berlabel MOCK karena bukan Gemini asli",
+    "actual": "Jawaban MOCK tampil (BUKAN bukti Gemini nyata)",
+    "status": "Lulus",
+    "evidence": "05-node-gemini-mock.png"
+  },
+  {
+    "id": "N-08",
+    "scenario": "Pertanyaan kosong ditolak di klien",
+    "expected": "Pesan \"Pertanyaan tidak boleh kosong.\"",
+    "actual": "Sesuai harapan",
+    "status": "Lulus",
+    "evidence": ""
+  },
+  {
+    "id": "N-09",
+    "scenario": "Logout lalu buka kembali /dashboard",
+    "expected": "Diarahkan ke /login",
+    "actual": "Sesuai harapan",
+    "status": "Lulus",
+    "evidence": "06-node-dashboard-ditolak-setelah-logout.png"
+  },
+  {
+    "id": "N-10",
+    "scenario": "Login: email tidak valid",
+    "expected": "Pesan format email tidak valid",
+    "actual": "Sesuai harapan",
+    "status": "Lulus",
+    "evidence": ""
+  },
+  {
+    "id": "N-11",
+    "scenario": "Login: password salah",
+    "expected": "Alert \"Email atau password salah.\"",
+    "actual": "Sesuai harapan",
+    "status": "Lulus",
+    "evidence": "07-node-login-kredensial-salah.png"
+  },
+  {
+    "id": "N-12",
+    "scenario": "Login email/password benar",
+    "expected": "Masuk ke dashboard",
+    "actual": "Sesuai harapan",
+    "status": "Lulus",
+    "evidence": "08-node-dashboard-login-email.png"
+  },
+  {
+    "id": "N-13",
+    "scenario": "Session cookie berflag HttpOnly & SameSite",
+    "expected": "Cookie __session HttpOnly, SameSite=Lax; tidak terbaca oleh JavaScript",
+    "actual": "httpOnly=true, sameSite=Lax, secure=false (Secure aktif hanya di NODE_ENV=production/HTTPS)",
+    "status": "Lulus",
+    "evidence": ""
+  },
+  {
+    "id": "N-14",
+    "scenario": "Sesi hilang/kedaluwarsa saat memakai Gemini",
+    "expected": "API 401 -> diarahkan ke /login?expired=1 dengan pesan sesi berakhir",
+    "actual": "Sesuai harapan",
+    "status": "Lulus",
+    "evidence": "09-node-sesi-berakhir.png"
+  },
+  {
+    "id": "N-15",
+    "scenario": "Register email yang sudah dipakai",
+    "expected": "Pesan \"Email ini sudah terdaftar. Silakan masuk.\"",
+    "actual": "Sesuai harapan",
+    "status": "Lulus",
+    "evidence": "10-node-register-email-terpakai.png"
+  },
+  {
+    "id": "N-16",
+    "scenario": "Akses /dashboard tanpa login (konteks bersih)",
+    "expected": "302 ke /login",
+    "actual": "/dashboard -> 302 /login; POST /api/gemini -> 401",
+    "status": "Lulus",
+    "evidence": ""
+  },
+  {
+    "id": "N-17",
+    "scenario": "Login Google via kredensial IdP tiruan emulator (BUKAN Google nyata)",
+    "expected": "Dashboard menampilkan metode login \"Google\"",
+    "actual": "Provider \"Google\" tampil (jalur emulator, bukan OAuth Google asli)",
+    "status": "Lulus",
+    "evidence": "11-node-dashboard-google-emulator.png"
+  },
+  {
+    "id": "N-18",
+    "scenario": "Klik tombol \"Masuk dengan Google\" (popup) di sandbox",
+    "expected": "Popup Google asli",
+    "actual": "BELUM DIUJI: sandbox memblokir apis.google.com, popup tidak dapat dibuka. Perlu uji manual di Firebase nyata.",
+    "status": "Belum diuji",
+    "evidence": ""
+  }
+]

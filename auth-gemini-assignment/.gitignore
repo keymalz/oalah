@@ -1,0 +1,17 @@
+# Rahasia & konfigurasi lokal
+.env
+.env.*
+!.env.example
+secrets/
+serviceAccount*.json
+*-firebase-adminsdk-*.json
+dart-defines.json
+# Dependensi & build
+node_modules/
+node-web/public/js/*.bundle.js
+docs/e2e/.build/
+flutter-web/build/
+flutter-web/.dart_tool/
+# Log emulator
+*-debug.log
+firebase-export-*/
