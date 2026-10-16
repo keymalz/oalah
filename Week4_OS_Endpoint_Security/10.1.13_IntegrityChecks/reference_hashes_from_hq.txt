@@ -1,0 +1,15 @@
+Reference hashes copied from http://hq.corp/hash.html (The Hash Page)
+inside the 10.1.13 Packet Tracer activity, as shown by the user's own screenshot.
+
+FileName | NEclients.txt | Hash| 4dff78485308281b339bfda9236eda45
+FileName | NWclients.txt | Hash| 2c77ff70d5f7a2a720d231617157faa4
+FileName | Nclients.txt  | Hash| 8040e56207aab9dd331566b79dca37dd
+FileName | SEclients.txt | Hash| 520eb6c72cc2574decb731bc6230e223
+FileName | SWclients.txt | Hash| 69e751fe1175b39709629710e5ffa491
+FileName | Sclients.txt  | Hash| 06bea9b0fa7db92d7c21261b88323be6
+FileName | income.txt    | Hash| b138706cb55787d2a01934b224edad32203f87470ff6c7ffb9bd126786d1830d
+
+Note: the income.txt value matches exactly the official HMAC answer
+(openssl dgst -sha256 -hmac cisco123 income.txt) from the activity's own
+answer key, independently confirming both sources are consistent for this
+specific .pka instance.
